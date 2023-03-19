@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
+import tsParticles from "tsparticles-engine";
 import Fade from "react-reveal";
+import AnimatedCursor from "react-animated-cursor";
+//import CustomCursor from 'custom-cursor-react';
+//import 'custom-cursor-react/dist/index.css';
+import MouseParticles from 'react-mouse-particles';
 
 class Header extends Component {
   render() {
@@ -13,8 +18,23 @@ class Header extends Component {
 
     return (
       <header id="home">
-        <ParticlesBg type="circle" bg={true} />
-
+        <ParticlesBg type="cobweb" color={["daa520"]} num='50' bg={true} />
+        <MouseParticles g={1} num={3} color="random" cull="stats,image-wrapper" level={6} life={1.2} />
+        {/*
+          <AnimatedCursor
+            color="255, 27, 28"
+            innerSize={8}
+            outerSize={20}
+            innerScale={0.7}
+            outerScale={1}
+            outerAlpha={0}
+            outerStyle={{
+              border: '3px solid #07e295'
+            }}
+            trailingSpeed={null}
+          />
+          */
+        }
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
@@ -23,44 +43,44 @@ class Header extends Component {
             Hide navigation
           </a>
 
-          <ul id="nav" className="nav">
-            <li className="current">
-              <a className="smoothscroll" href="#home">
-                Home
-              </a>
-            </li>
+          <Fade>
+            <ul id="nav" className="nav">
+              <li className="current">
+                <a className="smoothscroll" href="#home">
+                  Home
+                </a>
+              </li>
 
-            <li>
-              <a className="smoothscroll" href="#about">
-                About
-              </a>
-            </li>
+              <li>
+                <a className="smoothscroll" href="#about">
+                  About
+                </a>
+              </li>
 
-            <li>
-              <a className="smoothscroll" href="#resume">
-                Resume
-              </a>
-            </li>
+              <li>
+                <a className="smoothscroll" href="#resume">
+                  Resume
+                </a>
+              </li>
 
-            <li>
-              <a className="smoothscroll" href="#portfolio">
-                Works
-              </a>
-            </li>
+              <li>
+                <a className="smoothscroll" href="#portfolio">
+                  Works
+                </a>
+              </li>
 
-            <li>
-              <a className="smoothscroll" href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
+              <li>
+                <a className="smoothscroll" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </Fade>
         </nav>
 
         <div className="row banner">
           <div className="banner-text">
-            <Fade bottom>
-              <h1 className="responsive-headline">{name}</h1>
-            </Fade>
+            <h1 className="responsive-headline shineeffect">{name}</h1>
             <Fade bottom duration={1200}>
               <h3>{description}.</h3>
             </Fade>
@@ -68,7 +88,7 @@ class Header extends Component {
             <Fade bottom duration={2000}>
               <ul className="social">
                 <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+                  <i className="fa fa-book"></i>Page Source
                 </a>
                 <a href={github} className="button btn github-btn">
                   <i className="fa fa-github"></i>Github
@@ -83,7 +103,7 @@ class Header extends Component {
             <i className="icon-down-circle"></i>
           </a>
         </p>
-      </header>
+      </header >
     );
   }
 }

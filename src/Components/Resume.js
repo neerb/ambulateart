@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
+import "./Resume.css";
 
 class Resume extends Component {
   getRandomColor() {
@@ -48,7 +49,7 @@ class Resume extends Component {
 
       return (
         <li key={skills.name}>
-          <span style={{ width, backgroundColor }} className={className}></span>
+          <img src={"images/skillpics/" + skills.src}></img>
           <em>{skills.name}</em>
         </li>
       );
@@ -76,7 +77,7 @@ class Resume extends Component {
           <div className="row work">
             <div className="three columns header-col">
               <h1>
-                <span>Work</span>
+                <span>Experience</span>
               </h1>
             </div>
 
@@ -85,20 +86,16 @@ class Resume extends Component {
         </Slide>
 
         <Slide left duration={1300}>
-          <div className="row skill">
+          <div className="row skills app_resume-skills">
             <div className="three columns header-col">
               <h1>
                 <span>Skills</span>
               </h1>
             </div>
 
-            <div className="nine columns main-col">
-              <p>{skillmessage}</p>
+            {/* <p className="skills-title">{skillmessage}</p> */}
 
-              <div className="bars">
-                <ul className="skills">{skills}</ul>
-              </div>
-            </div>
+            <div className="app_resume-skills_list">{skills}</div>
           </div>
         </Slide>
       </section>

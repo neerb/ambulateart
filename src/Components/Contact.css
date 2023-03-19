@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=VT323&display=swap');
+
+.app_contact {
+    text-align: center;
+}
+
+h2 {
+    color: gold;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    font-family: 'VT323', monospace;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-family: 'VT323', monospace;
+}
