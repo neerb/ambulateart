@@ -115,6 +115,13 @@
         "desc":"University Project: A complete recreation of the Windows Programmer Caculator implementing an Infix/Postfix expression reducing and solving algorithm.",
         "image":"calculator.png",
         "link":"https://github.com/neerb/ProgrammerCalculator"
+      },
+      {
+        "title":"A Simple ToDo List",
+        "technologies":"React.js, CSS from scratch",
+        "desc":"The standard ToDo list project built in React, it's that simple.",
+        "image":"todolist.png",
+        "link":"https://github.com/neerb/ProgrammerCalculator"
       }
     ],
     "projects": [

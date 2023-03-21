@@ -18,7 +18,7 @@ class Header extends Component {
 
     return (
       <header id="home" className="app-header">
-        <ParticlesBg className="particles" type="cobweb" color={["daa520"]} num='35' bg={{ position: "absolute", zIndex: 0 }} />
+        <ParticlesBg className="particles" type="cobweb" color={["daa520"]} num='50' bg={{ position: "absolute", zIndex: 0 }} />
         <MouseParticles g={1} num={3} color="random" cull="stats,image-wrapper" level={6} life={1.2} />
         {/*
           <AnimatedCursor
