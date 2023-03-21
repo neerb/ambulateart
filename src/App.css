@@ -31,3 +31,40 @@
     height: 90%;
     width: 90%;
   }
+
+  .app-header {
+    background-color: black;
+    z-index: -2;
+  }
+
+  .app_resume {
+    padding-top: 35px;
+  }
+
+  .app_section-resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sidebar {
+    width: 20%;
+    background: wheat;
+  }
+
+  .sidebar img {
+    object-fit: fill;
+    
+  }
+
+  @media screen and (max-width: 1100px) {
+    .sidebar {
+      display: none;
+    }
+  }
+
+  /* .particles {
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+  } */

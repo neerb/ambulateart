@@ -1,17 +1,9 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
+import { Fade } from "react-reveal";
 import "./Resume.css";
 
 class Resume extends Component {
-  getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-
   render() {
     if (!this.props.data) return null;
 
@@ -43,10 +35,6 @@ class Resume extends Component {
     });
 
     const skills = this.props.data.skills.map((skills) => {
-      const backgroundColor = this.getRandomColor();
-      const className = "bar-expand " + skills.name.toLowerCase();
-      const width = skills.level;
-
       return (
         <li key={skills.name}>
           <img src={"images/skillpics/" + skills.src}></img>
@@ -56,48 +44,60 @@ class Resume extends Component {
     });
 
     return (
-      <section id="resume">
-        <Slide left duration={1300}>
-          <div className="row education">
-            <div className="three columns header-col">
-              <h1>
-                <span>Education</span>
-              </h1>
-            </div>
+      <section id="resume" className="app_section-resume">
+        <div className="sidebar">
+          <Fade>
+            <img src="./images/vineleftresume.png" alt="vineleft"></img>
+          </Fade>
+        </div>
+        <div className="app_resume">
+          <Slide left duration={1300}>
+            <div className="row education">
+              <div className="three columns header-col">
+                <h1>
+                  <span>Education</span>
+                </h1>
+              </div>
 
-            <div className="nine columns main-col">
-              <div className="row item">
-                <div className="twelve columns">{education}</div>
+              <div className="nine columns main-col">
+                <div className="row item">
+                  <div className="twelve columns">{education}</div>
+                </div>
               </div>
             </div>
-          </div>
-        </Slide>
+          </Slide>
 
-        <Slide left duration={1300}>
-          <div className="row work">
-            <div className="three columns header-col">
-              <h1>
-                <span>Experience</span>
-              </h1>
+          <Slide left duration={1300}>
+            <div className="row work">
+              <div className="three columns header-col">
+                <h1>
+                  <span>Experience</span>
+                </h1>
+              </div>
+
+              <div className="nine columns main-col">{work}</div>
             </div>
+          </Slide>
 
-            <div className="nine columns main-col">{work}</div>
-          </div>
-        </Slide>
+          <Slide left duration={1300}>
+            <div className="row skills app_resume-skills">
+              <div className="three columns header-col">
+                <h1>
+                  <span>Skills</span>
+                </h1>
+              </div>
 
-        <Slide left duration={1300}>
-          <div className="row skills app_resume-skills">
-            <div className="three columns header-col">
-              <h1>
-                <span>Skills</span>
-              </h1>
+              {/* <p className="skills-title">{skillmessage}</p> */}
+
+              <div className="app_resume-skills_list">{skills}</div>
             </div>
-
-            {/* <p className="skills-title">{skillmessage}</p> */}
-
-            <div className="app_resume-skills_list">{skills}</div>
-          </div>
-        </Slide>
+          </Slide>
+        </div>
+        <div className="sidebar">
+          <Fade>
+            <img src="./images/vinerightresume.png" alt="vineright"></img>
+          </Fade>
+        </div>
       </section>
     );
   }
