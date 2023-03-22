@@ -37,68 +37,70 @@ class Resume extends Component {
     const skills = this.props.data.skills.map((skills) => {
       return (
         <li key={skills.name}>
-          <img src={"images/skillpics/" + skills.src}></img>
+          <img src={"ambulateart/images/skillpics/" + skills.src}></img>
           <em>{skills.name}</em>
         </li>
       );
     });
 
     return (
-      <section id="resume" className="app_section-resume">
-        <div className="sidebar">
-          <Fade>
-            <img src="./images/vineleftresume.png" alt="vineleft"></img>
-          </Fade>
-        </div>
-        <div className="app_resume">
-          <Slide left duration={1300}>
-            <div className="row education">
-              <div className="three columns header-col">
-                <h1>
-                  <span>Education</span>
-                </h1>
-              </div>
+      <div>
+        <section id="resume" className="app_section-resume">
+          <div className="sidebar">
+            <Slide left>
+              <img src="./ambulateart/images/vineleftresume.png" alt="vineleft"></img>
+            </Slide>
+          </div>
+          <div className="app_resume">
+            <Slide left duration={1300}>
+              <div className="row education">
+                <div className="three columns header-col">
+                  <h1>
+                    <span>Education</span>
+                  </h1>
+                </div>
 
-              <div className="nine columns main-col">
-                <div className="row item">
-                  <div className="twelve columns">{education}</div>
+                <div className="nine columns main-col">
+                  <div className="row item">
+                    <div className="twelve columns">{education}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Slide>
+            </Slide>
 
-          <Slide left duration={1300}>
-            <div className="row work">
-              <div className="three columns header-col">
-                <h1>
-                  <span>Experience</span>
-                </h1>
+            <Slide left duration={1300}>
+              <div className="row work">
+                <div className="three columns header-col">
+                  <h1>
+                    <span>Experience</span>
+                  </h1>
+                </div>
+
+                <div className="nine columns main-col">{work}</div>
               </div>
+            </Slide>
 
-              <div className="nine columns main-col">{work}</div>
-            </div>
-          </Slide>
+            <Slide left duration={1300}>
+              <div className="row skills app_resume-skills">
+                <div className="three columns header-col">
+                  <h1>
+                    <span>Skills</span>
+                  </h1>
+                </div>
 
-          <Slide left duration={1300}>
-            <div className="row skills app_resume-skills">
-              <div className="three columns header-col">
-                <h1>
-                  <span>Skills</span>
-                </h1>
+                {/* <p className="skills-title">{skillmessage}</p> */}
+
+                <div className="app_resume-skills_list">{skills}</div>
               </div>
-
-              {/* <p className="skills-title">{skillmessage}</p> */}
-
-              <div className="app_resume-skills_list">{skills}</div>
-            </div>
-          </Slide>
-        </div>
-        <div className="sidebar">
-          <Fade>
-            <img src="./images/vinerightresume.png" alt="vineright"></img>
-          </Fade>
-        </div>
-      </section>
+            </Slide>
+          </div>
+          <div className="sidebar">
+            <Slide right>
+              <img src="./ambulateart/images/vinerightresume.png" alt="vineright"></img>
+            </Slide>
+          </div>
+        </section>
+      </div>
     );
   }
 }

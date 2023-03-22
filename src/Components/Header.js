@@ -6,6 +6,7 @@ import AnimatedCursor from "react-animated-cursor";
 //import CustomCursor from 'custom-cursor-react';
 //import 'custom-cursor-react/dist/index.css';
 import MouseParticles from 'react-mouse-particles';
+import { useState } from "react";
 
 class Header extends Component {
   render() {
@@ -17,24 +18,10 @@ class Header extends Component {
     const description = this.props.data.description;
 
     return (
+      /* used to be header */
       <header id="home" className="app-header">
-        <ParticlesBg className="particles" type="cobweb" color={["daa520"]} num='50' bg={{ position: "absolute", zIndex: 0 }} />
+        <ParticlesBg className="particles" type="cobweb" color={["daa520"]} num='50' bg={{ position: "absolute", zIndex: 0, left: 0 }} />
         <MouseParticles g={1} num={3} color="random" cull="stats,image-wrapper" level={6} life={1.2} />
-        {/*
-          <AnimatedCursor
-            color="255, 27, 28"
-            innerSize={8}
-            outerSize={20}
-            innerScale={0.7}
-            outerScale={1}
-            outerAlpha={0}
-            outerStyle={{
-              border: '3px solid #07e295'
-            }}
-            trailingSpeed={null}
-          />
-          */
-        }
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
@@ -75,6 +62,11 @@ class Header extends Component {
                 </a>
               </li>
             </ul>
+
+            <script>
+
+            </script>
+
           </Fade>
         </nav>
 

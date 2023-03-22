@@ -33,18 +33,26 @@
   }
 
   .app-header {
+    text-align: center;
+    align-content: center;
     background-color: black;
-    z-index: -2;
+    height: 100vh;
+    position: relative;
+
+    /* z-index: -2; */
   }
 
   .app_resume {
     padding-top: 35px;
+    width: 100%;
   }
 
   .app_section-resume {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-right: 0;
   }
 
   .sidebar {
@@ -54,7 +62,6 @@
 
   .sidebar img {
     object-fit: fill;
-    
   }
 
   @media screen and (max-width: 1100px) {
@@ -63,8 +70,31 @@
     }
   }
 
-  /* .particles {
+  .particles {
     height: 100%;
+    width: 100%;
     z-index: 0;
-    position: absolute;
-  } */
+    position: relative;
+  }
+
+  /* scrolldown link */
+.scrolldown a {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -29px;
+  color: #fff;
+  display: block;
+  height: 42px;
+  width: 42px;
+  font-size: 42px;
+  line-height: 42px;
+  color: #fff;
+  border-radius: 100%;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.scrolldown a:hover { color: #CC5200; }

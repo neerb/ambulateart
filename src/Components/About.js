@@ -6,51 +6,53 @@ class About extends Component {
     if (!this.props.data) return null;
 
     const name = this.props.data.name;
-    const profilepic = "images/" + this.props.data.image;
+    const profilepic = "ambulateart/images/" + this.props.data.image;
     const bio = this.props.data.bio;
     const email = this.props.data.email;
     const resumeDownload = this.props.data.resumedownload;
 
     return (
-      <section id="about">
-        <Fade duration={1000}>
-          <div className="row">
-            <div className="three columns">
-              <Fade>
-                <img
-                  className="mepic"
-                  src={profilepic}
-                  alt="selfpic"
-                />
-              </Fade>
-            </div>
-            <div className="nine columns main-col">
-              <h2>About Me</h2>
+      <div>
+        <section id="about">
+          <Fade duration={1000}>
+            <div className="row">
+              <div className="three columns">
+                <Fade>
+                  <img
+                    className="mepic"
+                    src={profilepic}
+                    alt="selfpic"
+                  />
+                </Fade>
+              </div>
+              <div className="nine columns main-col">
+                <h2>About Me</h2>
 
-              <p>{bio}</p>
-              <div className="row">
-                <div className="columns contact-details">
-                  <h2>Contact Details</h2>
-                  <p className="address">
-                    <span>Please contact me via email</span>
-                    <br />
-                    <span>{name}</span>
-                    <br />
-                    <span>{email}</span>
-                  </p>
-                </div>
-                <div className="columns download">
-                  <p>
-                    <a href={resumeDownload} className="button">
-                      <i className="fa fa-download"></i>Download Resume
-                    </a>
-                  </p>
+                <p>{bio}</p>
+                <div className="row">
+                  <div className="columns contact-details">
+                    <h2>Contact Details</h2>
+                    <p className="address">
+                      <span>Please contact me via email</span>
+                      <br />
+                      <span>{name}</span>
+                      <br />
+                      <span>{email}</span>
+                    </p>
+                  </div>
+                  <div className="columns download">
+                    <p>
+                      <a href={resumeDownload} className="button">
+                        <i className="fa fa-download"></i>Download Resume
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Fade>
-      </section>
+          </Fade>
+        </section>
+      </div>
     );
   }
 }

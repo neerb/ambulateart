@@ -210,7 +210,7 @@
    header .social li { margin: 0 10px; }
 
     /* scrolldown link */
-   header .scrolldown { display: none; }
+   /* header .scrolldown { display: none; } */
 
 
    /* About Section
@@ -232,7 +232,7 @@
       text-align: center;
    }
    #resume h1 { letter-spacing: 3px; }
-   #resume .main-col { padding-right: 30px; }
+   /* #resume .main-col { padding-right: 30px; } */
    #resume h3, #resume .info { text-align: center; }
       
    .bars { width: 100%; }

@@ -17,7 +17,7 @@ class Portfolio extends Component {
     if (!this.props.data) return null;
 
     const softwares = this.props.data.software.map(function (software) {
-      let softwareImage = "images/softwarepics/" + software.image;
+      let softwareImage = "ambulateart/images/softwarepics/" + software.image;
       return (
         <div key={id++} className="columns portfolio-item">
           <div className="item-wrap">
@@ -49,7 +49,7 @@ class Portfolio extends Component {
     });
 
     const projects = this.props.data.projects.map(function (projects) {
-      let projectImage = "images/artportfolio/" + projects.src;
+      let projectImage = "ambulateart/images/artportfolio/" + projects.src;
       return (
         <div key={id++} className="columns portfolio-item">
           <div className="item-wrap">
