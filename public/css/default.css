@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
    font-weight: normal;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
+/* h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; } */
 h2 { font-size: 28px; line-height: 36px; margin-bottom: 6px; }
 h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; }
 h4 { font-size: 20px; line-height: 30px; margin-bottom: 6px; }
@@ -171,12 +171,12 @@ h5 { font-size: 18px; line-height: 30px; }
 h6 { font-size: 14px; line-height: 30px; }
 .subheader { }
 
-p { margin: 0 0 30px 0; }
+/* p { margin: 0 0 30px 0; }
 p img { margin: 0; }
 p.lead {
    font: 19px/36px 'opensans-light', sans-serif;
    margin-bottom: 18px;
-}
+} */
 
 /* for 'em' and 'strong' tags, font-size and line-height should be same with
 the body tag due to rendering problems in some browsers */
@@ -285,7 +285,7 @@ hr { border: solid #E3E3E3; border-width: 1px 0 0; clear: both; margin: 11px 0 3
 
 /*  3. Links  ------------------------------------------------------- */
 
-a, a:visited {
+/* a, a:visited {
    text-decoration: none;
    outline: 0;
    color: #11ABB0;
@@ -295,7 +295,7 @@ a, a:visited {
    -o-transition: color .3s ease-in-out;
    transition: color .3s ease-in-out;
 }
-a:hover, a:focus { color: #313131; }
+a:hover, a:focus { color: #; } */
 p a, p a:visited { line-height: inherit; }
 
 
@@ -448,10 +448,10 @@ dd { margin: 0 0 0 20px; }
 
 /*  5. Images  --------------------------------------------------------- */
 
-img {
+/* img {
    max-width: 100%;
    height: auto;
-}
+} */
 img.pull-right { margin: 12px 0px 0px 18px; }
 img.pull-left { margin: 12px 18px 0px 0px; }
 
@@ -462,7 +462,7 @@ img.pull-left { margin: 12px 18px 0px 0px; }
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+/* input[type="button"] {
    font: 16px/30px 'opensans-bold', sans-serif;
    background: #11ABB0;
    display: inline-block;
@@ -485,7 +485,7 @@ input[type="button"] {
    -webkit-border-radius: 0px;
    -khtml-border-radius: 0px;
    border-radius: 0px;
-}
+} */
 
 .button:hover,
 button:hover,
@@ -593,7 +593,7 @@ input[type="checkbox"] { display: inline; }
 /* default
 --------------------------------------------------------------- */
 .row {
-   width: 96%;
+   width: 100%;
    max-width: 1020px;
    margin: 0 auto;
 }
@@ -721,7 +721,7 @@ properly.
 @media only screen and (max-width: 767px) {
 
    .row {
-	   width: 460px;
+	   /* width: 460px; */
 	   margin: 0 auto;
       padding: 0;
 	}

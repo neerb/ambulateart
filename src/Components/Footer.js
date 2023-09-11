@@ -5,23 +5,14 @@ class Footer extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const networks = this.props.data.social.map(function (network) {
-      return (
-        <li key={network.name}>
-          <a href={network.url}>
-            <i className={network.className}></i>
-          </a>
-        </li>
-      );
-    });
+    const project = this.props.data.project;
+    const github = this.props.data.github;
 
     return (
       <footer>
         <div className="row">
           <Fade bottom>
             <div className="twelve columns">
-              <ul className="social-links">{networks}</ul>
-
               <ul className="copyright">
                 <li>&copy; Copyright 2023 Nathan Breen</li>
               </ul>

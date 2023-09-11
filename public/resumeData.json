@@ -72,6 +72,10 @@
         "src":"htmlskill.png"
       },
       {
+        "name":"RESTful APIs",
+        "src":"restful.png"
+      },
+      {
         "name":"Java",
         "src":"javaskill.png"
       },
@@ -96,18 +100,18 @@
   "portfolio":{
     "software": [
       {
+        "title":"React Pokedex: Pokemon API",
+        "technologies":"React.js, CSS styled from scratch",
+        "desc":"Retro-minimalist style and fully responsive Pokedex interface using the PokeAPI (RESTful), React, and styling CSS from scratch.",
+        "image":"pokedexex.png",
+        "link":"https://neerb.github.io/pokedex-v2/"
+      },
+      {
         "title":"Unthink AI E-Commerce Product Uploader(Front-end interface)",
         "technologies":"React.js, Gatsby, TailwindCSS, Ant Design",
         "desc":"Developed the front-end user interface with coordination of back-end team, enabling users to upload .csv and .xlsx product catalog files to be parsed, uploaded, and processed to a back-end database containing online e-commerce product data via a RESTful API.",
         "image":"unthinkAI.png",
         "link":""
-      },
-      {
-        "title":"Simple Pokedex: Pokemon API",
-        "technologies":"React.js, CSS styled from scratch",
-        "desc":"Minimalistic Pokedex as an example of retrieving and formatting data via a RESTful API.",
-        "image":"pokedexex.png",
-        "link":"https://neerb.github.io/pokedex-react/"
       },
       {
         "title":"ProgrammerCalculator: A Windows Programming Calculator Remake",
@@ -121,8 +125,16 @@
         "technologies":"React.js, CSS from scratch",
         "desc":"The standard ToDo list project built in React, it's that simple.",
         "image":"todolist.png",
-        "link":"https://github.com/neerb/ProgrammerCalculator"
+        "link":"https://neerb.github.io/boofed-todolist/"
+      },
+      {
+        "title":"Pho-Ballah Restaurant Concept Landing Page",
+        "technologies":"React.js, CSS from scratch",
+        "desc":"A concept restaurant landing page for a fine-dining Pho restaurant.",
+        "image":"phoballah.png",
+        "link":"https://neerb.github.io/pho-ballah-landingpage-informationsite/"
       }
+      
     ],
     "projects": [
       {

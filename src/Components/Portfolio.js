@@ -10,6 +10,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Gallery from "react-photo-gallery";
+import "./Portfolio.css";
 
 let id = 0;
 class Portfolio extends Component {
@@ -68,7 +69,8 @@ class Portfolio extends Component {
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
           >
-            <Masonry>
+            <Masonry
+            >
               {softwares}
             </Masonry>
           </ResponsiveMasonry>

@@ -17,6 +17,8 @@ class Contact extends Component {
 
     const name = this.props.data.name;
     const email = this.props.data.email;
+    const project = this.props.data.project;
+    const github = this.props.data.github;
 
     return (
       <section id="contact">
@@ -36,6 +38,14 @@ class Contact extends Component {
               </Link>
             </h3>
 
+            <ul className="social-links">
+              <a href={github} className="button btn link-button">
+                <i className="fa fa-github"></i>
+              </a>
+              <a href={project} className="button btn link-button">
+                <i className="fa fa-linkedin"></i>
+              </a>
+            </ul>
           </Fade>
         </div>
       </section >

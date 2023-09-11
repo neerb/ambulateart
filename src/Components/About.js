@@ -1,7 +1,42 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
+import "./About.css";
+import Draggable from 'react-draggable';
+
+const skillPics = [
+  'ambulateart/images/skillpics/javascriptskill.png',
+  'ambulateart/images/skillpics/cssskill.png',
+  'ambulateart/images/skillpics/reactskill.png',
+  'ambulateart/images/skillpics/gatsbyskill.png'
+]
+let skillPos = 0;
 
 class About extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      skill: skillPics[skillPos]
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      skill: skillPics[skillPos++]
+    });
+
+    const intervalId = setInterval(() => {
+      if (skillPos >= skillPics.length)
+        skillPos = 0;
+      this.setState({
+        skill: skillPics[skillPos++]
+      });
+    }, 2500);
+
+
+    return () => clearInterval(intervalId);
+  }
+
   render() {
     if (!this.props.data) return null;
 
@@ -11,47 +46,110 @@ class About extends Component {
     const email = this.props.data.email;
     const resumeDownload = this.props.data.resumedownload;
 
-    return (
-      <div>
-        <section id="about">
-          <Fade duration={1000}>
-            <div className="row">
-              <div className="three columns">
-                <Fade>
-                  <img
-                    className="mepic"
-                    src={profilepic}
-                    alt="selfpic"
-                  />
-                </Fade>
+    const skills = this.props.skills.skills.map((skills) => {
+      return (
+        <div className="skill-img-label">
+          <Draggable
+            handle=".handle"
+            defaultPosition={{ x: 0, y: 0 }}
+            scale={1}>
+            <div className='skills-text-bubble'>
+              <div className='handle'>
+                <button className='minimize-btn' onClick={null}></button>
+                <div className='program-title'>
+                  <div className='program-line'></div>
+                  <h1 className='skills-text-title'>{skills.name}</h1>
+                  <div className='program-line'></div>
+                </div>
               </div>
-              <div className="nine columns main-col">
-                <h2>About Me</h2>
+              <div className='image-skill-wrapper'>
+                <img className='image-skill' alt='skill' src={"ambulateart/images/skillpics/" + skills.src}></img>
+              </div>
+            </div>
+          </Draggable>
+        </div>
+      );
+    });
 
-                <p>{bio}</p>
-                <div className="row">
-                  <div className="columns contact-details">
-                    <h2>Contact Details</h2>
-                    <p className="address">
-                      <span>Please contact me via email</span>
-                      <br />
-                      <span>{name}</span>
-                      <br />
-                      <span>{email}</span>
-                    </p>
-                  </div>
-                  <div className="columns download">
-                    <p>
-                      <a href={resumeDownload} className="button">
-                        <i className="fa fa-download"></i>Download Resume
-                      </a>
-                    </p>
-                  </div>
+    return (
+      <div id="about" className='about'>
+        <Fade>
+          <div className="can-work">
+            <h1 className="can-work-text">I can work <span>with</span></h1>
+          </div>
+          <div className='about-wrapper'>
+            <div className='about-outer-skills'>
+              <div className='skill-windows'>
+                <div className="skills-list-windows">{skills}</div>
+                <div className="skills-text">
+                  <Draggable
+                    handle=".handle"
+                    defaultPosition={{ x: 0, y: 0 }}
+                    position={null}
+                    grid={null}
+                    scale={1}>
+                    <div className='skills-text-bubble'>
+                      <div className='handle'>
+                        <button className='minimize-btn' onClick={null}></button>
+                        <div className='program-title'>
+                          <div className='program-line'></div>
+                          <h1 className='skills-text-title'>Skills 1</h1>
+                          <div className='program-line'></div>
+                        </div>
+                      </div>
+                      <h1 className='skills-text-bubble-text'>Programming Languages</h1>
+                      <p>JavaScript, TypeScript, Java, C#, C++</p>
+                    </div>
+                  </Draggable>
+
+                  <hr></hr>
+                  <Draggable
+                    handle=".handle"
+                    defaultPosition={{ x: 0, y: 0 }}
+                    position={null}
+                    grid={null}
+                    scale={1}>
+                    <div className='skills-text-bubble'>
+                      <div className='handle'>
+                        <button className='minimize-btn' onClick={null}></button>
+                        <div className='program-title'>
+                          <div className='program-line'></div>
+                          <h1 className='skills-text-title'>Skills 2</h1>
+                          <div className='program-line'></div>
+                        </div>
+                      </div>
+                      <h1 className='skills-text-bubble-text'>Technologies/Frameworks</h1>
+                      <p>React.js, RESTful APIs (HTTP querying), HTML, CSS, SASS, Bootstrap, JQuery, GatsbyJS, TailwindCSS, MongoDB, SQL</p>
+                    </div>
+                  </Draggable>
+
+                  <hr></hr>
+
+                  <Draggable
+                    handle=".handle"
+                    defaultPosition={{ x: 0, y: 0 }}
+                    position={null}
+                    grid={null}
+                    scale={1}>
+                    <div className='skills-text-bubble'>
+                      <div className='handle'>
+                        <button className='minimize-btn' onClick={null}></button>
+                        <div className='program-title'>
+                          <div className='program-line'></div>
+                          <h1 className='skills-text-title'>Skills 3</h1>
+                          <div className='program-line'></div>
+                        </div>
+                      </div>
+                      <h1 className='skills-text-bubble-text'>Miscellaneous</h1>
+                      <p>GitHub Version Control, Jira Software Project/Ticketing Management, Graphic Design & Photoshop, Ambulating</p>
+                    </div>
+                  </Draggable>
+
                 </div>
               </div>
             </div>
-          </Fade>
-        </section>
+          </div>
+        </Fade>
       </div>
     );
   }

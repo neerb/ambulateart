@@ -1,4 +1,6 @@
-
+.App {
+  width: 100%;
+}
 
 .shineeffect {
     color: hsl(0, 0%, 28%);

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+hr {
+    width: 55%;
+    margin: 18px auto 24px auto;
+    border-color: rgba(255, 236, 0, 0.5);
+}
+
+.header-desc {
+    color: #4AF626;
+    font-size: 3rem;
+    font-family: 'VT323', monospace;
+    letter-spacing: 2px;
+    /* background-color: rgb(0, 71, 0); */
+}
+
+.header-type {
+    float: left;
+    color: #4AF626;
+    font-size: 3rem;
+    font-family: 'VT323', monospace;
+    letter-spacing: 2px;
+}
+
+.header-sourcebuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.header-buttons {
+
+}
+
+.header-button {
+    font-size: 40px;
+    color: white;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.header-button:hover {
+    color:#4AF626;
+}
+
+@media only screen and (max-width: 420px) {
+    .header-desc {
+        font-size: 2rem;
+    }
+
+    .header-type {
+        font-size: 2rem;
+    }
+}

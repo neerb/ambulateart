@@ -27,13 +27,17 @@ html {
 }
 body { background: #0f0f0f; }
 
+#root {
+   width: 100%;
+}
+
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
 
 header {
    position: relative;
-   height: 800px;
+   height: 100%;
    min-height: 500px;
    width: 100%;
    background-color: black;
@@ -75,12 +79,6 @@ header .banner-text h3 span,
 header .banner-text h3 a {
    color: #fff;
 }
-header .banner-text hr {
-   width: 60%;
-   margin: 18px auto 24px auto;
-   border-color: #2F2D2E;
-   border-color: rgba(150, 150, 150, .1);
-}
 
 /* header social links */
 header .social {
@@ -120,12 +118,12 @@ header .scrolldown a:hover { color: #CC5200; } */
 
 /* primary navigation
 --------------------------------------------------------------------- */
-#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+/* #nav-wrap ul, #nav-wrap li, #nav-wrap a {
 	 margin: 0;
-	 padding: 0;
+	 padding: 5px 7px 5px 7px;
 	 border: none;
 	 outline: none;
-}
+} */
 
 /* nav-wrap */
 #nav-wrap {
@@ -142,13 +140,11 @@ header .scrolldown a:hover { color: #CC5200; } */
 .opaque { background-color: #333; }
 
 /* hide toggle button */
-#nav-wrap > a.mobile-btn { display: none; }
 
 ul#nav {
    min-height: 48px;
    width: auto;
 
-   /* center align the menu */
    text-align: center;
 }
 ul#nav li {
@@ -158,17 +154,14 @@ ul#nav li {
    display: inline-block;
 }
 
-/* Links */
 ul#nav li a {
-
-/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
-
    display: inline-block;
    padding: 8px 13px;
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
    color: #fff;
+   font-size: 15px;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -177,12 +170,14 @@ ul#nav li a {
 	transition: color .2s ease-in-out;
 }
 
-ul#nav li a:active { background-color: transparent !important; }
+ul#nav li a:active { 
+   background-color: transparent !important;
+   color: #ffec00; 
+}
+
 ul#nav li.current a { 
    color: #ffec00; 
    margin-bottom: 0;
-   /* text-decoration: underline; 
-   text-underline-offset: 8px; */
 }
 
 ul#nav li.current a::after { 
@@ -195,62 +190,14 @@ ul#nav li.current a::after {
    transition: 1s ease;
 }
 
-ul#nav li a:hover { 
+ul#nav li a:current { 
    color: #ffec00; 
-}
+} 
 
 
 /* ------------------------------------------------------------------ */
 /* c. About Section
 /* ------------------------------------------------------------------ */
-
-#about {
-   background: url(../images/bgabout.png);/*#CC5200;*/
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: cover;
-   padding-top: 96px;
-   padding-bottom: 66px;
-   overflow: hidden;
-}
-
-#about a, #about a:visited  { color: #fff; }
-#about a:hover, #about a:focus { color: #CC5200; }
-
-#about h2 {
-   font: 22px/30px 'opensans-bold', sans-serif;
-   color: #fff;
-   margin-bottom: 12px;
-}
-#about p {
-   line-height: 30px;
-   color: #ccc;
-}
-#about .profile-pic {
-   position: relative;
-   width: 120px;
-   height: 120px;
-   border-radius: 100%;
-}
-#about .contact-details { width: 41.66667%; }
-#about .download {
-   width: 58.33333%;
-   padding-top: 6px;
-}
-#about .main-col { padding-right: 5%; }
-#about .download .button {
-   margin-top: 6px;
-   background: #444;
-}
-#about .download .button:hover {
-   background: #fff;
-   color: #2B2B2B;
-}
-#about .download .button i {
-   margin-right: 15px;
-   font-size: 20px;
-}
-
 
 /* ------------------------------------------------------------------ */
 /* d. Resume Section
@@ -816,8 +763,8 @@ call-to-action .button {
 
 #contact {
    background: #191919;
-   padding-top: 96px;
-   padding-bottom: 102px;
+   padding-top: 80px;
+   padding-bottom: 70px;
    color: #636363;
 }
 #contact .section-head { margin-bottom: 42px; }

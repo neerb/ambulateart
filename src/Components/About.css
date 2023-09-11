@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+#about {
+    background: url("../../public/images/graphbg.png");
+    background-color: #F6F0BC;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    height: 100vh;
+    overflow:hidden;
+   }
+ 
+ #about a, #about a:visited  { color: #fff; }
+ #about a:hover, #about a:focus { color: #CC5200; }
+
+ .about-wrapper {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+ }
+
+.skill-img-wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   /* width: 250px;
+   height: 250px; */
+   align-self: center;
+}
+
+.skill-img {
+   padding: 30px;
+   object-fit: contain;
+}
+
+.header-link-buttons {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.link-button {
+   font-size: 2em;
+   margin: 0 5px 0 5px;
+   background: none;
+}
+
+.about-outer-skills {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.about-work {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   background-color: #f7e7ce;
+   border-radius: 30px;
+   border: black 5px solid;
+   margin-right: 20px;
+}
+
+.skill-windows {
+   display: flex;
+   flex-direction:row;
+   justify-content: center;
+}
+
+.can-work {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   height: 20%;
+   background:#2b2b2bb7;
+}
+
+.can-work-text {
+   font-size: 50px;
+   font-family: 'Roboto Mono', monospace;
+   color: white;
+}
+
+.can-work-text span {
+   color: salmon;
+}
+
+.about-work h1 {
+   font-size: 50px;
+   font-family: 'Roboto Mono', monospace;
+   overflow-wrap: normal;
+   line-height: normal;
+}
+
+.about-work h1 span {
+   color: salmon;
+}
+
+.skills-text {
+   width: 60%;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-self: center;
+}
+
+.skills-text hr {
+   width: 90%;
+   border: darkgreen 3px solid;
+   border-radius: 20px;
+   box-shadow: -2px 2px rgba(0, 0, 0, 0.425);
+}
+
+.skills-text-bubble {
+   background-color: #f7e7ce;
+   border-radius: 0px;
+   transition: 0.5s;
+   margin: 0px 0 0 0;
+   border: 3px black solid;
+   box-shadow: -7px 4px rgba(0, 0, 0, 0.425);
+}
+
+.skills-text-bubble:hover {
+   box-shadow: -8px 8px black;
+}
+
+.skills-text-bubble-image {
+   background-color: #f7e7ce;
+   border-radius: 0px;
+   transition: 0.5s;
+   margin: 0px 0 0 0;
+   border: 3px black solid;
+   box-shadow: -8px 8px rgba(0, 0, 0, 0.425);
+   text-align: center;
+}
+
+.minimize-btn {
+   background-color: red;
+   border: 1px black solid;
+   border-radius: 100%;
+   width: 18px;
+   height: 18px;
+   margin: auto auto auto 5px;
+}
+
+.minimize-btn:hover {
+   cursor: pointer;
+}
+
+.program-title {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   width: 100%;
+}
+
+.program-line {
+   align-self: center;
+   border: 1px black solid;
+   width: 10%;
+}
+
+.skills-text-bubble:hover {
+   /* scale: 1.1; */
+}
+
+.skills-text-bubble-text {
+   font-size: 20px;
+   font-family: 'Roboto Mono', monospace;
+   color: black;
+   margin: 5px 0 0px 0;
+   padding: 0 20px 0 20px;
+}
+
+.skills-text-bubble p {
+   font-style: italic;
+   font-size: 16px;
+   font-family: 'Roboto Mono', monospace;
+   color: darkgreen;
+   margin: 0 0 10px 0 ;
+   padding: 0 20px 0 20px;
+}
+
+.skills-text-title {
+   font-size: 12px;
+   font-family: 'Roboto Mono', monospace;
+   color: black;
+   /* padding: 0 20px 0 20px; */
+   width: 40%;
+   text-align: center;
+   line-height: normal;
+}
+
+
+.app_resume-skills_list {
+   display: flex;
+   text-align: center;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   flex-direction: row;
+   overflow: scroll;
+}
+
+.skill-img-label {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.image-skill-wrapper {
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   padding: 10px;
+}
+
+.image-skill {
+   object-fit:scale-down;
+   width: 190px;
+}
+
+.handle {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   border-bottom: 2px solid black;
+   padding: 5px 5px 5px 5px;
+}
+
+.handle:hover {
+   cursor: move;
+}
+
+.skills-list-windows {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   justify-content:safe;
+   padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ #about h2 {
+    font: 22px/30px 'opensans-bold', sans-serif;
+    color: #fff;
+    margin-bottom: 12px;
+ }
+ #about p {
+    line-height: 30px;
+    /* color: #ccc; */
+ }
+ #about .profile-pic {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+ }
+ #about .contact-details { width: 41.66667%; }
+ #about .download {
+    width: 58.33333%;
+    padding-top: 6px;
+ }
+ #about .main-col { padding-right: 5%; }
+ #about .download .button {
+    margin-top: 6px;
+    background: #444;
+ }
+ #about .download .button:hover {
+    background: #fff;
+    color: #2B2B2B;
+ }
+ #about .download .button i {
+    margin-right: 15px;
+    font-size: 20px;
+ }
+ 

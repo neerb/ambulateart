@@ -13,11 +13,11 @@
 
     /* header styles
    ------------------------------------------------------------------ */
-   header .banner-text h1 {
+   /* header .banner-text h1 {
       font: 80px/1.1em 'opensans-bold', sans-serif;
       letter-spacing: -1px;
       margin: 0 auto 12px auto;
-   }
+   } */
 
 }
 
@@ -32,7 +32,7 @@
       font: 78px/1.1em 'opensans-bold', sans-serif;
       letter-spacing: -1px;      
    }
-   header .banner-text h3 {
+   /* header .banner-text h3 {
       font: 17px/1.9em 'librebaskerville-regular', serif;
       width: 80%;
    }
@@ -40,11 +40,13 @@
       width: 65%;
       margin: 12px auto;
    }
+
+   
    /* nav-wrap */
-   #nav-wrap {
+   /* #nav-wrap {
       font: 11px 'opensans-bold', sans-serif;
       letter-spacing: 1.5px;
-   }
+   } */
 
 
    /* About Section
