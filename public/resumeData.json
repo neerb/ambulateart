@@ -56,7 +56,7 @@
     ],
     "skills":[
       {
-        "name":"React.js",
+        "name":"React",
         "src":"reactskill.png"
       },
       {
@@ -94,6 +94,14 @@
       {
         "name":"Gatsby",
         "src":"gatsbyskill.png"
+      },
+      {
+        "name":"GitHub",
+        "src":"github-mark.png"
+      },
+      {
+        "name":"Jira",
+        "src":"Jira.png"
       }
     ]
   },
