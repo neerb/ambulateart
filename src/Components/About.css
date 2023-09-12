@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+
 #about {
     background: url("../../public/images/graphbg.png");
     background-color: #F6F0BC;
@@ -211,7 +212,8 @@
 }
 
 .handle {
-   width: 185px;
+   /* width: 185px; */
+   width: 100%;
    display: flex;
    flex-direction: row;
    border: 3px black solid;
@@ -276,4 +278,36 @@
 
 .image-skill {
    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+   .skill-windows {
+      display: flex;
+
+      flex-direction:column-reverse;
+      justify-content: space-evenly;
+      padding: 20px;
+      align-self: center;
+   }
+
+   .about-wrapper {
+      /* display: block; */
+      overflow: hidden;
+      overflow: auto;
+   }
+   
+   .skills-image-window {
+      border-radius: 0px;
+      /* transition: 0.5s; */
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+   }
+
+   .skills-text {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
 }

@@ -31,7 +31,7 @@ function SkillCard(props) {
       scale={1}>
       <div className={minimized ? skillCardNoShadow : skillCardShadow}>
         <div className={minimized ? minimizedStylesHandle : maximizedStylesHandle}>
-          <button className='minimize-btn' style={{ backgroundColor: minimized ? "gold" : "red" }} onClick={handleMinimize}></button>
+          <button className='minimize-btn' style={{ backgroundColor: minimized ? "green" : "red" }} onClick={handleMinimize}></button>
           <div className='program-title'>
             <div className='program-line'></div>
             <h1 className='skills-text-title'>{props.skill.name}</h1>
