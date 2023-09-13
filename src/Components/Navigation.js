@@ -32,11 +32,12 @@ function Navigation() {
             // console.log(about.getBoundingClientRect().top - (window.innerHeight / 2) < 0);
             // console.log(home.getBoundingClientRect().top - (window.innerHeight / 2) < 0);
 
-            if (contact.getBoundingClientRect().top < window.innerHeight) {
-                setActiveSection('contact');
-            } else if (works.getBoundingClientRect().top - (window.innerHeight / 2) < 0) {
-                setActiveSection('portfolio');
-            } else if (about.getBoundingClientRect().top - (window.innerHeight / 2) < 0) {
+            // if (contact.getBoundingClientRect().top < window.innerHeight) {
+            //     setActiveSection('contact');
+            // } else if (works.getBoundingClientRect().top - (window.innerHeight / 2) < 0) {
+            //     setActiveSection('portfolio');
+            // } else 
+            if (about.getBoundingClientRect().top - (window.innerHeight / 2) < 0) {
                 setActiveSection('about');
             } else if (home.getBoundingClientRect().top <= window.innerHeight) {
                 setActiveSection('home');

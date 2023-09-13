@@ -1,8 +1,9 @@
 .navbar-top {
-  font: 12px 'opensans-bold', sans-serif;
+  font-family: 'VT323', monospace;
+  font-size: 24px;
   width: 100%;
   text-transform: uppercase;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   margin: 0 auto;
   z-index: 100;
   position: fixed;
@@ -38,7 +39,6 @@ nav ul {
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
-   font-size: 15px;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;

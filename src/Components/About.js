@@ -126,31 +126,31 @@ class About extends Component {
     return (
       <div id="about" className='about'>
         <Fade>
-          <div className='about-wrapper'>
-            <Fade top>
-              <div className="can-work">
-                <h1 className="can-work-text">I work <span>with...</span></h1>
+          {/* <div className='about-wrapper'> */}
+          <Fade top>
+            <div className="can-work">
+              <h1 className="can-work-text">I work <span>with...</span></h1>
+            </div>
+          </Fade>
+          {/* <div className='about-outer-skills'> */}
+          <div className='skill-windows'>
+            <Fade left>
+              <div className="skills-list-windows">{skills}</div>
+            </Fade>
+
+            <Fade right>
+              <div className="skills-text">
+                <SkillTextCard programText="Skills" titleText="Programming Languages" skillsText="JavaScript, TypeScript, Java, C#, C++" />
+                <hr></hr>
+                <SkillTextCard programText="Skills" titleText="Technologies/Frameworks" skillsText="React.js, RESTful APIs (HTTP querying), HTML, CSS, SASS, Bootstrap, JQuery, GatsbyJS, TailwindCSS, MongoDB, SQL" />
+                <hr></hr>
+                <SkillTextCard programText="Skills" titleText="Miscellaneous" skillsText="GitHub Version Control, Jira Software Project/Ticketing Management, Graphic Design & Photoshop, Ambulating" />
+                <hr></hr>
+                <SkillTextCard programText="!!!" titleText="Click & Drag us" skillsText=":}" />
               </div>
             </Fade>
-            {/* <div className='about-outer-skills'> */}
-            <div className='skill-windows'>
-              <Fade left>
-                <div className="skills-list-windows">{skills}</div>
-              </Fade>
-
-              <Fade right>
-                <div className="skills-text">
-                  <SkillTextCard programText="Skills" titleText="Programming Languages" skillsText="JavaScript, TypeScript, Java, C#, C++" />
-                  <hr></hr>
-                  <SkillTextCard programText="Skills" titleText="Technologies/Frameworks" skillsText="React.js, RESTful APIs (HTTP querying), HTML, CSS, SASS, Bootstrap, JQuery, GatsbyJS, TailwindCSS, MongoDB, SQL" />
-                  <hr></hr>
-                  <SkillTextCard programText="Skills" titleText="Miscellaneous" skillsText="GitHub Version Control, Jira Software Project/Ticketing Management, Graphic Design & Photoshop, Ambulating" />
-                  <hr></hr>
-                  <SkillTextCard programText="!!!" titleText="Click & Drag us" skillsText=":}" />
-                </div>
-              </Fade>
-            </div>
           </div>
+          {/* </div> */}
           {/* </div> */}
         </Fade>
       </div>
