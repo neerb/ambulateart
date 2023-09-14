@@ -20,7 +20,7 @@
    flex-direction: column;
    height: fit-content;
    min-height: 100vh;
-   position: absolute;
+   position: relative;
    overflow: hidden;
 }
 
@@ -28,9 +28,6 @@
    line-height: 25px;
 }
  
- #about a, #about a:visited  { color: #fff; }
- #about a:hover, #about a:focus { color: #CC5200; }
-
  .about-wrapper {
    display: flex;
    flex-direction: column;
@@ -83,9 +80,9 @@
 
 .skill-windows {
    display: flex;
-
-   /* flex-direction:row; */
-   justify-content: space-evenly;
+   flex-direction:row;
+   flex-wrap: wrap;
+   justify-content: center;
    padding: 20px;
    align-self: center;
 }
@@ -137,6 +134,7 @@
    /* transition: 0.5s; */
    margin: 0px auto 0 auto;
    width: fit-content;
+   margin: 10px;
 }
 
 
@@ -167,7 +165,7 @@
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
-   width: 100%;
+   width: 90%;
 }
 
 .program-line {
@@ -178,13 +176,13 @@
 }
 
 .skills-text-wrapper{
+   width: 100%;
    display: flex;
    flex-direction: column;
    justify-content: center;
    border-left: 3px black solid;
    border-bottom: 3px black solid;
    border-right: 3px black solid;
-   width: 100%;
    background-color: #f7e7ce;
 }
 
@@ -211,7 +209,7 @@
    color: black;
    /* padding: 0 20px 0 20px; */
    text-align: center;
-   line-height: normal;
+   margin: auto 0 auto 0;
 }
 
 
@@ -231,6 +229,7 @@
    flex-direction: row;
    border: 3px black solid;
    background-color: #ffd89a;
+   height: 30px;
 }
  
 .handle:hover {
@@ -243,6 +242,7 @@
    flex-direction: row;
    border: 3px black solid;
    background-color: #ffd89a;
+   height: 30px;
 }
 
 .text-handle:hover {
@@ -274,7 +274,7 @@
    height: fit-content;
    display: flex;
    flex-direction: column;
-   width: 185px;
+   /* width: 185px; */
 }
 
 .image-skill-wrapper {
@@ -286,18 +286,94 @@
    border-left: 3px black solid;
    border-bottom: 3px black solid;
    border-right: 3px black solid;
-   padding: 8px 0 8px 0;
+   padding: 8px 8px 8px 8px;
 }
 
 .image-skill {
    width: 100%;
 }
 
+.multi-array-window {
+   border-radius: 0px;
+   /* transition: 0.5s; */
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   margin: 10px;
+   /* width: 185px; */
+}
+
+.multi-image-skill-wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+   background-color: #F6F0BC;
+   height: fit-content;
+   width: 100%;
+   border-left: 3px black solid;
+   border-bottom: 3px black solid;
+   border-right: 3px black solid;
+}
+.multi-image-skill {
+
+}
+
+.multi-image-skill-img {
+   max-width: 160px;
+   object-fit: contain;
+   padding: 10px 0 10px 0;
+}
+
+.continue-image-window {
+   border-radius: 0px;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.continue-handle {
+   width: 120px;
+   display: flex;
+   flex-direction: row;
+   border: 3px black solid;
+   background-color: #ffd89a;
+   height: 30px;
+}
+
+.continue-handle:hover {
+   cursor: move;
+}
+
+.continue-btn {
+   max-width: 100%;
+   text-align: center;
+   /* padding: 10px 0 10px 0; */
+   height: fit-content;
+   background-color: #f7e7ce;
+   border-left: 3px black solid;
+   border-bottom: 3px black solid;
+   border-right: 3px black solid;
+   padding: 8px 8px 8px 8px;
+   background-color:bisque;
+}
+
+.continue-button {
+   font-size: 42px;
+   opacity: 1;
+   color: darkcyan;
+   transition: 0.5s;
+}
+
+.continue-button:hover {
+   color:indianred;
+}
+
 @media screen and (max-width: 800px) {
    .skill-windows {
       display: flex;
 
-      flex-direction:column-reverse;
       justify-content: space-evenly;
       padding: 20px;
       align-self: center;

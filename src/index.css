@@ -3,3 +3,7 @@
     padding: 0;
     scroll-behavior: smooth;
 }
+
+.smoothscroll {
+    scroll-behavior: smooth;
+}

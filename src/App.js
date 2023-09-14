@@ -5,6 +5,9 @@ import "./App.css";
 import Navigation from "./Components/Navigation";
 import Header from "./Components/Header";
 import About from "./Components/About";
+import Portfolio from "./Components/Portfolio";
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 class App extends Component {
   constructor(props) {
@@ -44,9 +47,9 @@ class App extends Component {
         <Header data={this.state.resumeData.main} id="home" />
         <About data={this.state.resumeData.main} skills={this.state.resumeData.resume} id="about" />
         {/* <Resume data={this.state.resumeData.resume} /> */}
-        {/* <Portfolio data={this.state.resumeData.portfolio} />
+        <Portfolio data={this.state.resumeData.portfolio} id='portfolio' />
         <Contact data={this.state.resumeData.main} />
-        <Footer data={this.state.resumeData.main} /> */}
+        <Footer data={this.state.resumeData.main} />
       </div>
     );
   }

@@ -4,6 +4,8 @@ import Fade from "react-reveal";
 import './Header.css'
 import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 class Header extends Component {
   render() {
@@ -33,7 +35,7 @@ class Header extends Component {
         </nav>
 
         <div className="header-wrapper">
-          <h2 style={{ fontSize: 30 }} class='header-label'>Portfolio:</h2>
+          {/* <h2 style={{ fontSize: 30 }} class='header-label'>Portfolio:</h2> */}
           <h1 className="header-name shineeffect">{name}</h1>
           <Fade bottom duration={1200}>
             <TypeAnimation
@@ -47,11 +49,10 @@ class Header extends Component {
           <Fade bottom duration={2000}>
             <div className="header-buttons">
               <a href={github} className="header-button">
-                <i className="fa-brands fa-github" />
-                {/* <FontAwesomeIcon icon="fa-brands fa-github" /> */}
+                <FontAwesomeIcon icon={faGithub} />
               </a>
               <a href={project} className="header-button">
-                <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+                <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
               {/* <a href={project} className="button btn project-btn">
                   <i className="fa fa-book"></i> Page 
@@ -60,11 +61,11 @@ class Header extends Component {
           </Fade>
         </div>
 
-        <p className="scrolldown">
-          <a className="smoothscroll" href="#about">
-            <i className="icon-down-circle"></i>
+        <div className='scrolldown'>
+          <a className="scrolldown-button" href="#about">
+            <FontAwesomeIcon icon={faCircleChevronDown} />
           </a>
-        </p>
+        </div>
       </header >
     );
   }

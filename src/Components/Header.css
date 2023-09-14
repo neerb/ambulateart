@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+.app-header {
+    text-align: center;
+    align-content: center;
+    background-color: black;
+    height: 100vh;
+    /* z-index: -2; */
+  }
+
 .header-wrapper {
     height: 100vh;
     display: flex;
@@ -18,6 +26,33 @@
 .header-name {
     font-size: 4rem;
 }
+
+.shineeffect {
+    color: hsl(0, 0%, 28%);
+    font-weight: bold!important;
+    font-family: monospace;
+    letter-spacing: 7px!important;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+.shineeffect {
+    padding: 0px;
+    background: linear-gradient(to right, #ffffff85 0, #ffea4e8e 10%, #ffe46db2 20%, #ffe46db2 30%, #ffea4e8a 40%, #ffffff85 50%, #ffffff85 60%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s infinite linear;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 800px;
+    }
+  }
 
 .header-desc {
     color: #4AF626;
@@ -44,7 +79,7 @@
 }
 
 .header-bar {
-    width: 45%;
+    min-width: 35%;
     margin: 18px auto 24px auto;
     border-color: rgba(255, 236, 0, 0.5);
 }
@@ -57,14 +92,44 @@
 }
 
 .header-button {
+    height: 40px;
     font-size: 40px;
     color: white;
-    /* padding: 15px; */
+    padding: 0 15px 0 15px;
     transition: 0.5s;
 }
 
 .header-button:hover {
     color:#4AF626;
+}
+
+.scrolldown {
+    width: 100%;
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 30px;
+    display: block;
+    font-size: 42px;
+    line-height: 42px;
+    border-radius: 100%;
+}
+
+.scrolldown-button {
+    color: white;
+    opacity: 0.85;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.scrolldown-button:hover {
+    color:gold;
 }
 
 @media only screen and (max-width: 420px) {

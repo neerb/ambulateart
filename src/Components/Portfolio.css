@@ -1,4 +1,10 @@
 #portfolio {
+    display: flex;
     background-color: black;
     height: fit-content;
+    position: relative;
+}
+
+.test {
+    height: 100vh;
 }

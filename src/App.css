@@ -12,46 +12,9 @@ body, ul {
   margin: 0;
 }
 
-.shineeffect {
-    color: hsl(0, 0%, 28%);
-    font-weight: bold!important;
-    font-family: monospace;
-    letter-spacing: 7px!important;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
-  
-.shineeffect {
-    padding: 0px;
-    background: linear-gradient(to right, #ffffff85 0, #ffea4e8e 10%, #ffe46db2 20%, #ffe46db2 30%, #ffea4e8a 40%, #ffffff85 50%, #ffffff85 60%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s infinite linear;
-  }
-  
-  @keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    100% {
-      background-position: 1000px;
-    }
-  }
-
   .mepic {
     height: 90%;
     width: 90%;
-  }
-
-  .app-header {
-    text-align: center;
-    align-content: center;
-    background-color: black;
-    height: 100vh;
-    position: relative;
-
-    /* z-index: -2; */
   }
 
   .app_resume {
@@ -88,25 +51,3 @@ body, ul {
     z-index: 0;
     position: relative;
   }
-
-  /* scrolldown link */
-.scrolldown a {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  margin-left: -29px;
-  color: #fff;
-  display: block;
-  height: 42px;
-  width: 42px;
-  font-size: 42px;
-  line-height: 42px;
-  color: #fff;
-  border-radius: 100%;
-
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-.scrolldown a:hover { color: #CC5200; }

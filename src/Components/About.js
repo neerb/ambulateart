@@ -2,6 +2,8 @@ import React, { Component, useState } from "react";
 import Fade from "react-reveal";
 import "./About.css";
 import Draggable from 'react-draggable';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const skillPics = [
   'ambulateart/images/skillpics/javascriptskill.png',
@@ -9,15 +11,32 @@ const skillPics = [
   'ambulateart/images/skillpics/reactskill.png',
   'ambulateart/images/skillpics/gatsbyskill.png'
 ]
-let skillPos = 0;
+
+const frontEndPics = {
+
+}
+
+const backEndPics = {
+
+}
+
+const versionControlPics = {
+
+}
 
 function SkillCard(props) {
   let minimizedStylesHandle = 'handle box-shadow';
   let maximizedStylesHandle = 'handle';
-  let skillCardNoShadow = 'skills-image-window';
-  let skillCardShadow = 'skills-image-window box-shadow';
+  let skillCardNoShadow = 'multi-array-window';
+  let skillCardShadow = 'multi-array-window box-shadow';
 
   const [minimized, setMinimized] = useState(false);
+  const skillPics = props.pics.map((skill) => {
+    return (
+      <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"ambulateart/images/skillpics/" + skill.src}></img>
+    );
+  });
+
 
   function handleMinimize(e) {
     setMinimized(!minimized);
@@ -34,12 +53,55 @@ function SkillCard(props) {
           <button className='minimize-btn' style={{ backgroundColor: minimized ? "green" : "red" }} onClick={handleMinimize}></button>
           <div className='program-title'>
             <div className='program-line'></div>
-            <h1 className='skills-text-title'>{props.skill.name}</h1>
+            <h1 className='skills-text-title'>{props.programText}</h1>
             <div className='program-line'></div>
           </div>
         </div>
-        <div className='image-skill-wrapper' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
-          <img className='image-skill' alt='skill' src={"ambulateart/images/skillpics/" + props.skill.src}></img>
+        <div className='multi-image-skill-wrapper' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
+          {skillPics}
+          {/* {props.pics.map((skill) => {
+            { console.log(skill) }
+            <img className='multi-image-skill-image' alt='skill' src={"ambulateart/images/skillpics/" + skill.src}></img>
+          })} */}
+        </div>
+      </div>
+    </Draggable>
+    // </div>
+  );
+}
+
+// single image skillcard
+function ContinueSkillCard(props) {
+  let minimizedStylesHandle = 'continue-handle box-shadow';
+  let maximizedStylesHandle = 'continue-handle';
+  let skillCardNoShadow = 'continue-image-window';
+  let skillCardShadow = 'continue-image-window box-shadow';
+
+  const [minimized, setMinimized] = useState(false);
+
+  function handleMinimize(e) {
+    setMinimized(!minimized);
+  }
+
+  return (
+    // <div className="skill-img-label">
+    <Draggable
+      handle=".continue-handle"
+      defaultPosition={{ x: 0, y: 0 }}
+      scale={1}>
+      <div className={minimized ? skillCardNoShadow : skillCardShadow}>
+        <div className={minimized ? minimizedStylesHandle : maximizedStylesHandle}>
+          <button className='minimize-btn' style={{ backgroundColor: minimized ? "green" : "red" }} onClick={handleMinimize}></button>
+          <div className='program-title'>
+            <div className='program-line'></div>
+            <h1 className='skills-text-title'>Continue</h1>
+            <div className='program-line'></div>
+          </div>
+        </div>
+        <div className='continue-btn' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
+          <a className="continue-button" href="#portfolio">
+            <FontAwesomeIcon icon={faCircleChevronDown} />
+          </a>
         </div>
       </div>
     </Draggable>
@@ -87,25 +149,12 @@ class About extends Component {
     super(props);
 
     this.state = {
-      skill: skillPics[skillPos]
+      frontEndPics: []
     }
   }
 
   componentDidMount() {
-    this.setState({
-      skill: skillPics[skillPos++]
-    });
-
-    const intervalId = setInterval(() => {
-      if (skillPos >= skillPics.length)
-        skillPos = 0;
-      this.setState({
-        skill: skillPics[skillPos++]
-      });
-    }, 2500);
-
-
-    return () => clearInterval(intervalId);
+    console.log(this.state.frontEndPics);
   }
 
   render() {
@@ -117,11 +166,35 @@ class About extends Component {
     const email = this.props.data.email;
     const resumeDownload = this.props.data.resumedownload;
 
-    const skills = this.props.skills.skills.map((skills) => {
-      return (
-        <SkillCard skill={skills}></SkillCard>
-      );
-    });
+    this.state = {
+      frontEndPics: [
+        this.props.skills.skills[1],
+        this.props.skills.skills[2],
+        this.props.skills.skills[3],
+        this.props.skills.skills[0],
+        this.props.skills.skills[9]
+      ],
+      backEndPics: [
+        this.props.skills.skills[4],
+        this.props.skills.skills[5],
+        this.props.skills.skills[6],
+        this.props.skills.skills[7],
+        this.props.skills.skills[8]
+      ],
+
+      versionControlPics: [
+        this.props.skills.skills[10],
+        this.props.skills.skills[11]
+      ]
+    }
+
+    console.log(this.state.frontEndPics);
+
+    // const skills = this.props.skills.skills.map((skills) => {
+    //   return (
+    //     <SkillCard skill={skills}></SkillCard>
+    //   );
+    // });
 
     return (
       <div id="about" className='about'>
@@ -135,19 +208,27 @@ class About extends Component {
           {/* <div className='about-outer-skills'> */}
           <div className='skill-windows'>
             <Fade left>
-              <div className="skills-list-windows">{skills}</div>
+
+              {/* <div className="skills-list-windows">{skills}</div> */}
             </Fade>
 
             <Fade right>
-              <div className="skills-text">
-                <SkillTextCard programText="Skills" titleText="Programming Languages" skillsText="JavaScript, TypeScript, Java, C#, C++" />
-                <hr></hr>
-                <SkillTextCard programText="Skills" titleText="Technologies/Frameworks" skillsText="React.js, RESTful APIs (HTTP querying), HTML, CSS, SASS, Bootstrap, JQuery, GatsbyJS, TailwindCSS, MongoDB, SQL" />
-                <hr></hr>
-                <SkillTextCard programText="Skills" titleText="Miscellaneous" skillsText="GitHub Version Control, Jira Software Project/Ticketing Management, Graphic Design & Photoshop, Ambulating" />
-                <hr></hr>
-                <SkillTextCard programText="!!!" titleText="Click & Drag us" skillsText=":}" />
-              </div>
+              {/* <div className="skills-text"> */}
+              <SkillTextCard programText="Skills" titleText="Programming Languages" skillsText="JavaScript, TypeScript, Java, C#, C++" />
+              {/* <hr></hr> */}
+              <SkillTextCard programText="Skills" titleText="Technologies/Frameworks" skillsText="React.js, RESTful APIs (HTTP querying), HTML, CSS, SASS, Bootstrap, JQuery, GatsbyJS, TailwindCSS, MongoDB, SQL" />
+              {/* <hr></hr> */}
+              <SkillTextCard programText="Skills" titleText="Miscellaneous" skillsText="GitHub Version Control, Jira Software Project/Ticketing Management, Graphic Design & Photoshop, Ambulating" />
+              {/* <hr></hr> */}
+              <SkillTextCard programText="!!!" titleText="Click & Drag us" skillsText=":}" />
+              {/* </div> */}
+
+              {/* <div className="skills-list-windows"> */}
+              <SkillCard programText="Front-End" pics={this.state.frontEndPics} />
+              <SkillCard programText="Back-End/Programming Languages" pics={this.state.backEndPics} />
+              <SkillCard programText="Version Control" pics={this.state.versionControlPics} />
+              {/* </div> */}
+              <ContinueSkillCard />
             </Fade>
           </div>
           {/* </div> */}
