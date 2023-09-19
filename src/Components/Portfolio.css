@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&display=swap');
+
 #portfolio {
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content: center;
-    background-color: darkslategray;
+    justify-content: space-around;
+    background-color: #386641;
+    background: url("../../public/images/pixelspace.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
     height: 100vh;
     max-height: fit-content;
     position: relative;
@@ -14,81 +20,105 @@
     height: 100vh;
 }
 
-.projects-one {
-    width: 100%;
+.front-end-projects {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: start;
-    margin-bottom: 10px;
-}
-
-.p1-1-container {
+    background-color: #F2E8CF;
+    border: 8px solid #BC4749;
     width: 90%;
-    height: 360px;
-    background-color: antiquewhite;
-    border: 4px solid black;
+    height: fit-content;
     border-left: none;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 30px 30px 0;
     position: relative;
     transition: 0.5s;
-    transform-origin: top left;
+    /* transform-origin: top left; */
+    transform-origin: left;
 }
 
-.p1-1-container:hover {
-    scale: 1.01;
-    direction: ltr;
-    background-color: white;
-}
-
-.p1-2-container {
-    width: 80%;
-    height: 345px;
-    background-color: antiquewhite;
-    border: 4px solid black;
-    border-left: none;
-    border-radius: 0 15px 15px 0;
-    position: absolute;
+.back-end-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #F2E8CF;
+    border: 8px solid #BC4749;
+    border-right: none;
+    width: 90%;
+    height: fit-content;
+    border-radius: 30px 0 0 30px;
+    position: relative;
     transition: 0.5s;
-    transform-origin: top left;
+    margin-left: auto;
+    transform-origin: right;
 }
 
-.p1-2-container:hover {
-    scale: 1.01;
-    direction: ltr;
-    background-color: white;
+.project-section-label-fe {
+    padding: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #BC4749;
 }
 
-.p1-3-container {
-    width: 70%;
-    height: 330px;
-    background-color: antiquewhite;
-    border: 4px solid black;
-    border-left: none;
-    border-radius: 0 15px 15px 0;
-    position: absolute;
+.project-section-label-be {
+    padding: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #BC4749;
+    text-align: right;
+}
+
+.label-container {
+    width: 100%;
+    height: fit-content;
+    position: relative;
     transition: 0.5s;
-    transform-origin: top left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.p1-3-container:hover {
+.label-bar-fe {
+    width: 100%;
+    border: 3px solid #BC4749;
+    height: 0;
+    margin: auto 0 auto 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.label-bar-be {
+    width: 100%;
+    border: 3px solid #BC4749;
+    height: 0;
+    margin: auto 0 auto 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.front-end-projects:hover {
     scale: 1.01;
-    direction: ltr;
     background-color: white;
 }
 
-.projects-two {
+.back-end-projects:hover {
+    scale: 1.01;
+    background-color: white;
+}
+
+.projects-container {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    margin-top: 10px;
 }
 
-.p2-container {
-    width: 90%;
-    height: 360px;
-    background-color: antiquewhite;
-    border:4px solid black;
-    border-right: none;
-    border-radius: 15px 0 0 15px;
+.project-card {
+    height: 200px;
+    width: 150px;
 }
+
+
+.project-card-img {
+    max-width: 250px;
+    max-height: 250px;
+}
+

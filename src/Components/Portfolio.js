@@ -1,23 +1,14 @@
 import React, { Component } from "react";
-import Zmage from "react-zmage";
 import Fade from "react-reveal";
-import { PhotoAlbum } from "react-photo-album";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import { Card } from "@mui/material";
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Gallery from "react-photo-gallery";
 import "./Portfolio.css";
 
 let id = 0;
 
 function SoftwareProjectCard(props) {
   return (
-    <div>
-
+    <div className='project-card'>
+      {/* <img className="project-card-image" src={"ambulateart/images/softwarepics/pokedexex.png"}>
+      </img> */}
     </div>
   );
 }
@@ -46,40 +37,30 @@ class Portfolio extends Component {
     return (
       <div id="portfolio">
         <Fade left>
-          <p>Front-End Projects</p>
-          <div className="projects-one">
-            
-            <Fade left duration={500}>
-              <div>
-                <div className="p1-1-container">
-                    <SoftwareProjectCard/>
-                </div>
-              </div>
-            </Fade>
-
-            <Fade left duration={750}>
-              <div>
-                <div className="p1-2-container">
-                  <SoftwareProjectCard/>
-                </div>
-              </div>
-            </Fade>
-
-            <Fade left duration={1000}>
-              <div>
-                <div className="p1-3-container">
-                    <SoftwareProjectCard/>
-                </div>
-              </div>
-            </Fade>
+          <div className="front-end-projects">
+            <div className="label-container">
+              <p className="project-section-label-fe">Front-End Projects</p>
+              <hr className="label-bar-fe"></hr>
+            </div>
+            <div className='projects-container'>
+              <SoftwareProjectCard />
+              <SoftwareProjectCard />
+              <SoftwareProjectCard />
+            </div>
           </div>
         </Fade>
 
-        <Fade right>
-          <p>Back-End Projects</p>
-          <div className="projects-two">
-            <div className="p2-container">
 
+        <Fade right>
+          <div className="back-end-projects">
+            <div className="label-container">
+              <hr className="label-bar-be"></hr>
+              <p className="project-section-label-be">Back-End Projects</p>
+            </div>
+            <div className='projects-container'>
+              <SoftwareProjectCard />
+              <SoftwareProjectCard />
+              <SoftwareProjectCard />
             </div>
           </div>
         </Fade>
