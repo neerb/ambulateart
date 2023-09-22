@@ -373,7 +373,6 @@
 @media screen and (max-width: 800px) {
    .skill-windows {
       display: flex;
-
       justify-content: space-evenly;
       padding: 20px;
       align-self: center;
@@ -398,5 +397,11 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .can-work-text {
+      padding: 0 10px 0 10px;
    }
 }

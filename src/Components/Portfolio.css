@@ -1,24 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;600&display=swap');
 
 #portfolio {
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     background-color: #386641;
-    background: url("../../public/images/pixelspace.jpg");
-    background-repeat: no-repeat;
+    background: url("../../public/images/pixelrain.jpg");
+    background-repeat: repeat;
     background-attachment: fixed;
     background-size:cover;
     height: 100vh;
     max-height: fit-content;
     position: relative;
-    padding: 20px 0 20px 0;
 }
 
-.test {
-    height: 100vh;
+.magnet-left {
+    margin-right: auto;
 }
+
+.magnet-right {
+    margin-left: auto;
+}
+
+.portfolio-block {
+    margin: 70px auto 40px auto;
+    height: 100%;
+    width: 90%;
+    /* background: linear-gradient(#556b2fc4, #502f6bc4); */
+    text-align: center;
+    overflow: hidden;
+}
+
+.port-header {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 3em;
+    background-color: rgba(47, 79, 79, 0.701);
+    padding: 15px 5px 15px 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.header-spanelement {
+    color: rgb(198, 198, 198)
+}
+
+.header-spancompo {
+    color: rgb(135, 250, 166);
+}
+
+.header-spanslash {
+    color:#ff6164;
+}
+
+.header-spanprops {
+    color: lightblue;
+}
+
+.projects-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#556b2fc4, #502f6bc4);
+    border-radius: 10px;
+}
+
+.projects-wrapper::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: fit-content;
+    background-image: url("../../public/images/pixelspace.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    opacity: 0.3;
+    filter: invert(.75);
+    border-radius: 10px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    /* background-color: black; */
+    z-index: 1;
+    margin: 10px 5px 10px 5px;
+}
+
+.main-card {
+    background-color: black;
+    width: 250px;
+    height: 175px;
+}
+
+.stack-card-overlay {
+    width: 130px;
+    height: 85px;
+    margin-left: 200px;
+    margin-top: -30px;
+    background-color: bisque;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .front-end-projects {
     display: flex;
@@ -110,12 +235,6 @@
     display: flex;
     flex-direction: row;
 }
-
-.project-card {
-    height: 200px;
-    width: 150px;
-}
-
 
 .project-card-img {
     max-width: 250px;
