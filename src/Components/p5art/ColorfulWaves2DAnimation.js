@@ -30,7 +30,7 @@ class ColorfulWave2DAnimation extends Component {
 
             this.angle += 1;
             for (let x = 0; x <= p.width + 100; x += 10) {
-                let y = p.sin(p.radians(x + this.angle)) * 100;
+                let y = p.noise(p.radians(x + this.angle)) * 100;
                 wave[x / 10] = y;
             }
         }

@@ -107,7 +107,11 @@
     "software": [
       {
         "title":"React Pokedex: Pokemon API",
-        "technologies":"React.js, CSS styled from scratch",
+        "technologies":[
+          "React",
+          "CSS",
+          "PokeAPI (RESTful)"
+        ],
         "desc":"Retro-minimalist style and fully responsive Pokedex interface using the PokeAPI (RESTful), React, and styling CSS from scratch.",
         "image":"pokedexex.png",
         "demo":"https://neerb.github.io/pokedex-v2/",
@@ -115,7 +119,11 @@
       },
       {
         "title":"Unthink AI E-Commerce Product Uploader(Front-end Team)",
-        "technologies":"React.js, Gatsby, TailwindCSS, Ant Design",
+        "technologies": [
+          "Gatsby React",
+          "TailwindCSS",
+          "Ant Design Components"
+        ],
         "desc":"Developed the front-end user interface with coordination of back-end team, enabling users to upload .csv and .xlsx product catalog files to be parsed, uploaded, and processed to a back-end database containing online e-commerce product data via a Django implemented RESTful API.",
         "image":"unthinkAI.png",
         "demo":"",
@@ -123,7 +131,10 @@
       },
       {
         "title":"A Simple ToDo List Applet",
-        "technologies":"React.js, CSS from scratch",
+        "technologies":[
+          "React",
+          "Native CSS"
+        ],
         "desc":"The standard ToDo list project built in React, it's that simple.",
         "image":"todolist.png",
         "demo":"https://neerb.github.io/boofed-todolist/",
@@ -131,7 +142,10 @@
       },
       {
         "title":"Pho-Ballah Restaurant Concept Landing Page",
-        "technologies":"React.js, CSS from scratch",
+        "technologies":[
+          "React", 
+          "Native CSS"
+        ],
         "desc":"A concept restaurant landing page for a fine-dining Pho restaurant.",
         "image":"phoballah.png",
         "demo":"https://neerb.github.io/pho-ballah-landingpage-informationsite/",
@@ -139,7 +153,10 @@
       },
       {
         "title":"ProgrammerCalculator: A Windows Programming Calculator Remake",
-        "technologies":"Native Java, Java Swing Components",
+        "technologies":[
+          "Java",
+          "Swing Components"
+        ],
         "desc":"University Project: A complete recreation of the Windows Programmer Caculator implementing an Infix/Postfix expression reducing and solving algorithm.",
         "image":"calculator.png",
         "demo":"https://github.com/neerb/ProgrammerCalculator",

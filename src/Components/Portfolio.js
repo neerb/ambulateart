@@ -20,6 +20,10 @@ import LaughingFaces from "./p5art/LaughingFaces";
 import WildFaces from "./p5art/WildFaces";
 import AnimatedDetailedHumanFace from "./p5art/AnimatedDetailedHumanface";
 import MenacingFace from "./p5art/MenacingFace";
+import Kaleidoscope2D from "./p5art/Kaleidoscope2D";
+import DetailedKaleidoscope2D from "./p5art/DetailedKaleidoscope2D";
+import Psychedelic3D from "./p5art/Psychedelic3D";
+import AnimatedFlowerBouquet from "./p5art/AnimatedFlowerBouqet";
 
 let id = 0;
 
@@ -27,6 +31,7 @@ function SoftwareProjectCard(props) {
   let reversePos = "reverse-order magnet-right";
 
   return (
+    <Fade left>
     <div className='project-card'>
       <h1 className="project-title">
         {">"} {props.projectData.title}
@@ -40,19 +45,23 @@ function SoftwareProjectCard(props) {
             {props.projectData.desc}
           </p>
 
-          <div>
+          <div className="tech-wrapper">
             <div className="tech-stack">
               <div className="stack-title">
-
+                  {"< Stack Used />"}
               </div>
 
               <div className="stack-info">
-
+                {props.projectData.technologies.map((t) => 
+                <p key={t}>
+                  {t}
+                </p>
+                )}
               </div>
             </div>
 
-            <div>
-              Live Demo and Source Links:
+            <div className="proj-links">
+              {/* Live Demo and Source Links: */}
               <a target='_blank' href={props.projectData.demo} className="header-button">
                 <FontAwesomeIcon icon={faLaptop} />
               </a>
@@ -61,12 +70,12 @@ function SoftwareProjectCard(props) {
               </a>
             </div>
           </div>
-
         </div>
       </div>
       {/* <img className="project-card-image" src={"ambulateart/images/softwarepics/pokedexex.png"}>
       </img> */}
     </div>
+    </Fade>
   );
 }
 
@@ -129,7 +138,11 @@ class Portfolio extends Component {
                 {/* <LaughingFaces /> */}
                 {/* <WildFaces /> */}
                 {/* <AnimatedDetailedHumanFace /> */}
-                <MenacingFace />
+                {/* <MenacingFace /> */}
+                {/* <Kaleidoscope2D/> */}
+                {/* <DetailedKaleidoscope2D/> */}
+                {/* <Psychedelic3D/> */}
+                {/* <AnimatedFlowerBouquet/> */}
               </div>
             </div>
           </div>
