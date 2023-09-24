@@ -137,7 +137,6 @@ function SkillTextCard(props) {
         <div className='skills-text-wrapper' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
           <h1 className='skills-text-bubble-text'>{props.titleText}</h1>
           <p>{props.skillsText}</p>
-
         </div>
       </div>
     </Draggable>
@@ -222,6 +221,7 @@ class About extends Component {
               {/* <hr></hr> */}
               <SkillTextCard programText="!!!" titleText="Click & Drag us" skillsText=":}" />
               {/* </div> */}
+              <SkillTextCard programText="About Me" titleText="Who am I?" skillsText="B.S. Computer Science Graduate (The University of Texas at Dallas). My passion lies within learning new programming techniques and skills. During my studies and spare time, I have developed a wide range of applications: varying from fully-responsive full-stack web pages, data structure implementations, all they way to API integrated Twitter bots. I have experience in multiple languages & frameworks such as C#, C++, Java, JavaScript, and React. While I mainly enjoy working on front-end applications and doing styling with CSS(libraries/native) and HTML, I also enjoy the process of full-stack development by implementing back-end technologies like MongoDB and Express.js RESTful API services. Likewise, I enjoy attending hackathons, creating desktop and mobile applications, and solving coding problems." />
 
               {/* <div className="skills-list-windows"> */}
               <SkillCard programText="Front-End" pics={this.state.frontEndPics} />

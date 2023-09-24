@@ -1,21 +1,68 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
 import "./Portfolio.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faCircleChevronDown, faLaptop } from "@fortawesome/free-solid-svg-icons";
+import TimesTables from "./p5art/TimesTables";
+import PerlinNoise2D from "./p5art/PerlinNoise2D";
+import Unknownp5 from "./p5art/Unknownp5";
+import Colorful3DAnimation from "./p5art/Colorful3DAnimation";
+import Triangular3DAnimation from "./p5art/Triangular3DAnimation";
+import ColorfulBouncingBalls from "./p5art/ColorfulBouncingBalls";
+import ColorfulBouncingBalls3D from "./p5art/ColorfulBouncingBalls3D";
+import ColorfulWaves3DAnimation from "./p5art/ColorfulWaves3DAnimation";
+import ColorfulWave2DAnimation from "./p5art/ColorfulWaves2DAnimation";
+import GravitySimulation2D from "./p5art/GravitySimulation2D";
+import SolarSystem3DAnimation from "./p5art/SolarSystem3DAnimation";
+import SolarSystem3D from "./p5art/SolarSystem3D";
+import LaughingFaces from "./p5art/LaughingFaces";
+import WildFaces from "./p5art/WildFaces";
+import AnimatedDetailedHumanFace from "./p5art/AnimatedDetailedHumanface";
+import MenacingFace from "./p5art/MenacingFace";
 
 let id = 0;
 
 function SoftwareProjectCard(props) {
+  let reversePos = "reverse-order magnet-right";
+
   return (
     <div className='project-card'>
-      <h1>
-        {props.projectData.title}
+      <h1 className="project-title">
+        {">"} {props.projectData.title}
       </h1>
-      <div className="main-card">
+      <div className={"project-info " + (props.right ? reversePos : null)}>
+        <img src={"ambulateart/images/softwarepics/" + props.projectData.image}>
+        </img>
 
-      </div>
+        <div className="proj-desc-links">
+          <p>
+            {props.projectData.desc}
+          </p>
 
-      <div className="stack-card-overlay">
+          <div>
+            <div className="tech-stack">
+              <div className="stack-title">
 
+              </div>
+
+              <div className="stack-info">
+
+              </div>
+            </div>
+
+            <div>
+              Live Demo and Source Links:
+              <a target='_blank' href={props.projectData.demo} className="header-button">
+                <FontAwesomeIcon icon={faLaptop} />
+              </a>
+              <a target='_blank' href={props.projectData.source} className="header-button">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </div>
+          </div>
+
+        </div>
       </div>
       {/* <img className="project-card-image" src={"ambulateart/images/softwarepics/pokedexex.png"}>
       </img> */}
@@ -49,18 +96,44 @@ class Portfolio extends Component {
         <div className="portfolio-block">
           <Fade>
             <h1 className='port-header'>
-              <span className="header-spanelement">{"<"}</span> 
+              <span className="header-spanelement">{"<"}</span>
               <span className="header-spancompo">{"My"}</span>
-              <span className="header-spanprops">{" works"}</span> 
+              <span className="header-spanprops">{" works"}</span>
               <span className="header-spanslash">{"/"}</span>
               <span className="header-spanelement">{">"}</span>
             </h1>
           </Fade>
-          
+
           <div className="projects-wrapper">
-            <SoftwareProjectCard projectData={this.props.data.software[0]}/>
+            <SoftwareProjectCard projectData={this.props.data.software[0]} />
+            <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
+            <SoftwareProjectCard projectData={this.props.data.software[2]} />
+            <div className='project-card'>
+              <h1 className="project-title">
+                {">"} Procedural Programming Art (p5.js)
+              </h1>
+
+              <div className="programming-art">
+                {/* <TimesTables /> */}
+                {/* <PerlinNoise2D /> */}
+                {/* <Unknownp5 /> */}
+                {/* <Colorful3DAnimation /> */}
+                {/* <Triangular3DAnimation /> */}
+                {/* <ColorfulBouncingBalls /> */}
+                {/* <ColorfulBouncingBalls3D /> */}
+                {/* <ColorfulWaves3DAnimation /> */}
+                {/* <ColorfulWave2DAnimation /> */}
+                {/* <GravitySimulation2D /> */}
+                {/* <SolarSystem3DAnimation /> */}
+                {/* <SolarSystem3D /> */}
+                {/* <LaughingFaces /> */}
+                {/* <WildFaces /> */}
+                {/* <AnimatedDetailedHumanFace /> */}
+                <MenacingFace />
+              </div>
+            </div>
           </div>
-          
+
         </div>
 
         {/* <Fade left>

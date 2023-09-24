@@ -11,7 +11,7 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
+    const linkedin = this.props.data.linkedin;
     const github = this.props.data.github;
     const name = this.props.data.name;
     const description = this.props.data.description;
@@ -39,7 +39,7 @@ class Header extends Component {
           <h1 className="header-name shineeffect">{name}</h1>
           <Fade bottom duration={1200}>
             <TypeAnimation
-              sequence={["> I am a UI Developer", 1500, "> I am a UX Designer", 1500, "> I am a Software Engineer", 1500, '> I am an Ambulator', 1500]}
+              sequence={["> I am a Web Developer", 1500, "> I am a UI/UX Designer", 1500, "> I am a Software Engineer", 1500, "> I am a Full-Stack Developer", 1500, , '> I am an Ambulator', 1500]}
               className='header-desc'
               repeat={Infinity}
             />
@@ -48,10 +48,10 @@ class Header extends Component {
           <hr className="header-bar" />
           <Fade bottom duration={2000}>
             <div className="header-buttons">
-              <a href={github} className="header-button">
+              <a target='_blank' href={github} className="header-button">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a href={project} className="header-button">
+              <a target='_blank' href={linkedin} className="header-button">
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
               {/* <a href={project} className="button btn project-btn">

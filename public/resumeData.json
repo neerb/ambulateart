@@ -8,7 +8,7 @@
     "email": "natbreenx@gmail.com",
     "phone": "777-777-7777",
     "github":"https://github.com/neerb",
-    "project":"https://github.com/neerb",
+    "linkedin":"https://www.linkedin.com/in/nathan-breen-35196817b/",
     "address":{
       "street":"(Your Street)",
       "city":"(Your City)",
@@ -20,13 +20,11 @@
     "social":[
       {
         "name":"linkedin",
-        "url":"https://www.linkedin.com/in/nathan-breen-35196817b/",
-        "className":"fa fa-linkedin"
+        "url":"https://www.linkedin.com/in/nathan-breen-35196817b/"
       }, 
       {
         "name":"github",
-        "url":"https://github.com/neerb",
-        "className":"fa fa-github"
+        "url":"https://github.com/neerb"
       }
     ]
   },
@@ -113,18 +111,18 @@
         "desc":"Retro-minimalist style and fully responsive Pokedex interface using the PokeAPI (RESTful), React, and styling CSS from scratch.",
         "image":"pokedexex.png",
         "demo":"https://neerb.github.io/pokedex-v2/",
-        "source": ""
+        "source": "https://github.com/neerb/pokedex-v2"
       },
       {
-        "title":"Unthink AI E-Commerce Product Uploader(Front-end interface)",
+        "title":"Unthink AI E-Commerce Product Uploader(Front-end Team)",
         "technologies":"React.js, Gatsby, TailwindCSS, Ant Design",
-        "desc":"Developed the front-end user interface with coordination of back-end team, enabling users to upload .csv and .xlsx product catalog files to be parsed, uploaded, and processed to a back-end database containing online e-commerce product data via a RESTful API.",
+        "desc":"Developed the front-end user interface with coordination of back-end team, enabling users to upload .csv and .xlsx product catalog files to be parsed, uploaded, and processed to a back-end database containing online e-commerce product data via a Django implemented RESTful API.",
         "image":"unthinkAI.png",
         "demo":"",
         "source":""
       },
       {
-        "title":"A Simple ToDo List",
+        "title":"A Simple ToDo List Applet",
         "technologies":"React.js, CSS from scratch",
         "desc":"The standard ToDo list project built in React, it's that simple.",
         "image":"todolist.png",
