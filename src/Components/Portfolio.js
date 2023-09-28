@@ -25,6 +25,8 @@ import Kaleidoscope2D from "./p5art/Kaleidoscope2D";
 import DetailedKaleidoscope2D from "./p5art/DetailedKaleidoscope2D";
 import Psychedelic3D from "./p5art/Psychedelic3D";
 import AnimatedFlowerBouquet from "./p5art/AnimatedFlowerBouqet";
+import Draggable from "react-draggable";
+import { useState } from "react";
 
 
 let colorGradients = [
@@ -107,6 +109,48 @@ function SoftwareProjectCard(props) {
   );
 }
 
+function SkillCard(props) {
+  let minimizedStylesHandle = 'handle box-shadow';
+  let maximizedStylesHandle = 'handle';
+  let skillCardNoShadow = 'multi-array-window';
+  let skillCardShadow = 'multi-array-window box-shadow';
+
+  const [minimized, setMinimized] = useState(false);
+
+
+  function handleMinimize(e) {
+    setMinimized(!minimized);
+  }
+
+  return (
+    // <div className="skill-img-label">
+    <Draggable
+      handle=".handle"
+      defaultPosition={{ x: 0, y: 0 }}
+      scale={1}>
+      <div className={minimized ? skillCardNoShadow : skillCardShadow}>
+        <div className={minimized ? minimizedStylesHandle : maximizedStylesHandle}>
+          <button className='minimize-btn' style={{ backgroundColor: minimized ? "green" : "red" }} onClick={handleMinimize}></button>
+          <div className='program-title'>
+            <div className='program-line'></div>
+            <h1 className='skills-text-title'>{props.programText}</h1>
+            <div className='program-line'></div>
+          </div>
+        </div>
+        <div className='multi-image-skill-wrapper' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
+          {props.artComp}
+          {/* {props.pics.map((skill) => {
+            { console.log(skill) }
+            <img className='multi-image-skill-image' alt='skill' src={"ambulateart/images/skillpics/" + skill.src}></img>
+          })} */}
+        </div>
+      </div>
+    </Draggable>
+    // </div>
+  );
+}
+
+
 class Portfolio extends Component {
   constructor(props) {
     super(props);
@@ -146,22 +190,27 @@ class Portfolio extends Component {
               <SoftwareProjectCard projectData={this.props.data.software[0]} />
               <SoftwareProjectCard projectData={this.props.data.software[2]} />
               <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
-
+              {/* <SkillCard programText="p5.js" artComp={<PerlinNoise2D />} /> */}
             </div>
 
             <div className="project-list">
               <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
               <SoftwareProjectCard projectData={this.props.data.software[0]} />
               <SoftwareProjectCard projectData={this.props.data.software[2]} />
+              {/* <SkillCard programText="p5.js" artComp={<ColorfulBouncingBalls />} /> */}
 
             </div>
             <div className="block"></div>
+
             <div className='project-card'>
               <h1 className="project-title">
                 {">"} Procedural Programming Art (p5.js)
               </h1>
+              {/* <SkillCard programText="p5.js" artComp={<PerlinNoise2D />} />
+              <SkillCard programText="p5.js" artComp={<ColorfulBouncingBalls />} /> */}
 
               <div className="programming-art">
+
                 {/* <TimesTables /> */}
                 {/* <PerlinNoise2D /> */}
                 {/* <Unknownp5 /> */}

@@ -122,7 +122,8 @@
         "technologies": [
           "Gatsby React",
           "TailwindCSS",
-          "Ant Design Components"
+          "Ant Design Components",
+          "Django REST Framework"
         ],
         "desc":"Developed the front-end user interface with coordination of back-end team, enabling users to upload .csv and .xlsx product catalog files to be parsed, uploaded, and processed to a back-end database containing online e-commerce product data via a Django implemented RESTful API.",
         "image":"unthinkAI.png",

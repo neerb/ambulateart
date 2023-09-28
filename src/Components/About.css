@@ -80,11 +80,19 @@
 
 .skill-windows {
    display: flex;
-   flex-direction:row;
+   flex-direction: row;
    flex-wrap: wrap;
    justify-content: center;
    padding: 20px;
    align-self: center;
+}
+
+.skills-left {
+   margin-left: auto;
+}
+
+.skills-right {
+
 }
 
 .can-work {
@@ -100,9 +108,9 @@
    font-family: 'Roboto Mono', monospace;
    color: black;
    margin: 85px auto 50px auto;
-   padding: 0 10px;
+   padding: 5px 10px;
    background-color: rgb(255, 231, 201);
-   box-shadow:  -8px -8px #00A4BD, 6px 6px #FF7A59;
+   box-shadow:  -8px -6px #00A4BD, 6px 6px #FF7A59;
 }
 
 .can-work-text span {
@@ -340,7 +348,7 @@
 }
 
 .continue-handle {
-   width: 120px;
+   width: 175px;
    display: flex;
    flex-direction: row;
    border: 3px black solid;
