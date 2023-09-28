@@ -96,14 +96,18 @@
 }
 
 .can-work-text {
-   font-size: 50px;
+   font-size: 35px;
    font-family: 'Roboto Mono', monospace;
-   color: white;
-   margin: 50px 0 50px 0;
+   color: black;
+   margin: 85px auto 50px auto;
+   padding: 0 10px;
+   background-color: rgb(255, 231, 201);
+   box-shadow:  -8px -8px #00A4BD, 6px 6px #FF7A59;
 }
 
 .can-work-text span {
-   color: salmon;
+   color: rgb(199, 32, 32);
+   font-style: italic;
 }
 
 .about-work h1 {
@@ -404,6 +408,6 @@
 
 @media screen and (max-width: 500px) {
    .can-work-text {
-      padding: 0 10px 0 10px;
+      /* padding: 0 10px 0 10px; */
    }
 }

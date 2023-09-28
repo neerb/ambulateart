@@ -28,11 +28,11 @@ import AnimatedFlowerBouquet from "./p5art/AnimatedFlowerBouqet";
 
 
 let colorGradients = [
-  "linear-gradient(#556b2fc4, #502f6bc4)",
-  "linear-gradient(#a9ff68c4, #5cb270c4)",
-  "linear-gradient(#ef745cc4, #34073dc4)",
-  "linear-gradient(#6eee87c4, #5fc52ec4)",
-  "linear-gradient(#fbd07cc4, #f7f779c4)"
+  "linear-gradient(-45deg, #556b2f 50%, #502f6bc4 50%)",
+  "linear-gradient(-45deg, #a9ff68 50%, #5cb270c4 50%)",
+  "linear-gradient(-45deg, #ef745c 50%, #34073dc4 50%)",
+  "linear-gradient(-45deg, #c27ba0 50%, #5fc52ec4 50%)",
+  "linear-gradient(-45deg, #fbd07c 50%, #f7f779c4 50%)"
 ];
 
 let colors = [
@@ -50,53 +50,58 @@ function SoftwareProjectCard(props) {
 
   return (
     <Fade left>
-      <div className='project-card grid-item' style={{ background: colorGradients[Math.floor(Math.random() * 5)] }}>
-        <h1 className="project-title">
-          <TypeAnimation
-            sequence={["> " + props.projectData.title]}
-          />
-        </h1>
-        <div className={"project-info " + (props.right ? reversePos : null)}>
-          <img src={"ambulateart/images/softwarepics/" + props.projectData.image}>
-          </img>
+      <div className="border-aim">
 
-          <div className="proj-desc-links">
-            <p style={{
-              background: "linear-gradient(to right, " + colors[Math.floor(Math.random() * 5)] + ", black)"
-            }}>
+        <div className="project-card" style={{
+          // background: colorGradients[Math.floor(Math.random() * 5)]
+        }}>
+          <h1 className="project-title">
+            <TypeAnimation
+              sequence={["> " + props.projectData.title]}
+            />
+          </h1>
+          <div className={"project-info " + (props.right ? reversePos : null)}>
+            <img className="" src={"ambulateart/images/softwarepics/" + props.projectData.image}>
+            </img>
 
-              {props.projectData.desc}
-            </p>
-            <hr></hr>
-            <div className="tech-wrapper">
-              <div className="tech-stack">
-                <div className="stack-title">
-                  {"< Stack Used />"}
+            <div className="proj-desc-links ">
+              <p style={{
+                background: "linear-gradient(-45deg, #333333c4" + /*colors[Math.floor(Math.random() * 5)] + */" 50%, #000000c4 50%)",
+              }}>
+
+                {props.projectData.desc}
+              </p>
+              <hr></hr>
+              <div className="tech-wrapper">
+                <div className="tech-stack">
+                  <div className="stack-title">
+                    {"< Stack Used />"}
+                  </div>
+
+                  <div className="stack-info">
+                    {props.projectData.technologies.map((t) =>
+                      <p key={t}>
+                        {t}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
-                <div className="stack-info">
-                  {props.projectData.technologies.map((t) =>
-                    <p key={t}>
-                      {t}
-                    </p>
-                  )}
+                <div className="proj-links">
+                  {/* Live Demo and Source Links: */}
+                  <a target='_blank' href={props.projectData.demo} className="proj-button border-aim-btn">
+                    <FontAwesomeIcon icon={faLaptop} />
+                  </a>
+                  <a target='_blank' href={props.projectData.source} className="proj-button border-aim-btn">
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
                 </div>
-              </div>
-
-              <div className="proj-links">
-                {/* Live Demo and Source Links: */}
-                <a target='_blank' href={props.projectData.demo} className="proj-button">
-                  <FontAwesomeIcon icon={faLaptop} />
-                </a>
-                <a target='_blank' href={props.projectData.source} className="proj-button">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
               </div>
             </div>
           </div>
-        </div>
-        {/* <img className="project-card-image" src={"ambulateart/images/softwarepics/pokedexex.png"}>
+          {/* <img className="project-card-image" src={"ambulateart/images/softwarepics/pokedexex.png"}>
       </img> */}
+        </div>
       </div>
     </Fade>
   );
@@ -137,12 +142,20 @@ class Portfolio extends Component {
           </Fade>
 
           <div className="projects-wrapper">
-            <SoftwareProjectCard projectData={this.props.data.software[0]} />
-            <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
-            <SoftwareProjectCard projectData={this.props.data.software[2]} />
-            <SoftwareProjectCard projectData={this.props.data.software[0]} />
-            <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
-            <SoftwareProjectCard projectData={this.props.data.software[2]} />
+            <div className="project-list">
+              <SoftwareProjectCard projectData={this.props.data.software[0]} />
+              <SoftwareProjectCard projectData={this.props.data.software[2]} />
+              <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
+
+            </div>
+
+            <div className="project-list">
+              <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
+              <SoftwareProjectCard projectData={this.props.data.software[0]} />
+              <SoftwareProjectCard projectData={this.props.data.software[2]} />
+
+            </div>
+            <div className="block"></div>
             <div className='project-card'>
               <h1 className="project-title">
                 {">"} Procedural Programming Art (p5.js)

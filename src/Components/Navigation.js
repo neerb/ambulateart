@@ -7,6 +7,7 @@ import { blue } from '@mui/material/colors';
 function Navigation() {
     const [activeSection, setActiveSection] = useState('home');
     const [toggleMenu, setToggleMenu] = useState(false);
+    const [solidBg, setSolidBg] = useState(false);
 
     useEffect(() => {
         const hrefPos = window.location.hash.substring(1);
@@ -65,7 +66,7 @@ function Navigation() {
 
     return (
         <nav className="navbar-top">
-            <ul>
+            <ul className='solidbg'>
                 <li className={activeSection === 'home' ? 'active' : ''}><a href="#home">Home</a></li>
                 <li className={activeSection === 'about' ? 'active' : ''}><a href="#about">About</a></li>
                 {/* <li className={activeSection === 'resume' ? 'active' : ''}><a href="#resume">Resume</a></li> */}

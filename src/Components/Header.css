@@ -97,10 +97,40 @@
     color: white;
     padding: 0 15px 0 15px;
     transition: 0.5s;
+    margin: 0 10px 0 10px;
 }
 
 .header-button:hover {
     color:#4AF626;
+}
+
+.aim-btn {
+    --gg: 2px;     /* the gap */
+    --bb: 4px;    /* border thickness*/
+    --cc: rgba(0, 0, 0, 0); /* the color */
+
+
+    padding: calc(var(--gg) + var(--bb));
+    --_cc: #0000 0 25%, var(--cc) 0 50%;
+    --_gg1: repeating-linear-gradient(90deg ,var(--_cc)) repeat-x;
+    --_gg2: repeating-linear-gradient(180deg,var(--_cc)) repeat-y;
+    /* background:
+        var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+        var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%); */
+    background:
+        var(--_gg1) var(--_pp, 25%) 0   ,var(--_gg2) 0    var(--_pp,125%),
+        var(--_gg1) var(--_pp,125%) 100%,var(--_gg2) 100% var(--_pp, 25%);
+        
+    background-size: 200% var(--bb),var(--bb) 200%;
+    /* cursor: pointer; */
+    transition: .3s;
+}
+
+.aim-btn:hover {
+    /* --bb: 10px; */
+    --cc: gold; /* the color */
+    --_pp: 75%;
+    filter: grayscale(0%);
 }
 
 .scrolldown {

@@ -199,11 +199,11 @@ class About extends Component {
       <div id="about" className='about'>
         <Fade>
           {/* <div className='about-wrapper'> */}
-          <Fade top>
-            <div className="can-work">
-              <h1 className="can-work-text">I work <span>with...</span></h1>
-            </div>
-          </Fade>
+          <div className="can-work">
+            <Fade left>
+              <h1 className="can-work-text">Some things <span>about me...</span></h1>
+            </Fade>
+          </div>
           {/* <div className='about-outer-skills'> */}
           <div className='skill-windows'>
             <Fade left>
@@ -221,10 +221,10 @@ class About extends Component {
               {/* <hr></hr> */}
               <SkillTextCard programText="!!!" titleText="Click & Drag us" skillsText=":}" />
               {/* </div> */}
-              <SkillTextCard programText="About Me" titleText="Who am I?" skillsText="B.S. Computer Science Graduate (The University of Texas at Dallas). My passion lies within learning new programming techniques and skills. During my studies and spare time, I have developed a wide range of applications: varying from fully-responsive full-stack web pages, data structure implementations, all they way to API integrated Twitter bots. I have experience in multiple languages & frameworks such as C#, C++, Java, JavaScript, and React. While I mainly enjoy working on front-end applications and doing styling with CSS(libraries/native) and HTML, I also enjoy the process of full-stack development by implementing back-end technologies like MongoDB and Express.js RESTful API services. Likewise, I enjoy attending hackathons, creating desktop and mobile applications, and solving coding problems." />
 
               {/* <div className="skills-list-windows"> */}
               <SkillCard programText="Front-End" pics={this.state.frontEndPics} />
+              <SkillTextCard programText="About Me" titleText="Who am I?" skillsText="B.S. Computer Science Graduate (The University of Texas at Dallas). My passion lies within learning new programming techniques and skills. During my studies and spare time, I have developed a wide range of applications: varying from fully-responsive full-stack web pages, data structure implementations, all they way to API integrated Twitter bots. I have experience in multiple languages & frameworks such as C#, C++, Java, JavaScript, and React. While I mainly enjoy working on front-end applications and doing styling with CSS(libraries/native) and HTML, I also enjoy the process of full-stack development by implementing back-end technologies like MongoDB and Express.js RESTful API services. Likewise, I enjoy attending hackathons, creating desktop and mobile applications, and solving coding problems." />
               <SkillCard programText="Back-End/Programming Languages" pics={this.state.backEndPics} />
               <SkillCard programText="Version Control" pics={this.state.versionControlPics} />
               {/* </div> */}
@@ -234,7 +234,7 @@ class About extends Component {
           {/* </div> */}
           {/* </div> */}
         </Fade>
-      </div>
+      </div >
     );
   }
 }

@@ -48,10 +48,10 @@ class Header extends Component {
           <hr className="header-bar" />
           <Fade bottom duration={2000}>
             <div className="header-buttons">
-              <a target='_blank' href={github} className="header-button">
+              <a target='_blank' href={github} className="header-button aim-btn">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a target='_blank' href={linkedin} className="header-button">
+              <a target='_blank' href={linkedin} className="header-button aim-btn">
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
               {/* <a href={project} className="button btn project-btn">
