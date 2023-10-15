@@ -134,7 +134,7 @@
         "title":"A Simple ToDo List Applet",
         "technologies":[
           "React",
-          "Native CSS"
+          "CSS"
         ],
         "desc":"The standard ToDo list project built in React, it's that simple.",
         "image":"todolist.png",
@@ -145,7 +145,7 @@
         "title":"Pho-Ballah Restaurant Concept Landing Page",
         "technologies":[
           "React", 
-          "Native CSS"
+          "CSS"
         ],
         "desc":"A concept restaurant landing page for a fine-dining Pho restaurant.",
         "image":"phoballah.png",
@@ -156,11 +156,22 @@
         "title":"ProgrammerCalculator: A Windows Programming Calculator Remake",
         "technologies":[
           "Java",
-          "Swing Components"
+          "Java Swing Library"
         ],
         "desc":"University Project: A complete recreation of the Windows Programmer Caculator implementing an Infix/Postfix expression reducing and solving algorithm.",
         "image":"calculator.png",
         "demo":"https://github.com/neerb/ProgrammerCalculator",
+        "source":""
+      },
+      {
+        "title":"Ambulation Zone",
+        "technologies":[
+          "Java",
+          "Swing Components"
+        ],
+        "desc":"Any thought or programming related idea or concept that may pop into my head (usually front-end related) is published to this site.  This is best experienced on a PC/Desktop.",
+        "image":"ambulationzone.png",
+        "demo":"",
         "source":""
       } 
     ],

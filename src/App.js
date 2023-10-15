@@ -49,7 +49,7 @@ class App extends Component {
         {/* <Resume data={this.state.resumeData.resume} /> */}
         <Portfolio data={this.state.resumeData.portfolio} id='portfolio' />
         <Contact data={this.state.resumeData.main} />
-        <Footer data={this.state.resumeData.main} />
+        {/* <Footer data={this.state.resumeData.main} /> */}
       </div>
     );
   }

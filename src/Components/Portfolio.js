@@ -53,7 +53,6 @@ function SoftwareProjectCard(props) {
   return (
     <Fade left>
       <div className="border-aim">
-
         <div className="project-card" style={{
           // background: colorGradients[Math.floor(Math.random() * 5)]
         }}>
@@ -189,82 +188,23 @@ class Portfolio extends Component {
             <div className="project-list">
               <SoftwareProjectCard projectData={this.props.data.software[0]} />
               <SoftwareProjectCard projectData={this.props.data.software[2]} />
-              <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
+              <SoftwareProjectCard projectData={this.props.data.software[4]} />
               {/* <SkillCard programText="p5.js" artComp={<PerlinNoise2D />} /> */}
             </div>
 
             <div className="project-list">
               <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
-              <SoftwareProjectCard projectData={this.props.data.software[0]} />
-              <SoftwareProjectCard projectData={this.props.data.software[2]} />
+              <SoftwareProjectCard projectData={this.props.data.software[3]} right={true} />
               {/* <SkillCard programText="p5.js" artComp={<ColorfulBouncingBalls />} /> */}
 
             </div>
-            <div className="block"></div>
-
-            <div className='project-card'>
-              <h1 className="project-title">
-                {">"} Procedural Programming Art (p5.js)
-              </h1>
-              {/* <SkillCard programText="p5.js" artComp={<PerlinNoise2D />} />
-              <SkillCard programText="p5.js" artComp={<ColorfulBouncingBalls />} /> */}
-
-              <div className="programming-art">
-
-                {/* <TimesTables /> */}
-                {/* <PerlinNoise2D /> */}
-                {/* <Unknownp5 /> */}
-                {/* <Colorful3DAnimation /> */}
-                {/* <Triangular3DAnimation /> */}
-                {/* <ColorfulBouncingBalls /> */}
-                {/* <ColorfulBouncingBalls3D /> */}
-                {/* <ColorfulWaves3DAnimation /> */}
-                {/* <ColorfulWave2DAnimation /> */}
-                {/* <GravitySimulation2D /> */}
-                {/* <SolarSystem3DAnimation /> */}
-                {/* <SolarSystem3D /> */}
-                {/* <LaughingFaces /> */}
-                {/* <WildFaces /> */}
-                {/* <AnimatedDetailedHumanFace /> */}
-                {/* <MenacingFace /> */}
-                {/* <Kaleidoscope2D/> */}
-                {/* <DetailedKaleidoscope2D/> */}
-                {/* <Psychedelic3D/> */}
-                {/* <AnimatedFlowerBouquet/> */}
-              </div>
-            </div>
           </div>
-
         </div>
 
-        {/* <Fade left>
-          <div className="front-end-projects">
-            <div className="label-container">
-              <p className="project-section-label-fe">Front-End Projects</p>
-              <hr className="label-bar-fe"></hr>
-            </div>
-            <div className='projects-container'>
-              <SoftwareProjectCard />
-              <SoftwareProjectCard />
-              <SoftwareProjectCard />
-            </div>
-          </div>
-        </Fade>
-
-
-        <Fade right>
-          <div className="back-end-projects">
-            <div className="label-container">
-              <hr className="label-bar-be"></hr>
-              <p className="project-section-label-be">Back-End Projects</p>
-            </div>
-            <div className='projects-container'>
-              <SoftwareProjectCard />
-              <SoftwareProjectCard />
-              <SoftwareProjectCard />
-            </div>
-          </div>
-        </Fade> */}
+        {/* <div className="programming-art">
+          <SkillCard programText="p5.js" artComp={<PerlinNoise2D />} />
+          <SkillCard programText="p5.js" artComp={<SolarSystem3D />} />
+        </div> */}
       </div >
     );
 
