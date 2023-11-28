@@ -2,10 +2,15 @@
 
 
 :root {
-   --bgc: #ffd8d8;
+   /* --bgc: #ffd8d8;
    --bgc2: #bbff8e;
    --bgc3: #8eacff;
-   --bggc: rgb(0, 0, 139);
+   --bggc: rgb(0, 0, 139); */
+   --bgc: #ffe1a8;
+   --bgc2: #c75d6d;
+   --bgc3: #B49FCC;
+   --bgc4: #cc9faa;
+   --bggc: rgb(4, 4, 7);
 }
 
 /* #about {
@@ -21,7 +26,7 @@
    /* background: url("../../public/images/graphbg.png"); */
    /* background-color: #F6F0BC; */
    border-top: gold 4px solid;
-   background: linear-gradient(var(--bgc), var(--bgc2), var(--bgc3));
+   background: linear-gradient(180deg, var(--bgc), var(--bgc2), var(--bgc3), var(--bgc4), var(--bgc));
    display: flex;
    flex-direction: column;
    height: auto;
@@ -30,7 +35,7 @@
    overflow: hidden;
 }
 
-   #about p {
+#about p {
    line-height: 25px;
 }
 
@@ -51,7 +56,7 @@
  .about-wrapper {
    display: flex;
    flex-direction: column;
-   height: 100%;
+   height: 100vh;
    overflow: hidden;
 
    background-image: linear-gradient(var(--bggc) .1em, transparent .1em), linear-gradient(90deg, var(--bggc) .1em, transparent .1em);
@@ -108,6 +113,7 @@
    justify-content: center;
    padding: 20px;
    align-self: center;
+   gap: 20px;
 }
 
 .skills-left {
@@ -339,7 +345,7 @@
    /* width: 185px; */
 }
 
-.multi-image-skill-wrapper {
+.multi-image-wrapper {
    display: flex;
    flex-direction: row;
    justify-content: center;
@@ -347,9 +353,9 @@
    background-color: #F6F0BC;
    height: fit-content;
    width: 100%;
-   border-left: 3px black solid;
+   /* border-left: 3px black solid;
    border-bottom: 3px black solid;
-   border-right: 3px black solid;
+   border-right: 3px black solid; */
 }
 .multi-image-skill {
 
@@ -370,7 +376,8 @@
 }
 
 .continue-handle {
-   width: 175px;
+   min-width: 175px;
+   max-width: 175px;
    display: flex;
    flex-direction: row;
    border: 3px black solid;
@@ -383,14 +390,11 @@
 }
 
 .continue-btn {
-   max-width: 100%;
+   width: 175px;
    text-align: center;
    /* padding: 10px 0 10px 0; */
    height: fit-content;
    background-color: #f7e7ce;
-   border-left: 3px black solid;
-   border-bottom: 3px black solid;
-   border-right: 3px black solid;
    padding: 8px 8px 8px 8px;
    background-color:bisque;
 }
@@ -436,8 +440,17 @@
    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
    .can-work-text {
-      /* padding: 0 10px 0 10px; */
+   }
+}
+
+@media screen and (max-width: 550px) {
+   .can-work {
+      max-width: 90vw;
+      margin: auto;
+   }
+   .can-work-text {
+      font-size: 28px;
    }
 }

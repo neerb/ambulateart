@@ -195,6 +195,7 @@ class Portfolio extends Component {
             <div className="project-list">
               <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
               <SoftwareProjectCard projectData={this.props.data.software[3]} right={true} />
+              <SoftwareProjectCard projectData={this.props.data.software[5]} right={true} />
               {/* <SkillCard programText="p5.js" artComp={<ColorfulBouncingBalls />} /> */}
 
             </div>
