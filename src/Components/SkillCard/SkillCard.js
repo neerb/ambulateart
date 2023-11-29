@@ -52,7 +52,8 @@ function SkillCard(props) {
                             <div className='program-line'></div>
                             <div className='program-line'></div>
                             <div className='program-line'></div>
-                        </div>                    </div>
+                        </div>
+                    </div>
                 </div>
                 <div className='multi-image-skill-wrapper' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
                     {props.artComp}

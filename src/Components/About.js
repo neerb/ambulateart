@@ -171,20 +171,53 @@ class About extends Component {
 
               {/* <Fade> */}
               <SkillCard programText="Debrief: Introduction" artComp={
-                <div className=''>
-                  <h1 className=''>{"ayeeeeee"}</h1>
-                  <p>{""}</p>
+                <div className='intro-wrap'>
+                  <h1 className='intro-title'>{"Welcome"}</h1>
+                  <p className="intro">
+                    Front-end focused web developer dedicated to building uniquely crafted user-interactive experiences.
+                    Computer Science graduate from The University of Texas at Dallas (UTD).
+                    I have a genuine zeal for exploring new programming techniques, skills, and implementations. In my academic journey and spare time, I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter bots.
+                    I'm comfortable with a range of languages and frameworks, including C#, C++, Java, JavaScript, and React. While I particularly enjoy front-end development, where I focus on styling/structuring with CSS and HTML, I also find time to appreciate the intricacies of full-stack development, incorporating technologies like MongoDB and Express.js for RESTful API services.
+                    I find joy in attending hackathons, working on desktop and mobile applications, and solving coding problems.
+                    Let's collaborate and create something together.
+                  </p>
                 </div>
               } />
 
-              <MacCard programText="apple" artComp={
-                <div className=''>
-                  <h1 className=''>{"ayeeeeee"}</h1>
-                  <p>{""}</p>
+              <WindowsCard programText="C:/mySkillset-0" artComp={
+                <div className='skills-text-wrapper'>
+                  <h1 className='text-vt323 skills-title'>{"Technologies/Frameworks"}</h1>
+                  <ul className="text-vt323 skills-text-list">
+                    <li>React.js</li>
+                    <li>RESTful APIs (Express.js)</li>
+                    <li>JavaScript/Typescript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>SASS</li>
+                    <li>JQuery</li>
+                    <li>TailwindCSS</li>
+                    <li>Boostrap</li>
+                    <li>Gatsby</li>
+                    <li>Vite</li>
+                  </ul>
                 </div>
               } />
 
-              <MacCard programText="Front-End" underbartext={"(I used these to make this site you're on now.)"} artComp={
+              <MacCard programText="C:/mySkillset-1" artComp={
+                <div className='skills-text-wrapper-mac mac-bgc'>
+                  <h1 className='skills-title-mac'>{"Programming Languages/Back-end Tech"}</h1>
+                  <ul className="skills-text-list-mac">
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>Express.js</li>
+                    <li>MongoDB</li>
+                    <li>SQL</li>
+                  </ul>
+                </div>
+              } />
+
+              <MacCard programText="Front-End" underbartext={"(This site you're on now)"} artComp={
                 <div className="multi-image-wrapper">
                   {this.state.frontEndPics.map((skill) => {
                     return (
@@ -226,7 +259,7 @@ class About extends Component {
               {/* <div className="skills-text"> */}
               {/* <SkillTextCard programText="Skills" titleText="Programming Languages" skillsText="JavaScript, TypeScript, Java, C#, C++" /> */}
               {/* <hr></hr> */}
-              {/* <SkillTextCard programText="Skills" titleText="Technologies/Frameworks" skillsText="React.js, RESTful APIs (HTTP querying), HTML, CSS, SASS, Bootstrap, JQuery, GatsbyJS, TailwindCSS, MongoDB, SQL" /> */}
+              {/* <SkillTextCard programText="Skills" titleText="Technologies/Frameworks" skillsText="React.js, RESTful APIs (HTTP querying), HTML, CSS, SASS, Bootstrap, JQuery, GatsbyJS, TailwindCSS, Express.js, MongoDB, SQL" /> */}
               {/* <hr></hr> */}
               {/* <SkillTextCard programText="Skills" titleText="Miscellaneous" skillsText="GitHub Version Control, Jira Software Project/Ticketing Management, Graphic Design & Photoshop, Ambulating" /> */}
               {/* <hr></hr> */}

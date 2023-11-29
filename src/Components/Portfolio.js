@@ -51,60 +51,58 @@ function SoftwareProjectCard(props) {
   let reversePos = "reverse-order magnet-right";
 
   return (
-    <Fade left>
-      <div className="border-aim">
-        <div className="project-card" style={{
-          // background: colorGradients[Math.floor(Math.random() * 5)]
-        }}>
-          <h1 className="project-title">
-            <TypeAnimation
-              sequence={["> " + props.projectData.title]}
-            />
-          </h1>
-          <div className={"project-info " + (props.right ? reversePos : null)}>
-            <img className="" src={"ambulateart/images/softwarepics/" + props.projectData.image}>
-            </img>
+    <div className="border-aim">
+      <div className="project-card" style={{
+        // background: colorGradients[Math.floor(Math.random() * 5)]
+      }}>
+        <h1 className="project-title">
+          <TypeAnimation
+            sequence={["> " + props.projectData.title]}
+          />
+        </h1>
+        <div className={"project-info " + (props.right ? reversePos : null)}>
+          <img className="" src={"ambulateart/images/softwarepics/" + props.projectData.image}>
+          </img>
 
-            <div className="proj-desc-links ">
-              <p style={{
-                background: "linear-gradient(-45deg, #333333c4" + /*colors[Math.floor(Math.random() * 5)] + */" 50%, #000000c4 50%)",
-              }}>
+          <div className="proj-desc-links ">
+            <p style={{
+              background: "linear-gradient(-45deg, #333333c4" + /*colors[Math.floor(Math.random() * 5)] + */" 50%, #000000c4 50%)",
+            }}>
 
-                {props.projectData.desc}
-              </p>
-              <hr></hr>
-              <div className="tech-wrapper">
-                <div className="tech-stack">
-                  <div className="stack-title">
-                    {"< Stack Used />"}
-                  </div>
-
-                  <div className="stack-info">
-                    {props.projectData.technologies.map((t) =>
-                      <p key={t}>
-                        {t}
-                      </p>
-                    )}
-                  </div>
+              {props.projectData.desc}
+            </p>
+            <hr></hr>
+            <div className="tech-wrapper">
+              <div className="tech-stack">
+                <div className="stack-title">
+                  {"< Stack Used />"}
                 </div>
 
-                <div className="proj-links">
-                  {/* Live Demo and Source Links: */}
-                  <a target='_blank' href={props.projectData.demo} className="proj-button border-aim-btn">
-                    <FontAwesomeIcon icon={faLaptop} />
-                  </a>
-                  <a target='_blank' href={props.projectData.source} className="proj-button border-aim-btn">
-                    <FontAwesomeIcon icon={faGithub} />
-                  </a>
+                <div className="stack-info">
+                  {props.projectData.technologies.map((t) =>
+                    <p key={t}>
+                      {t}
+                    </p>
+                  )}
                 </div>
+              </div>
+
+              <div className="proj-links">
+                {/* Live Demo and Source Links: */}
+                <a target='_blank' href={props.projectData.demo} className="proj-button border-aim-btn">
+                  <FontAwesomeIcon icon={faLaptop} />
+                </a>
+                <a target='_blank' href={props.projectData.source} className="proj-button border-aim-btn">
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
               </div>
             </div>
           </div>
-          {/* <img className="project-card-image" src={"ambulateart/images/softwarepics/pokedexex.png"}>
-      </img> */}
         </div>
+        {/* <img className="project-card-image" src={"ambulateart/images/softwarepics/pokedexex.png"}>
+      </img> */}
       </div>
-    </Fade>
+    </div>
   );
 }
 
@@ -185,20 +183,21 @@ class Portfolio extends Component {
           </Fade>
 
           <div className="projects-wrapper">
-            <div className="project-list">
-              <SoftwareProjectCard projectData={this.props.data.software[0]} />
-              <SoftwareProjectCard projectData={this.props.data.software[2]} />
-              <SoftwareProjectCard projectData={this.props.data.software[4]} />
-              {/* <SkillCard programText="p5.js" artComp={<PerlinNoise2D />} /> */}
-            </div>
+            <Fade left>
+              <div className="project-list">
+                <SoftwareProjectCard projectData={this.props.data.software[0]} />
+                <SoftwareProjectCard projectData={this.props.data.software[2]} />
+                <SoftwareProjectCard projectData={this.props.data.software[4]} />
+              </div>
+            </Fade>
 
-            <div className="project-list">
-              <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
-              <SoftwareProjectCard projectData={this.props.data.software[3]} right={true} />
-              <SoftwareProjectCard projectData={this.props.data.software[5]} right={true} />
-              {/* <SkillCard programText="p5.js" artComp={<ColorfulBouncingBalls />} /> */}
-
-            </div>
+            <Fade right>
+              <div className="project-list">
+                <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
+                <SoftwareProjectCard projectData={this.props.data.software[3]} right={true} />
+                <SoftwareProjectCard projectData={this.props.data.software[5]} right={true} />
+              </div>
+            </Fade>
           </div>
         </div>
 

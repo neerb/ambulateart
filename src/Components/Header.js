@@ -27,7 +27,9 @@ class Header extends Component {
     return (
       /* used to be header */
       <header id="home" className="app-header">
-        <ParticlesBg className="particles" type="cobweb" color={["daa520"]} num='50' bg={{ position: "absolute", zIndex: 0, left: 0, top: 0 }} />
+
+        <ParticlesBg className="" type="cobweb" color={["daa520"]} num='50' bg={{ position: "absolute", zIndex: 0, left: 0, top: 0 }} />
+
         <nav id="nav-wrap">
 
           <Fade>

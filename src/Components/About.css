@@ -57,12 +57,21 @@
    display: flex;
    flex-direction: column;
    height: 100vh;
-   overflow: hidden;
+   overflow: auto;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+
 
    background-image: linear-gradient(var(--bggc) .1em, transparent .1em), linear-gradient(90deg, var(--bggc) .1em, transparent .1em);
    background-size: 1.6em 1.6em;
    background-attachment: fixed;
  }
+
+
+ .about-wrapper::-webkit-scrollbar {
+   display: none;
+ }
+
 
 .skill-img-wrapper {
    display: flex;
@@ -157,9 +166,90 @@
    color: salmon;
 }
 
-.skills-text {
+.intro-wrap {
    display: flex;
    flex-direction: column;
+   max-width: 600px;
+   padding: 5px 10px 10px 10px;
+}
+
+.intro-title{
+   text-align: center;
+}
+
+.intro {
+   text-align: center;
+}
+
+.text-vt323 {
+   font-family: 'VT323', monospace;
+}
+
+.mac-bgc {
+   background-color: rgb(255, 255, 255);
+}
+
+.skills-text-wrapper {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+
+   background: black;
+   color: white;
+}
+
+.skills-title {
+   color:aqua;
+}
+
+.skills-title-mac {
+   color:rgb(0, 0, 0)
+}
+
+.skills-text-wrapper-mac {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+}
+
+.skills-text-wrapper-mac:hover {
+   background: black;
+   color: white;
+   /* font-family: 'VT323', monospace; */
+
+   .skills-title-mac {
+      color:rgb(238, 255, 0);
+   }
+}
+
+.skills-title {
+   font-size: 1.75rem;
+}
+
+.skills-text-list {
+   margin-left: 8px;
+   /* font-family: 'Roboto Mono', monospace; */
+   font-size: 1.3rem;
+   list-style: square inside;
+   list-style: symbols(numeric "U+26AA" "U+26AB"); 
+}
+
+.skills-text-list li:hover {
+   background-color: chartreuse;
+   color: black;
+}
+
+.skills-text-list-mac {
+   margin-left: 8px;
+   /* font-family: 'Roboto Mono', monospace; */
+   font-size: 1.3rem;
+   list-style: square inside;
+   list-style: symbols(numeric "U+26AA" "U+26AB"); 
+}
+
+.skills-text-list-mac li:hover {
+   background-color: rgb(255, 0, 242);
+   color: white;
 }
 
 .skills-text hr {
@@ -214,17 +304,6 @@
    border: 1px black solid;
    width: 15%;
    padding: 0 5px 0 5px;
-}
-
-.skills-text-wrapper{
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   border-left: 3px black solid;
-   border-bottom: 3px black solid;
-   border-right: 3px black solid;
-   background-color: #f7e7ce;
 }
 
 .skills-text-bubble-text {
