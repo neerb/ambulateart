@@ -24,6 +24,14 @@ class Contact extends Component {
 
     return (
       <section id="contact">
+        {/* <div className="contact-outer1">
+          <div className="contact-outer-wrap">
+            <div className="top-plane"></div>
+            <div className="bottom-plane"></div>
+          </div>
+        </div> */}
+
+
         <div className="app_contact">
           <div className="bar-wrapper">
             <div className="contact-bar barc1"></div>
@@ -32,56 +40,100 @@ class Contact extends Component {
             <div className="contact-bar barc4"></div>
             <div className="contact-bar barc5"></div>
           </div>
+          <div className="contact-outer">
+            <div className="contact-outer-wrap">
+              <div className="top-plane"></div>
+              <div className="bottom-plane"></div>
+            </div>
 
+            <div className="pos-abs-wrap">
+              <div className="contact-info-wrap">
 
-          <Fade bottom duration={1000}>
-
-            <div className="contact-outer">
-              <div className="contact-outer-wrap">
-                <div className="top-plane"></div>
-
-                <div className="contact-info-wrap">
+                <div className="contact-info">
                   <div className="bolt-wrapper">
-                    <div className="bolt" />
-                    <div className="bolt" />
+                    <div className="bolt" style={{ margin: "auto" }} />
                   </div>
 
-                  <div className="contact-info-inside">
-                    <h2>
-                      Contact & Links
-                    </h2>
+                  <h2>
+                    Contact & Links
+                  </h2>
 
-                    <h3>
-                      Nathan Breen
-                    </h3>
+                  <div className="bolt-wrapper">
+                    <div className="bolt" style={{ margin: "auto" }} />
+                  </div>
+                </div>
 
-                    <h3>
-                      <Link>
-                        natbreenx@gmail.com
-                      </Link>
-                    </h3>
+                <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+                  <div className="contact-info" style={{ margin: "0 20px" }}>
+                    <div className="bolt-wrapper">
+                      <div className="bolt" style={{ margin: "auto" }} />
 
-                    <div className="header-buttons">
-                      <a target='_blank' href={github} className="header-button aim-btn">
-                        <FontAwesomeIcon icon={faGithub} />
-                      </a>
-                      <a target='_blank' href={linkedin} className="header-button aim-btn">
-                        <FontAwesomeIcon icon={faLinkedinIn} />
-                      </a>
+                    </div>
+
+                    <div className="contact-info-inside">
+                      <h3>
+                        Nathan Breen
+                      </h3>
+                    </div>
+                    <div className="bolt-wrapper">
+                      <div className="bolt" style={{ margin: "auto" }} />
+
                     </div>
                   </div>
 
-                  <div className="bolt-wrapper">
-                    <div className="bolt" />
-                    <div className="bolt" />
+                  <div className="contact-info" style={{ margin: "0 20px" }}>
+                    <div className="bolt-wrapper">
+                      <div className="bolt" />
+                      <div className="bolt" />
+                    </div>
+
+                    <div className="contact-info-inside">
+                      <h3>
+                        <Link>
+                          natbreenx@gmail.com
+                        </Link>
+                      </h3>
+                    </div>
+                    <div className="bolt-wrapper">
+                      <div className="bolt" />
+                      <div className="bolt" />
+                    </div>
+                  </div>
+
+                  <div className="contact-info" style={{ margin: "0 20px" }}>
+                    <div className="bolt-wrapper">
+                      <div className="bolt" />
+                      <div className="bolt" />
+                    </div>
+
+                    <div className="contact-info-inside">
+
+                      <div className="header-buttons">
+                        <div className="contact-info" style={{ margin: "0 20px" }}>
+                          <a target='_blank' href={github} className="header-button aim-btn">
+                            <FontAwesomeIcon icon={faGithub} />
+                          </a>
+                        </div>
+                        <div className="contact-info" style={{ margin: "0 20px" }}>
+                          <a target='_blank' href={linkedin} className="header-button aim-btn">
+                            <FontAwesomeIcon icon={faLinkedinIn} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bolt-wrapper">
+                      <div className="bolt" />
+                      <div className="bolt" />
+                    </div>
                   </div>
                 </div>
-                <div className="bottom-plane"></div>
+
               </div>
             </div>
+          </div>
 
 
-            {/* <div className="contact-info-wrap">
+          {/* <div className="contact-info-wrap">
               <h2>
                 Contact & Links
               </h2>
@@ -107,14 +159,13 @@ class Contact extends Component {
 
             </div> */}
 
-            <div className="bar-wrapper col-reverse">
-              <div className="contact-bar barc1"></div>
-              <div className="contact-bar barc2"></div>
-              <div className="contact-bar barc3"></div>
-              <div className="contact-bar barc4"></div>
-              <div className="contact-bar barc5"></div>
-            </div>
-          </Fade>
+          <div className="bar-wrapper col-reverse">
+            <div className="contact-bar barc1"></div>
+            <div className="contact-bar barc2"></div>
+            <div className="contact-bar barc3"></div>
+            <div className="contact-bar barc4"></div>
+            <div className="contact-bar barc5"></div>
+          </div>
         </div>
       </section >
     );
