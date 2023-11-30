@@ -3,7 +3,9 @@ import React, { Component } from "react";
 import { Fade, Slide } from "react-reveal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { FaRegCopy } from "react-icons/fa6";
 import "./Contact.css"
+import $ from 'jquery';
 
 class Contact extends Component {
   /*
@@ -21,6 +23,23 @@ class Contact extends Component {
     const project = this.props.data.project;
     const github = this.props.data.github;
     const linkedin = this.props.data.linkedin;
+
+    function copyEmail() {
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(email).then(function () {
+        // alert("Copied to clipboard successfully!");
+        $("#email").addClass("copiedText");
+        document.getElementById("email").innerText = "Copied!";
+
+        setTimeout(function () {
+          $("#email").removeClass("copiedText");
+          document.getElementById("email").innerText = email;
+        }, 2000).then(() => {
+        });
+      }, function (error) {
+        // alert("ERROR:\n" + error);
+      });
+    }
 
     return (
       <section id="contact">
@@ -87,12 +106,16 @@ class Contact extends Component {
                       <div className="bolt" />
                     </div>
 
-                    <div className="contact-info-inside">
-                      <h3>
+                    <div className="email-copy">
+                      <h3 id="email">
                         <Link>
                           natbreenx@gmail.com
                         </Link>
                       </h3>
+
+                      <button onClick={copyEmail} className="contact-info email-copy-btn">
+                        <FaRegCopy />
+                      </button>
                     </div>
                     <div className="bolt-wrapper">
                       <div className="bolt" />
