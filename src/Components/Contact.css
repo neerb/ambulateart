@@ -275,8 +275,9 @@ h2 {
 
 .copiedText {
     background: none;
-    text-shadow: 0 0 4px #00000086, 2px 2px 16px hsla(0,0%,100%,.5);
+    text-shadow: 0 0 8px #00000086, 2px 2px 16px hsla(0,0%,100%,.5);
     animation: 2s textCopied ease-in-out;
+    color: rgb(255, 219, 18);
 }
 
 @keyframes textCopied {
