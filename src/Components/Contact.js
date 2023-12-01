@@ -82,7 +82,7 @@ class Contact extends Component {
                   </div>
                 </div>
 
-                <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+                <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", flexWrap: "wrap", gap: "20px" }}>
                   <div className="contact-info" style={{ margin: "0 20px" }}>
                     <div className="bolt-wrapper">
                       <div className="bolt" style={{ margin: "auto" }} />
@@ -108,9 +108,7 @@ class Contact extends Component {
 
                     <div className="email-copy">
                       <h3 id="email">
-                        <Link>
-                          natbreenx@gmail.com
-                        </Link>
+                        natbreenx@gmail.com
                       </h3>
 
                       <button onClick={copyEmail} className="contact-info email-copy-btn">

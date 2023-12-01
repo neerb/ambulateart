@@ -9,10 +9,10 @@ import WindowsCard from "./WindowsComponentCard/WindowsCard";
 import MacCard from "./MacComponentCard/MacCard";
 
 const skillPics = [
-  'ambulateart/images/skillpics/javascriptskill.png',
-  'ambulateart/images/skillpics/cssskill.png',
-  'ambulateart/images/skillpics/reactskill.png',
-  'ambulateart/images/skillpics/gatsbyskill.png'
+  '/images/skillpics/javascriptskill.png',
+  '/images/skillpics/cssskill.png',
+  '/images/skillpics/reactskill.png',
+  '/images/skillpics/gatsbyskill.png'
 ]
 
 const frontEndPics = {
@@ -118,7 +118,7 @@ class About extends Component {
     if (!this.props.data) return null;
 
     const name = this.props.data.name;
-    const profilepic = "ambulateart/images/" + this.props.data.image;
+    const profilepic = "/images/" + this.props.data.image;
     const bio = this.props.data.bio;
     const email = this.props.data.email;
     const resumeDownload = this.props.data.resumedownload;
@@ -176,8 +176,17 @@ class About extends Component {
                   <p className="intro">
                     Front-end focused web developer dedicated to building uniquely crafted user-interactive experiences.
                     Computer Science graduate from The University of Texas at Dallas (UTD).
-                    I have a genuine zeal for exploring new programming techniques, skills, and implementations. In my academic journey and spare time, I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter bots.
-                    I'm comfortable with a range of languages and frameworks, including C#, C++, Java, JavaScript, and React. While I particularly enjoy front-end development, where I focus on styling/structuring with CSS and HTML, I also find time to appreciate the intricacies of full-stack development, incorporating technologies like MongoDB and Express.js for RESTful API services.
+                    I have a <span className="italics">genuine zeal</span> for exploring new programming techniques, skills, and implementations. In my academic journey and spare time, I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter bots.
+                    I'm comfortable with a range of languages and frameworks, including{" "}
+                    <span className="emphasis-text1">C#</span>,{" "}
+                    <span className="emphasis-text2">C++</span>,{" "}
+                    <span className="emphasis-text3">Java</span>,{" "}
+                    <span className="emphasis-text4">JavaScript</span>,{" "} and {" "}
+                    <span className="emphasis-text5">React</span>.
+                    While I particularly enjoy front-end development, where I focus on styling/structuring with{" "}
+                    <span className="emphasis-text1">CSS and HTML</span>,
+                    I also find time to appreciate the intricacies of full-stack development, incorporating technologies like{" "}
+                    <span className="emphasis-textw" w>MongoDB and Express.js for RESTful API services</span>.
                     I find joy in attending hackathons, working on desktop and mobile applications, and solving coding problems.
                     Let's collaborate and create something together.
                   </p>
@@ -203,6 +212,13 @@ class About extends Component {
                 </div>
               } />
 
+              <WindowsCard programText="C:/try-it-out.drg" artComp={
+                <div className='click-drag-wrap'>
+                  <h1 className='text-vt323 click-drag-us'>{"> These windows are draggable -"}</h1>
+                  <h1 className='text-vt323 click-drag-us'>{"Click and Drag us around "}<span className="happyface">{"^_^"}</span></h1>
+                </div>
+              } />
+
               <MacCard programText="C:/mySkillset-1" artComp={
                 <div className='skills-text-wrapper-mac mac-bgc'>
                   <h1 className='skills-title-mac'>{"Programming Languages/Back-end Tech"}</h1>
@@ -221,7 +237,7 @@ class About extends Component {
                 <div className="multi-image-wrapper">
                   {this.state.frontEndPics.map((skill) => {
                     return (
-                      <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"ambulateart/images/skillpics/" + skill.src}></img>
+                      <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"/images/skillpics/" + skill.src}></img>
                     )
                   })}
                 </div>
@@ -232,7 +248,7 @@ class About extends Component {
                 <div className="multi-image-wrapper">
                   {this.state.backEndPics.map((skill) => {
                     return (
-                      <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"ambulateart/images/skillpics/" + skill.src}></img>
+                      <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"/images/skillpics/" + skill.src}></img>
                     )
                   })}
                 </div>
@@ -242,7 +258,7 @@ class About extends Component {
               <SkillCard programText="Version Control Tools" artComp={
                 this.state.versionControlPics.map((skill) => {
                   return (
-                    <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"ambulateart/images/skillpics/" + skill.src}></img>
+                    <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"/images/skillpics/" + skill.src}></img>
                   )
                 })} />
 

@@ -131,6 +131,48 @@
         "source":""
       },
       {
+        "title":"Ambulation Zone",
+        "technologies":[
+          "JavaScript",
+          "CSS",
+          "React",
+          "JQuery",
+          "Gatsby"
+        ],
+        "desc":"Any thought or programming related idea or concept that may pop into my head (usually front-end related) is published to this site.  This is best experienced on a PC/Desktop.",
+        "image":"ambulationzone-sc.png",
+        "demo":"",
+        "source":""
+      },
+      {
+        "title":"Greed Island Cards Database: Full-Stack Project",
+        "technologies":[
+          "JavaScript, CSS, React",
+          "Express.js",
+          "MongoDB",
+          "JQuery",
+          "Gatsby"
+        ],
+        "desc":"A full-stack web project with fully implemented multi-pathway RESTful API and Database linkage, populated with the information for all of the Greed Island cards from the popular show Hunter X Hunter.  Accompanied by a front-end user display to view and search through this array of cards.",
+        "image":"greedislanddatabase-sc.png",
+        "demo":"",
+        "source":""
+      },
+      {
+        "title":"Curated and Animated Album Covers",
+        "technologies":[
+          "JavaScript",
+          "CSS",
+          "React",
+          "JQuery",
+          "Gatsby"
+        ],
+        "desc":"A few of my favorite album covers brought to life utilizing CSS styling and animations.",
+        "image":"albumcovers-sc.png",
+        "demo":"",
+        "source":""
+      },
+      {
         "title":"A Simple ToDo List Applet",
         "technologies":[
           "React",
@@ -162,18 +204,7 @@
         "image":"calculator.png",
         "demo":"https://github.com/neerb/ProgrammerCalculator",
         "source":""
-      },
-      {
-        "title":"Ambulation Zone",
-        "technologies":[
-          "Java",
-          "Swing Components"
-        ],
-        "desc":"Any thought or programming related idea or concept that may pop into my head (usually front-end related) is published to this site.  This is best experienced on a PC/Desktop.",
-        "image":"ambulationzone.png",
-        "demo":"",
-        "source":""
-      } 
+      }
     ],
     "projects": [
       {

@@ -61,7 +61,7 @@ function SoftwareProjectCard(props) {
           />
         </h1>
         <div className={"project-info " + (props.right ? reversePos : null)}>
-          <img className="" src={"ambulateart/images/softwarepics/" + props.projectData.image}>
+          <img className="" src={"/images/softwarepics/" + props.projectData.image}>
           </img>
 
           <div className="proj-desc-links ">
@@ -99,7 +99,7 @@ function SoftwareProjectCard(props) {
             </div>
           </div>
         </div>
-        {/* <img className="project-card-image" src={"ambulateart/images/softwarepics/pokedexex.png"}>
+        {/* <img className="project-card-image" src={"/images/softwarepics/pokedexex.png"}>
       </img> */}
       </div>
     </div>
@@ -138,7 +138,7 @@ function SkillCard(props) {
           {props.artComp}
           {/* {props.pics.map((skill) => {
             { console.log(skill) }
-            <img className='multi-image-skill-image' alt='skill' src={"ambulateart/images/skillpics/" + skill.src}></img>
+            <img className='multi-image-skill-image' alt='skill' src={"/images/skillpics/" + skill.src}></img>
           })} */}
         </div>
       </div>
@@ -188,6 +188,7 @@ class Portfolio extends Component {
                 <SoftwareProjectCard projectData={this.props.data.software[0]} />
                 <SoftwareProjectCard projectData={this.props.data.software[2]} />
                 <SoftwareProjectCard projectData={this.props.data.software[4]} />
+                <SoftwareProjectCard projectData={this.props.data.software[6]} />
               </div>
             </Fade>
 
@@ -196,6 +197,7 @@ class Portfolio extends Component {
                 <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
                 <SoftwareProjectCard projectData={this.props.data.software[3]} right={true} />
                 <SoftwareProjectCard projectData={this.props.data.software[5]} right={true} />
+                <SoftwareProjectCard projectData={this.props.data.software[7]} right={true} />
               </div>
             </Fade>
           </div>

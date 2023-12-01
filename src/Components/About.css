@@ -10,7 +10,7 @@
    --bgc2: #c75d6d;
    --bgc3: #B49FCC;
    --bgc4: #cc9faa;
-   --bggc: rgb(4, 4, 7);
+   --bggc: rgb(0, 0, 73);
 }
 
 /* #about {
@@ -70,6 +70,74 @@
 
  .about-wrapper::-webkit-scrollbar {
    display: none;
+ }
+
+.italics {
+   font-style: italic;
+   font-weight: 600;
+}
+
+ .emphasis-textw {
+   background-color: black;
+   font-family: 'VT323', monospace;
+   color: #fff;
+   text-shadow: 0 0 4px #fff, 2px 2px 16px hsla(0,0%,100%,.5);
+   letter-spacing: 1px;
+   padding: 0px 2px;
+ }
+
+ .emphasis-textp {
+   background-color: black;
+   font-family: 'VT323', monospace;
+   color: #ee6bff;
+   text-shadow: 0 0 4px #ee6bff, 2px 2px 16px hsla(0,0%,100%,.5);
+   letter-spacing: 1px;
+   padding: 0px 2px;
+ }
+
+ .emphasis-text1 {
+   background-color: black;
+   font-family: 'VT323', monospace;
+   color: chartreuse;
+   text-shadow: 0 0 4px chartreuse, 2px 2px 16px hsla(0,0%,100%,.5);
+   letter-spacing: 1px;
+   padding: 0px 2px;
+ }
+
+ .emphasis-text2 {
+   background-color: black;
+   font-family: 'VT323', monospace;
+   color: #ff6ba9;
+   text-shadow: 0 0 4px #ff6ba9, 2px 2px 16px hsla(0,0%,100%,.5);
+   letter-spacing: 1px;
+   padding: 0px 2px;
+ }
+
+ .emphasis-text3 {
+   background-color: black;
+   font-family: 'VT323', monospace;
+   color: #ff8800;
+   text-shadow: 0 0 4px #ff8800, 2px 2px 16px hsla(0,0%,100%,.5);
+   letter-spacing: 1px;
+   padding: 0px 2px;
+ }
+
+ .emphasis-text4 {
+   background-color: black;
+   font-family: 'VT323', monospace;
+   color: #fbff00;
+   text-shadow: 0 0 4px #fbff00, 2px 2px 16px hsla(0,0%,100%,.5);
+   letter-spacing: 1px;
+   padding: 0px 2px;
+ }
+
+ .emphasis-text5 {
+   background-color: black;
+   font-family: 'VT323', monospace;
+   color: #00ffea;
+   text-shadow: 0 0 4px #00ffea, 2px 2px 16px hsla(0,0%,100%,.5);
+   letter-spacing: 1px;
+   padding: 0px 2px;
  }
 
 
@@ -151,7 +219,8 @@
 }
 
 .can-work-text span {
-   color: rgb(199, 32, 32);
+   color: #c72020;
+   text-shadow: 0 0 5px rgb(255, 162, 201), 2px 2px 16px hsla(0,0%,100%,.5);
    font-style: italic;
 }
 
@@ -179,6 +248,7 @@
 
 .intro {
    text-align: center;
+   font-size: 1.15rem;
 }
 
 .text-vt323 {
@@ -199,7 +269,40 @@
 }
 
 .skills-title {
-   color:aqua;
+   color:#00ffff;
+   text-shadow: 0 0 2px #00ffff6c, 2px 2px 16px hsla(0,0%,100%,.5);
+}
+
+.happyface {
+   display: inline-block;
+   color: chartreuse;
+   animation: happy alternate 1s infinite linear;
+   animation-play-state: running;
+}
+
+@keyframes happy {
+   0% {
+      transform: rotateZ(-10deg);
+   }
+   50% {
+      transform: scale(1.2);
+   }
+   100% {
+      transform: rotateZ(10deg);
+   }
+}
+
+.click-drag-wrap {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+
+   background: rgb(0, 0, 0);
+}
+
+.click-drag-us {
+   color:#e5ff00;
+   text-shadow: 0 0 2px #e5ff00, 2px 2px 16px hsla(0,0%,100%,.5);
 }
 
 .skills-title-mac {
@@ -487,6 +590,33 @@
 
 .continue-button:hover {
    color:indianred;
+}
+
+
+@media screen and (min-width: 1600px) {
+   .intro-wrap {
+      max-width: 800px;
+   }
+
+   .intro-title {
+      font-size: 3.25rem;
+   }
+
+   .intro {
+      font-size: 1.25rem;
+   }
+
+   .skills-title {
+      font-size: 2.5rem;
+   }
+
+   .skills-text-list {
+      font-size: 1.5rem;
+   }
+
+   .multi-image-skill-img {
+      width: 200px;
+   }
 }
 
 @media screen and (max-width: 800px) {
