@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
 import "./Portfolio.css";
+import "./Contact.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faCircleChevronDown, faLaptop } from "@fortawesome/free-solid-svg-icons";
@@ -55,54 +56,67 @@ function SoftwareProjectCard(props) {
       <div className="project-card" style={{
         // background: colorGradients[Math.floor(Math.random() * 5)]
       }}>
-        <h1 className="project-title">
-          <TypeAnimation
-            sequence={["> " + props.projectData.title]}
-          />
-        </h1>
-        <div className={"project-info " + (props.right ? reversePos : null)}>
-          <img className="" src={"/images/softwarepics/" + props.projectData.image}>
-          </img>
 
-          <div className="proj-desc-links ">
-            <p style={{
-              background: "linear-gradient(-45deg, #333333c4" + /*colors[Math.floor(Math.random() * 5)] + */" 50%, #000000c4 50%)",
-            }}>
+        <div className="inner-card-wrapper-bolts">
+          <div className="bolt-wrapper">
+            <div className="bolt" />
+            <div className="bolt" />
+          </div>
 
-              {props.projectData.desc}
-            </p>
-            <hr></hr>
-            <div className="tech-wrapper">
-              <div className="tech-stack">
-                <div className="stack-title">
-                  {"< Stack Used />"}
+          <div>
+            <h1 className="project-title">
+              <TypeAnimation
+                sequence={["> " + props.projectData.title]}
+              />
+            </h1>
+            <div className={"project-info " + (props.right ? reversePos : null)}>
+              <img className="" src={"/images/softwarepics/" + props.projectData.image}>
+              </img>
+
+              <div className="proj-desc-links ">
+                <p style={{
+                  background: "linear-gradient(-45deg, #333333c4" + /*colors[Math.floor(Math.random() * 5)] + */" 50%, #000000c4 50%)",
+                }}>
+
+                  {props.projectData.desc}
+                </p>
+                <hr></hr>
+                <div className="tech-wrapper">
+                  <div className="tech-stack">
+                    <div className="stack-title">
+                      {"< Stack Used />"}
+                    </div>
+
+                    <div className="stack-info">
+                      {props.projectData.technologies.map((t) =>
+                        <p key={t}>
+                          {t}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="proj-links">
+                    {/* Live Demo and Source Links: */}
+                    <a target='_blank' href={props.projectData.demo} className="proj-button border-aim-btn">
+                      <FontAwesomeIcon icon={faLaptop} />
+                    </a>
+                    <a target='_blank' href={props.projectData.source} className="proj-button border-aim-btn">
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                  </div>
                 </div>
-
-                <div className="stack-info">
-                  {props.projectData.technologies.map((t) =>
-                    <p key={t}>
-                      {t}
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              <div className="proj-links">
-                {/* Live Demo and Source Links: */}
-                <a target='_blank' href={props.projectData.demo} className="proj-button border-aim-btn">
-                  <FontAwesomeIcon icon={faLaptop} />
-                </a>
-                <a target='_blank' href={props.projectData.source} className="proj-button border-aim-btn">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
               </div>
             </div>
           </div>
+
+          <div className="bolt-wrapper">
+            <div className="bolt" />
+            <div className="bolt" />
+          </div>
         </div>
-        {/* <img className="project-card-image" src={"/images/softwarepics/pokedexex.png"}>
-      </img> */}
       </div>
-    </div>
+    </div >
   );
 }
 

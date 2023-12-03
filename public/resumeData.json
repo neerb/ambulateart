@@ -126,9 +126,9 @@
           "Django REST Framework"
         ],
         "desc":"Developed the front-end user interface with coordination of back-end team, enabling users to upload .csv and .xlsx product catalog files to be parsed, uploaded, and processed to a back-end database containing online e-commerce product data via a Django implemented RESTful API.",
-        "image":"unthinkAI.png",
-        "demo":"",
-        "source":""
+        "image":"unthinkai.png",
+        "demo":"https://github.com/neerb",
+        "source":"https://github.com/neerb"
       },
       {
         "title":"Ambulation Zone",
@@ -140,9 +140,9 @@
           "Gatsby"
         ],
         "desc":"Any thought or programming related idea or concept that may pop into my head (usually front-end related) is published to this site.  This is best experienced on a PC/Desktop.",
-        "image":"ambulationzone-sc.png",
-        "demo":"",
-        "source":""
+        "image":"ambulationzonesc.png",
+        "demo":"https://ambulate.net",
+        "source":"https://github.com/neerb"
       },
       {
         "title":"Greed Island Cards Database: Full-Stack Project",
@@ -154,9 +154,9 @@
           "Gatsby"
         ],
         "desc":"A full-stack web project with fully implemented multi-pathway RESTful API and Database linkage, populated with the information for all of the Greed Island cards from the popular show Hunter X Hunter.  Accompanied by a front-end user display to view and search through this array of cards.",
-        "image":"greedislanddatabase-sc.png",
-        "demo":"",
-        "source":""
+        "image":"greedislanddatabasesc.png",
+        "demo":"https://github.com/neerb",
+        "source":"https://github.com/neerb"
       },
       {
         "title":"Curated and Animated Album Covers",
@@ -168,9 +168,9 @@
           "Gatsby"
         ],
         "desc":"A few of my favorite album covers brought to life utilizing CSS styling and animations.",
-        "image":"albumcovers-sc.png",
-        "demo":"",
-        "source":""
+        "image":"albumcoverssc.png",
+        "demo":"https://github.com/neerb",
+        "source":"https://github.com/neerb"
       },
       {
         "title":"A Simple ToDo List Applet",
@@ -181,7 +181,7 @@
         "desc":"The standard ToDo list project built in React, it's that simple.",
         "image":"todolist.png",
         "demo":"https://neerb.github.io/boofed-todolist/",
-        "source":""
+        "source":"https://github.com/neerb"
       },
       {
         "title":"Pho-Ballah Restaurant Concept Landing Page",
@@ -192,7 +192,7 @@
         "desc":"A concept restaurant landing page for a fine-dining Pho restaurant.",
         "image":"phoballah.png",
         "demo":"https://neerb.github.io/pho-ballah-landingpage-informationsite/",
-        "source": ""
+        "source": "https://github.com/neerb"
       },
       {
         "title":"ProgrammerCalculator: A Windows Programming Calculator Remake",
@@ -203,7 +203,7 @@
         "desc":"University Project: A complete recreation of the Windows Programmer Caculator implementing an Infix/Postfix expression reducing and solving algorithm.",
         "image":"calculator.png",
         "demo":"https://github.com/neerb/ProgrammerCalculator",
-        "source":""
+        "source":"https://github.com/neerb"
       }
     ],
     "projects": [

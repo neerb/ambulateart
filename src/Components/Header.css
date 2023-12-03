@@ -163,13 +163,13 @@
     color:gold;
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 500px) {
     .header-wrapper {
         text-align: left;
     }
 
     .header-desc {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .header-bar {
