@@ -7,7 +7,7 @@
 #portfolio {
     border-top: gold 4px solid;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     justify-content: center;
     background-color: #386641;
@@ -30,10 +30,11 @@
 }
 
 .portfolio-block {
+
     margin: 70px auto 40px auto;
     height: 100%;
     max-height: fit-content;
-    width: 90%;
+    width: 97%;
     /* background: linear-gradient(#556b2fc4, #502f6bc4); */
     text-align: center;
 }
@@ -109,23 +110,19 @@
 .project-card {
     display: flex;
     flex-direction: column;
-    /* height: fit-content; */
-    height: auto;
     justify-content: center;
-    /* width: 90%; */
-    /* background-color: black; */
     z-index: 1;
-    /* margin: 10px auto 10px auto; */
     padding: 15px 5px 15px 5px;
-    /* max-width: 600px; */
     width: fit-content;
-    /* max-width: 600px; */
-    /* background-color: rgba(0, 0, 0, 0.53); */
+    height: auto;
     background: linear-gradient(45deg, #888888c4 0%, #888888c4 50%, #7243bdcb 50%, #7243bdcb 100%);
+    
+    background: 
+    linear-gradient(45deg, #888888c4 0%, #888888c4 50%, #7243bdcb 50%, #7243bdcb 100%),
+    url(../../public/images/cementoverlay.png) center;    
     background-repeat: repeat-x;
     border-radius: 5px;
-    /* box-shadow: -7px -4px rgba(255, 100, 100, 0.425); */
-    /* border: 5px solid #F55536; */
+
     transition: 0.5s ease-in-out;
     background-size: 150%;
     transition: background-position .2s cubic-bezier(.47, .1, 1, .63),
@@ -138,7 +135,6 @@
     outline: 2px solid rgba(0,0,0,.5);
     box-shadow: -2px 2px 1px rgba(0,0,0,.75), inset 0 0 4px #cbc6cb, 4px 4px 0 rgba(0,0,0,.75);
     filter: drop-shadow(-2px 4px 0 rgba(0,0,0,.5));
-
 }
 
 .inner-card-wrapper-bolts {
@@ -149,7 +145,8 @@
     height: 100%;
 }
 
-.project-card:before {
+/* .project-card::before { */
+.metal-foreground {
     position: absolute;
     content: "";
     width: 100%;
@@ -158,12 +155,18 @@
     left: 0;
     mix-blend-mode: overlay;
     pointer-events: none;
+    border-radius: 5px;
     
-    background-image: url(../../public/images/light-aluminum-comp.webp);
-    background: linear-gradient(90deg,#88868b,#a7a2a6 10%,#a09b9f 50%,#8f8d93 75%,#625f60 90%,#4a4645);
+    /* background-image: url(../../public/images/light-aluminum-comp.webp); */
+    /* background: linear-gradient(90deg,#88868b,#a7a2a6 10%,#a09b9f 50%,#8f8d93 75%,#625f60 90%,#4a4645); */
+    background-image: url(../../public/images/metal-small-comp.webp),
+    url(../../public/images/light-aluminum-comp.webp),
+    linear-gradient(90deg,#88868b,#a7a2a6 10%,#a09b9f 50%,#8f8d93 75%,#625f60 90%,#4a4645);
 }
 
-.project-card:after {
+
+/* .project-card::after { */
+.gradient-metal-bg {
     position: absolute;
     content: "";
     width: 100%;
@@ -172,8 +175,10 @@
     left: 0;
     mix-blend-mode: overlay;
     pointer-events: none;
+    /* background-image: url(../../public/images/metal-small-comp.webp); */
+    background: linear-gradient(90deg,#88868b,#a7a2a6 10%,#a09b9f 50%,#8f8d93 75%,#625f60 90%,#4a4645);
+    border-radius: 5px;
     z-index: -1;
-    background-image: url(../../public/images/metal-small-comp.webp);
 }
 
 .project-card:hover {
@@ -251,10 +256,10 @@
     color: #4AF626;
     background-color: rgba(0, 0, 0, 0.726);
     border-radius: 10px;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 5px 5px 5px;
     text-align: center;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     /* margin-bottom: 10px; */
 }
 
@@ -394,10 +399,6 @@
 }
 
 @media screen and (max-width: 1250px) {
-    .project-card {
-        
-    }
-
     .proj-desc-links p {
         font-size: 1rem;
         /* font-size: 10px; */
@@ -410,10 +411,6 @@
 
     .proj-links {
         padding: 0;
-    }
-
-    .project-card {
-        /* width: max-content; */
     }
 
     .projects-wrapper {
@@ -440,10 +437,25 @@
 }
 
 @media screen and (max-width: 580px) {
+    .portfolio-block {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .border-aim {
+        margin: 10px 5px;
+        /* pointer-events: none; */
+        background: none;
+        transition: none;
+        padding: 0;
+    }
+
     .project-card {
-        height: auto;
         border-radius: 20px;
-        padding: 10px 15px;
+    }
+
+    .project-card::before {
+        border-radius: 20px;
     }
 
     .projects-wrapper {
@@ -470,7 +482,7 @@
     }
 
     .project-title {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }
 

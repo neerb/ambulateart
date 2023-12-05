@@ -24,9 +24,9 @@ function MacCard(props) {
             scale={1}>
             <div className={minimized ? skillCardNoShadow : skillCardShadow}>
                 <div className={minimized ? minimizedStylesHandle : maximizedStylesHandle}>
-                    <button className={"m-minimize-btn " + (minimized ? "btn-b" : "btn-r")} onClick={handleMinimize}></button>
-                    <button className={"m-minimize-btn " + (minimized ? "btn-b" : "btn-y")} onClick={handleMinimize}></button>
-                    <button className={"m-minimize-btn " + (minimized ? "btn-b" : "btn-g")} onClick={handleMinimize}></button>
+                    <button className={"m-minimize-btn " + (minimized ? "btn-b" : "btn-r")} onClick={handleMinimize} onTouchEnd={handleMinimize}></button>
+                    <button className={"m-minimize-btn " + (minimized ? "btn-b" : "btn-y")} onClick={handleMinimize} onTouchEnd={handleMinimize}></button>
+                    <button className={"m-minimize-btn " + (minimized ? "btn-b" : "btn-g")} onClick={handleMinimize} onTouchEnd={handleMinimize}></button>
                     <div className="m-title-wrap">
                         <BsFillFolderFill className="m-program-icon" />
                         <h1 className='m-program-title'>{props.programText}</h1>

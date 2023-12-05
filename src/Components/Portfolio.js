@@ -57,18 +57,22 @@ function SoftwareProjectCard(props) {
         // background: colorGradients[Math.floor(Math.random() * 5)]
       }}>
 
+        {/* 
+        <div className="metal-foreground"></div>
+
+        <div className="gradient-metal-bg"></div> */}
+
+        <h1 className="project-title">
+          <TypeAnimation
+            sequence={["> " + props.projectData.title]}
+          />
+        </h1>
         <div className="inner-card-wrapper-bolts">
-          <div className="bolt-wrapper">
-            <div className="bolt" />
+          <div className="bolt-wrapper" style={{ justifyContent: "center" }}>
             <div className="bolt" />
           </div>
 
           <div>
-            <h1 className="project-title">
-              <TypeAnimation
-                sequence={["> " + props.projectData.title]}
-              />
-            </h1>
             <div className={"project-info " + (props.right ? reversePos : null)}>
               <img className="" src={"/images/softwarepics/" + props.projectData.image}>
               </img>
@@ -110,8 +114,7 @@ function SoftwareProjectCard(props) {
             </div>
           </div>
 
-          <div className="bolt-wrapper">
-            <div className="bolt" />
+          <div className="bolt-wrapper" style={{ justifyContent: "center" }}>
             <div className="bolt" />
           </div>
         </div>
@@ -120,65 +123,13 @@ function SoftwareProjectCard(props) {
   );
 }
 
-function SkillCard(props) {
-  let minimizedStylesHandle = 'handle box-shadow';
-  let maximizedStylesHandle = 'handle';
-  let skillCardNoShadow = 'multi-array-window';
-  let skillCardShadow = 'multi-array-window box-shadow';
-
-  const [minimized, setMinimized] = useState(false);
-
-
-  function handleMinimize(e) {
-    setMinimized(!minimized);
-  }
-
-  return (
-    // <div className="skill-img-label">
-    <Draggable
-      handle=".handle"
-      defaultPosition={{ x: 0, y: 0 }}
-      scale={1}>
-      <div className={minimized ? skillCardNoShadow : skillCardShadow}>
-        <div className={minimized ? minimizedStylesHandle : maximizedStylesHandle}>
-          <button className='minimize-btn' style={{ backgroundColor: minimized ? "green" : "red" }} onClick={handleMinimize}></button>
-          <div className='program-title'>
-            <div className='program-line'></div>
-            <h1 className='skills-text-title'>{props.programText}</h1>
-            <div className='program-line'></div>
-          </div>
-        </div>
-        <div className='multi-image-skill-wrapper' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
-          {props.artComp}
-          {/* {props.pics.map((skill) => {
-            { console.log(skill) }
-            <img className='multi-image-skill-image' alt='skill' src={"/images/skillpics/" + skill.src}></img>
-          })} */}
-        </div>
-      </div>
-    </Draggable>
-    // </div>
-  );
-}
-
-
 class Portfolio extends Component {
   constructor(props) {
     super(props);
-
-    // this.state = {
-    //   frontEndProjects: [this.props.data.software[0],
-    //                     this.props.data.software[1]],
-    //   backEndProjects: []
-    // }
-
   }
 
   componentDidMount() {
-
-    // console.log(this.state.frontEndProjects);
   }
-
 
   render() {
     if (!this.props.data) return null;
@@ -200,17 +151,17 @@ class Portfolio extends Component {
             <Fade left>
               <div className="project-list">
                 <SoftwareProjectCard projectData={this.props.data.software[0]} />
-                <SoftwareProjectCard projectData={this.props.data.software[2]} />
+                <SoftwareProjectCard projectData={this.props.data.software[2]} right={true} />
                 <SoftwareProjectCard projectData={this.props.data.software[4]} />
-                <SoftwareProjectCard projectData={this.props.data.software[6]} />
+                <SoftwareProjectCard projectData={this.props.data.software[6]} right={true} />
               </div>
             </Fade>
 
             <Fade right>
               <div className="project-list">
-                <SoftwareProjectCard projectData={this.props.data.software[1]} right={true} />
+                <SoftwareProjectCard projectData={this.props.data.software[1]} />
                 <SoftwareProjectCard projectData={this.props.data.software[3]} right={true} />
-                <SoftwareProjectCard projectData={this.props.data.software[5]} right={true} />
+                <SoftwareProjectCard projectData={this.props.data.software[5]} />
                 <SoftwareProjectCard projectData={this.props.data.software[7]} right={true} />
               </div>
             </Fade>

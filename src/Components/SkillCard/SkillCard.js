@@ -40,7 +40,7 @@ function SkillCard(props) {
             scale={1}>
             <div id={props.setId} onMouseEnter={hoverWindow} onMouseLeave={endHover} className={(minimized ? skillCardNoShadow : skillCardShadow)}>
                 <div className={minimized ? minimizedStylesHandle : maximizedStylesHandle}>
-                    <button className='minimize-btn' style={{ background: minimized ? "radial-gradient(yellow, gold 80%)" : "radial-gradient(crimson, red 80%)" }} onClick={handleMinimize}></button>
+                    <button className='minimize-btn' style={{ background: minimized ? "radial-gradient(yellow, gold 80%)" : "radial-gradient(crimson, red 80%)" }} onClick={handleMinimize} onTouchEnd={handleMinimize}></button>
                     <div className='program-title'>
                         <div className="program-lines">
                             <div className='program-line'></div>

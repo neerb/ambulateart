@@ -155,16 +155,18 @@ class About extends Component {
 
     return (
       <div id="about" className='about'>
-        <div className={"page-filter"}></div>
+        <div className="page-filter"></div>
+        <div className="about-gradient-bg"></div>
         <Fade>
           <div className='about-wrapper'>
-            <div className="can-work">
-              <Fade left>
-                <h1 className="can-work-text">Some things <span>about me...</span></h1>
-              </Fade>
-            </div>
             {/* <div className='about-outer-skills'> */}
             <div className='skill-windows'>
+              <div className="can-work">
+                <Fade left>
+                  <h1 className="can-work-text">Some things <span>about me...</span></h1>
+                </Fade>
+              </div>
+              <div className="about-bg-grid"></div>
               <Fade left>
                 {/* <div className="skills-list-windows">{skills}</div> */}
               </Fade>
@@ -205,7 +207,7 @@ class About extends Component {
                     <li>SASS</li>
                     <li>JQuery</li>
                     <li>TailwindCSS</li>
-                    <li>Boostrap</li>
+                    <li>Bootstrap</li>
                     <li>Gatsby</li>
                     <li>Vite</li>
                   </ul>
@@ -233,7 +235,7 @@ class About extends Component {
                 </div>
               } />
 
-              <MacCard programText="Front-End" underbartext={"(This site you're on now)"} artComp={
+              <MacCard programText="X:/Front-End" underbartext={"(This site you're on now)"} artComp={
                 <div className="multi-image-wrapper">
                   {this.state.frontEndPics.map((skill) => {
                     return (
@@ -244,7 +246,7 @@ class About extends Component {
               }
               />
 
-              <WindowsCard programText="X:/Back-End and Programming Languages" artComp={
+              <WindowsCard programText="X:/Back-End" artComp={
                 <div className="multi-image-wrapper">
                   {this.state.backEndPics.map((skill) => {
                     return (

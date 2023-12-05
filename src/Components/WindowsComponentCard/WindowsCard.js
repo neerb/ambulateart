@@ -28,7 +28,7 @@ function WindowsCard(props) {
                         <FaComputer className="w-program-icon" />
                         <h1 className='w-program-title'>{props.programText}</h1>
                     </div>
-                    <button className='w-minimize-btn' style={{ background: minimized ? "radial-gradient(yellow, goldenrod)" : "radial-gradient(orange, red)" }} onClick={handleMinimize}></button>
+                    <button className='w-minimize-btn' type="button" name="minimize" style={{ background: minimized ? "radial-gradient(yellow, goldenrod)" : "radial-gradient(orange, red)" }} onClick={handleMinimize} onTouchEnd={handleMinimize}></button>
                 </div>
                 <div className='windows-program-wrapper' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
                     {props.artComp}
