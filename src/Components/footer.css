@@ -1,0 +1,11 @@
+.footer-wrap {
+    width: 100%;
+    height: auto;
+    background: #000;
+}
+
+.copyright {
+    font-family: "VT323", monospace;
+    color: chartreuse;
+    text-align: center;
+}

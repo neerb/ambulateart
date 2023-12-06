@@ -18,7 +18,6 @@ function SkillCard(props) {
     }
 
     const hoverWindow = (e) => {
-        console.log("h");
         // $("body").addClass("grayscale");
         // $("#" + props.setId).addClass("removegray");
 
@@ -38,7 +37,7 @@ function SkillCard(props) {
             handle=".handle"
             defaultPosition={{ x: 0, y: 0 }}
             scale={1}>
-            <div id={props.setId} onMouseEnter={hoverWindow} onMouseLeave={endHover} className={(minimized ? skillCardNoShadow : skillCardShadow)}>
+            <div id={props.setId} className={(minimized ? skillCardNoShadow : skillCardShadow)}>
                 <div className={minimized ? minimizedStylesHandle : maximizedStylesHandle}>
                     <button className='minimize-btn' style={{ background: minimized ? "radial-gradient(yellow, gold 80%)" : "radial-gradient(crimson, red 80%)" }} onClick={handleMinimize} onTouchEnd={handleMinimize}></button>
                     <div className='program-title'>
