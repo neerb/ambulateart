@@ -15,6 +15,7 @@ import { useCallback } from "react";
 
 function App() {
   const [resumeData, setResumeData] = useState(null);
+  const abtRef = useRef();
 
   const getResumeData = () => {
     $.ajax({
@@ -31,6 +32,19 @@ function App() {
     });
   }
 
+  let moving = true;
+
+  setInterval(() => {
+    moving = false;
+  }, 2000)
+
+  function scrollTo(section) {
+    if (section.current && !moving) {
+      section.current.scrollIntoView();
+      moving = true;
+    }
+  }
+
   useEffect(() => {
     getResumeData();
   }, [])
@@ -40,11 +54,13 @@ function App() {
       <div className="App" id='app' >
         <Navigation />
         <Header data={resumeData.main} id="home" />
-        <About data={resumeData.main} skills={resumeData.resume} id="about" />
+        <div ref={abtRef}>
+          <About goToSectionRef={abtRef} scrollTo={scrollTo} data={resumeData.main} skills={resumeData.resume} id="about" />
+        </div>
         <Portfolio data={resumeData.portfolio} id='portfolio' />
         <Contact data={resumeData.main} />
         <Footer data={resumeData.main} />
-      </div>
+      </div >
     );
   }
   else {

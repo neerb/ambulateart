@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useRef, useState } from "react";
 import Fade from "react-reveal";
 import "./About.css";
 import Draggable from 'react-draggable';
@@ -101,60 +101,40 @@ function SkillTextCard(props) {
   );
 }
 
-class About extends Component {
-  constructor(props) {
-    super(props);
+function About(props) {
+  const sec = useRef();
 
-    this.state = {
-      frontEndPics: []
-    }
-  }
+  const fePics = [
+    props.skills.skills[1],
+    props.skills.skills[2],
+    props.skills.skills[3],
+    props.skills.skills[0],
+    props.skills.skills[9]
+  ];
 
-  componentDidMount() {
-    console.log(this.state.frontEndPics);
-  }
+  const bePics = [
+    props.skills.skills[4],
+    props.skills.skills[5],
+    props.skills.skills[6],
+    props.skills.skills[7],
+    props.skills.skills[8]
+  ];
 
-  render() {
-    if (!this.props.data) return null;
+  const vcPics = [
+    props.skills.skills[10],
+    props.skills.skills[11]
+  ];
 
-    const name = this.props.data.name;
-    const profilepic = "/images/" + this.props.data.image;
-    const bio = this.props.data.bio;
-    const email = this.props.data.email;
-    const resumeDownload = this.props.data.resumedownload;
+  if (props.data) {
+    const name = props.data.name;
+    const profilepic = "/images/" + props.data.image;
+    const bio = props.data.bio;
+    const email = props.data.email;
+    const resumeDownload = props.data.resumedownload;
 
-    this.state = {
-      frontEndPics: [
-        this.props.skills.skills[1],
-        this.props.skills.skills[2],
-        this.props.skills.skills[3],
-        this.props.skills.skills[0],
-        this.props.skills.skills[9]
-      ],
-      backEndPics: [
-        this.props.skills.skills[4],
-        this.props.skills.skills[5],
-        this.props.skills.skills[6],
-        this.props.skills.skills[7],
-        this.props.skills.skills[8]
-      ],
-
-      versionControlPics: [
-        this.props.skills.skills[10],
-        this.props.skills.skills[11]
-      ]
-    }
-
-    console.log(this.state.frontEndPics);
-
-    // const skills = this.props.skills.skills.map((skills) => {
-    //   return (
-    //     <SkillPicCard skill={skills}></SkillCard>
-    //   );
-    // });
-
+    // if (frontEndPics && backEndPics && versionControlPics) {
     return (
-      <div id="about" className='about'>
+      <div id="about" className='about' onTouchEnd={() => { props.scrollTo(props.goToSectionRef) }} onMouseOver={() => { props.scrollTo(props.goToSectionRef) }}>
         <div className="page-filter"></div>
         <div className="about-gradient-bg"></div>
         <Fade>
@@ -237,7 +217,7 @@ class About extends Component {
 
               <MacCard programText="X:/Front-End" underbartext={"(This site you're on now)"} artComp={
                 <div className="multi-image-wrapper">
-                  {this.state.frontEndPics.map((skill) => {
+                  {fePics.map((skill) => {
                     return (
                       <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"/images/skillpics/" + skill.src}></img>
                     )
@@ -248,7 +228,7 @@ class About extends Component {
 
               <WindowsCard programText="X:/Back-End" artComp={
                 <div className="multi-image-wrapper">
-                  {this.state.backEndPics.map((skill) => {
+                  {bePics.map((skill) => {
                     return (
                       <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"/images/skillpics/" + skill.src}></img>
                     )
@@ -258,7 +238,7 @@ class About extends Component {
               />
 
               <SkillCard programText="Version Control Tools" artComp={
-                this.state.versionControlPics.map((skill) => {
+                vcPics.map((skill) => {
                   return (
                     <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"/images/skillpics/" + skill.src}></img>
                   )
@@ -292,6 +272,8 @@ class About extends Component {
         </Fade>
       </div >
     );
+    // }
+    // else return <div>bruh</div>;
   }
 }
 

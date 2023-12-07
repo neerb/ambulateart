@@ -110,7 +110,8 @@
         "technologies":[
           "React",
           "CSS",
-          "PokeAPI (RESTful)"
+          "PokeAPI (RESTful)",
+          "HTML"
         ],
         "desc":"Retro-minimalist style and fully responsive Pokedex interface using the PokeAPI (RESTful), React, and styling CSS from scratch.",
         "image":"pokedexex.png",
@@ -176,7 +177,8 @@
         "title":"A Simple ToDo List Applet",
         "technologies":[
           "React",
-          "CSS"
+          "CSS",
+          "HTML"
         ],
         "desc":"The standard ToDo list project built in React, it's that simple.",
         "image":"todolist.png",
@@ -187,7 +189,8 @@
         "title":"Pho-Ballah Restaurant Concept Landing Page",
         "technologies":[
           "React", 
-          "CSS"
+          "CSS",
+          "HTML"
         ],
         "desc":"A concept restaurant landing page for a fine-dining Pho restaurant.",
         "image":"phoballah.png",

@@ -72,7 +72,7 @@ function SoftwareProjectCard(props) {
             <div className="bolt" />
           </div>
 
-          <div>
+          <div className="card-wrapper">
             <div className={"project-info " + (props.right ? reversePos : null)}>
               <img className="" src={"/images/softwarepics/" + props.projectData.image}>
               </img>
@@ -102,12 +102,17 @@ function SoftwareProjectCard(props) {
 
                   <div className="proj-links">
                     {/* Live Demo and Source Links: */}
-                    <a target='_blank' href={props.projectData.demo} className="proj-button border-aim-btn">
-                      <FontAwesomeIcon icon={faLaptop} />
-                    </a>
-                    <a target='_blank' href={props.projectData.source} className="proj-button border-aim-btn">
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
+                    <div className="proj-btn">
+                      <a target='_blank' href={props.projectData.demo} className="proj-button border-aim-btn">
+                        <FontAwesomeIcon icon={faLaptop} />
+                      </a>
+                    </div>
+
+                    <div className="proj-btn">
+                      <a target='_blank' href={props.projectData.source} className="proj-button border-aim-btn">
+                        <FontAwesomeIcon icon={faGithub} />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
