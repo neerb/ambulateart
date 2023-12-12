@@ -158,13 +158,14 @@ function About(props) {
                   <p className="intro">
                     Front-end focused web developer dedicated to building uniquely crafted user-interactive experiences.
                     Computer Science graduate from The University of Texas at Dallas (UTD).
-                    I have a <span className="italics">genuine zeal</span> for exploring new programming techniques, skills, and implementations. In my academic journey and spare time, I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter bots.
+                    I have a <span className="italics">genuine zeal</span> for exploring new programming techniques, skills, and implementations. I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter(X) bots.
                     I'm comfortable with a range of languages and frameworks, including{" "}
                     <span className="emphasis-text1">C#</span>,{" "}
                     <span className="emphasis-text2">C++</span>,{" "}
                     <span className="emphasis-text3">Java</span>,{" "}
                     <span className="emphasis-text4">JavaScript</span>,{" "} and {" "}
                     <span className="emphasis-text5">React</span>.
+                    Likewise, I'm inclined towards <span className="emphasis-text5">WebGL</span> rendering and traversing in a 3D environment.
                     While I particularly enjoy front-end development, where I focus on styling/structuring with{" "}
                     <span className="emphasis-text1">CSS and HTML</span>,
                     I also find time to appreciate the intricacies of full-stack development, incorporating technologies like{" "}
@@ -186,6 +187,7 @@ function About(props) {
                     <li>CSS</li>
                     <li>SASS</li>
                     <li>JQuery</li>
+                    <li>WebGL</li>
                     <li>TailwindCSS</li>
                     <li>Bootstrap</li>
                     <li>Gatsby</li>

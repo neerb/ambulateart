@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
+import HeaderBg from "./HeaderBG/HeaderBg";
 
 class Header extends Component {
   render() {
@@ -28,7 +29,11 @@ class Header extends Component {
       /* used to be header */
       <header id="home" className="app-header">
 
-        <ParticlesBg className="" type="cobweb" color={["daa520"]} num='50' bg={{ position: "absolute", zIndex: 0, left: 0, top: 0 }} />
+        {/* <ParticlesBg className="" type="cobweb" color={["daa520"]} num='50' bg={{ position: "absolute", zIndex: 0, left: 0, top: 0 }} /> */}
+        <div className="header-bg">
+          <HeaderBg />
+        </div>
+
 
         <nav id="nav-wrap">
 
