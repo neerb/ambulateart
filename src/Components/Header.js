@@ -28,11 +28,10 @@ class Header extends Component {
     return (
       /* used to be header */
       <header id="home" className="app-header">
-
-        {/* <ParticlesBg className="" type="cobweb" color={["daa520"]} num='50' bg={{ position: "absolute", zIndex: 0, left: 0, top: 0 }} /> */}
-        <div className="header-bg">
+        <ParticlesBg className="" type="cobweb" color={["daa520"]} num='50' bg={{ position: "absolute", zIndex: 0, left: 0, top: 0 }} />
+        {/* <div className="header-bg">
           <HeaderBg />
-        </div>
+        </div> */}
 
 
         <nav id="nav-wrap">

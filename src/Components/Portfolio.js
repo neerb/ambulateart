@@ -153,23 +153,19 @@ class Portfolio extends Component {
           </Fade>
 
           <div className="projects-wrapper">
-            <Fade left>
-              <div className="project-list">
-                <SoftwareProjectCard projectData={this.props.data.software[0]} />
-                <SoftwareProjectCard projectData={this.props.data.software[2]} right={true} />
-                <SoftwareProjectCard projectData={this.props.data.software[4]} />
-                <SoftwareProjectCard projectData={this.props.data.software[6]} right={true} />
-              </div>
-            </Fade>
+            <div className="project-list">
+              <SoftwareProjectCard projectData={this.props.data.software[0]} />
+              <SoftwareProjectCard projectData={this.props.data.software[2]} right={true} />
+              <SoftwareProjectCard projectData={this.props.data.software[4]} />
+              <SoftwareProjectCard projectData={this.props.data.software[6]} right={true} />
+            </div>
 
-            <Fade right>
-              <div className="project-list">
-                <SoftwareProjectCard projectData={this.props.data.software[1]} />
-                <SoftwareProjectCard projectData={this.props.data.software[3]} right={true} />
-                <SoftwareProjectCard projectData={this.props.data.software[5]} />
-                <SoftwareProjectCard projectData={this.props.data.software[7]} right={true} />
-              </div>
-            </Fade>
+            <div className="project-list">
+              <SoftwareProjectCard projectData={this.props.data.software[1]} />
+              <SoftwareProjectCard projectData={this.props.data.software[3]} right={true} />
+              <SoftwareProjectCard projectData={this.props.data.software[5]} />
+              <SoftwareProjectCard projectData={this.props.data.software[7]} right={true} />
+            </div>
           </div>
         </div>
 

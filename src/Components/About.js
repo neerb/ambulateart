@@ -7,6 +7,9 @@ import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import SkillCard from "./SkillCard/SkillCard"
 import WindowsCard from "./WindowsComponentCard/WindowsCard";
 import MacCard from "./MacComponentCard/MacCard";
+import MusicBumper from "./MusicBumper/MusicBumper";
+import cleanteeth from "../../src/audio/cleanteeth.mp3"
+import tailrunner from "../../src/audio/tailrunner.mp3"
 
 const skillPics = [
   '/images/skillpics/javascriptskill.png',
@@ -26,6 +29,9 @@ const backEndPics = {
 const versionControlPics = {
 
 }
+
+// const audioLink = 'https://audio.jukehost.co.uk/TSwcmY1V3H6wLYCOzNHrgIfGMXkTXk5m';
+// const audioLink = 'https://audio.jukehost.co.uk/LnFwvFwA1l75iaTZaRRaJwHLL4EPVJSa';
 
 
 // single image skillcard
@@ -196,12 +202,20 @@ function About(props) {
                 </div>
               } />
 
-              <WindowsCard programText="C:/try-it-out.drg" artComp={
-                <div className='click-drag-wrap'>
-                  <h1 className='text-vt323 click-drag-us'>{"> These windows are draggable -"}</h1>
-                  <h1 className='text-vt323 click-drag-us'>{"Click and Drag us around "}<span className="happyface">{"^_^"}</span></h1>
+              <div className="cool-div">
+                <WindowsCard programText="C:/try-it-out.drg" artComp={
+                  <div className='click-drag-wrap'>
+                    <h1 className='text-vt323 click-drag-us'>{"> These windows are draggable -"}</h1>
+                    <h1 className='text-vt323 click-drag-us'>{"Click and Drag us around "}<span className="happyface">{"^_^"}</span></h1>
+                  </div>
+                } />
+
+                <div className="center-window">
+                  <MacCard programText="Big Sound" underbartext="I like visualizing music" artComp={<MusicBumper audioSource={tailrunner} />
+                  } />
                 </div>
-              } />
+              </div>
+
 
               <MacCard programText="C:/mySkillset-1" artComp={
                 <div className='skills-text-wrapper-mac mac-bgc'>

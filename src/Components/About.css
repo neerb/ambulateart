@@ -348,6 +348,16 @@
    text-shadow: 0 0 2px #e5ff00, 2px 2px 16px hsla(0,0%,100%,.5);
 }
 
+.cool-div {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.center-window {
+   margin: 0 auto;
+}
+
 .skills-title-mac {
    color:rgb(0, 0, 0)
 }
