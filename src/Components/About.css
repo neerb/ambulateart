@@ -59,16 +59,23 @@
    flex-direction: column;
    height: 100vh;
    width: 100%;
-   overflow: auto;
+   /* overflow: auto; */
    -ms-overflow-style: none;
    scrollbar-width: none;
    z-index: 0;
    pointer-events: none;
+   scroll-behavior: auto;
 
 
    background-image: linear-gradient(var(--bggc) .1em, transparent .1em), linear-gradient(90deg, var(--bggc) .1em, transparent .1em);
    background-size: 1.6em 1.6em;
    background-attachment: fixed;
+}
+
+@-moz-document url-prefix() {
+   .about-bg-grid {
+      position: fixed;
+   }
 }
 
 .page-filter {
@@ -96,13 +103,6 @@
    background: url(../../public/images/brick.png), #ffd79b;
    background-repeat: repeat;
    background-size: cover;
-
-   /* background: linear-gradient(180deg, var(--bgc), var(--bgc2), var(--bgc3), var(--bgc4), var(--bgc)); */
-
-/* 
-   background-image: linear-gradient(var(--bggc) .1em, transparent .1em), linear-gradient(90deg, var(--bggc) .1em, transparent .1em);
-   background-size: 1.6em 1.6em;
-   background-attachment: fixed; */
  }
 
 
@@ -113,6 +113,21 @@
 .italics {
    font-style: italic;
    font-weight: 600;
+}
+
+.utdorange {
+   font-weight: 700;
+   color: #E87500;
+}
+
+.utdgreen {
+   font-weight: 700;
+   color: #185844;
+}
+
+.utdwhite {
+   font-weight: 700;
+   color: #ffffff;
 }
 
  .emphasis-textw {
@@ -432,15 +447,6 @@
    box-shadow: -8px 8px rgba(0, 0, 0, 0.425);
    text-align: center;
 } */
-
-.minimize-btn {
-   background-color: red;
-   border: 1.5px black solid;
-   border-radius: 100%;
-   width: 18px;
-   height: 18px;
-   margin: auto auto auto 5px;
-}
 
 .minimize-btn:hover {
    cursor: pointer;

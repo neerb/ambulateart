@@ -17,19 +17,6 @@ function SkillCard(props) {
         setMinimized(!minimized);
     }
 
-    const hoverWindow = (e) => {
-        // $("body").addClass("grayscale");
-        // $("#" + props.setId).addClass("removegray");
-
-        // $('*').not("#" + props.setId).addClass("grayscale");
-    }
-
-    const endHover = (e) => {
-        // $("body").removeClass("grayscale");
-        // $("#" + props.setId).removeClass("removegray");
-
-        // $('body').not("#" + props.setId).removeClass("grayscale");
-    }
 
     return (
         // <div className="skill-img-label">

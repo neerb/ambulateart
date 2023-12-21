@@ -9,10 +9,10 @@
  }
 
  .minimize-btn {
-    background: radial-gradient(rgb(235, 233, 120), red 80%);
-    border: 1.5px black solid;
-    width: 18px;
-    height: 18px;
+    background: radial-gradient(#ebe978, #ff0000 80%);
+    border: 2px black solid;
+    width: 20px;
+    height: 20px;
     margin: auto auto auto 5px;
  }
  

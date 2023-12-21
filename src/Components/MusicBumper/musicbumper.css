@@ -3,13 +3,19 @@
   font-size: 3rem;
   font-size: 35px;
   letter-spacing: 2px;
-  background-color: #000;
+  /* background-color: #000; */
+  background-color:#000;
+  background-size: 20px 20px;
+  /* background-image:  repeating-linear-gradient(0deg, #3d0000, #3d0000 2px, #000000 1px, #000000); */
+  background-image: repeating-linear-gradient(0deg,#000 0%, #000 30%, #630000 50%, #000 70%, #000 100%);
+  
+  
   /* background-color: rgb(255, 231, 201);
   box-shadow:  -8px -6px #00A4BD, 6px 6px #FF7A59; */
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  height: 150px;
+  height: 200px;
   /* width: 350px; */
   min-width: 250px;
   width: 320px;
@@ -29,6 +35,20 @@
   animation: hue-fade 20s infinite alternate;
 }
 
+.not-playing {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'VT323', monospace;
+  color: #eeff00;
+  font-size: 28px;
+  text-shadow: 0 0 2px #eeff00, 2px 2px 16px hsla(0,0%,100%,.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @keyframes hue-fade {
   /* from {
     filter: hue-rotate(0deg);
@@ -43,22 +63,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(ghostwhite, dimgray); */
-  background: #770000;
+  background: radial-gradient(#a3a3a3,#eeeeee);
+  background: #000000;
+}
+
+#controls hr {
+  color: #FFF;
+  width: 24%;
+  height: 0;
+  border: #FFF 2px dashed;
+  margin: 0 auto;
 }
 
 #controls button {
   background: none;
   outline: none;
   border: none;
-  color: white;
+  color: #fff;
   box-sizing: border-box;
-  margin: 5px 10px;
-  font-size: 20px;
+  margin: 7px 6px 3px 6px;
+  font-size: 24px;
 }
 
 #controls button:hover {
-  color: #ffe554;
+  color: #4cffe7;
 }
 
 .bars-wrapper {
@@ -116,6 +144,7 @@
   background: linear-gradient(
       chartreuse,gold
   );
+  box-shadow: 0 0 4px #eeff00, 0px 0px 4px hsla(0,0%,100%,.5);
   /* box-shadow: 0 0 2px #00000098, 1px 1px 16px hsla(0,0%,100%); */
   /* height: 20px; */
   /* display: none; */

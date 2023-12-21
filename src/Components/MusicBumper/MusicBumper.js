@@ -3,6 +3,7 @@ import './musicbumper.css';
 import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa";
 import { MdReplay } from "react-icons/md";
+import { MdReplayCircleFilled } from "react-icons/md";
 
 const AMPLITUDE_MAX = 255;
 
@@ -66,7 +67,7 @@ class Visualizer extends React.Component {
         console.log(this.state.context);
         let audioSource = document.getElementById("drbumper");
 
-        if (this.state.isPlaying) {
+        if (this.state.context.state === 'running') {
             this.state.context.suspend();
             this.setState({
                 isPlaying: false
@@ -74,7 +75,7 @@ class Visualizer extends React.Component {
 
             audioSource.pause();
         }
-        else if (!this.state.isPlaying) {
+        else if (this.state.context.state === 'suspended') {
             this.state.context.resume();
             this.setState({
                 isPlaying: true
@@ -116,13 +117,31 @@ class Visualizer extends React.Component {
                 </audio>
                 {/* </div> */}
 
+                {
+                    this.state.isPlaying
+                        ?
+                        <div className="bars-wrapper">
+                            <div id="bars" className="flip">
+                                {bars}
+                            </div>
+                        </div>
+                        :
+                        <div className="not-playing">
+                            <p>
+                                - press play -
+                            </p>
+                        </div>
+                }
+
+                {/* 
                 <div className="bars-wrapper">
                     <div id="bars" className="flip">
                         {bars}
                     </div>
-                </div>
+                </div> */}
 
                 <div id="controls">
+                    <hr></hr>
                     <button onClick={this.pausePlay}>
                         {(
                             this.state.isPlaying ?
@@ -133,8 +152,9 @@ class Visualizer extends React.Component {
                     </button>
 
                     <button onClick={this.replay}>
-                        <MdReplay />
+                        <MdReplayCircleFilled />
                     </button>
+                    <hr></hr>
                 </div>
             </div>
         )

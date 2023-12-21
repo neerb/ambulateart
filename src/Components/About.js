@@ -34,79 +34,6 @@ const versionControlPics = {
 // const audioLink = 'https://audio.jukehost.co.uk/LnFwvFwA1l75iaTZaRRaJwHLL4EPVJSa';
 
 
-// single image skillcard
-function ContinueSkillCard(props) {
-  let minimizedStylesHandle = 'continue-handle box-shadow';
-  let maximizedStylesHandle = 'continue-handle';
-  let skillCardNoShadow = 'continue-image-window';
-  let skillCardShadow = 'continue-image-window box-shadow';
-
-  const [minimized, setMinimized] = useState(false);
-
-  function handleMinimize(e) {
-    setMinimized(!minimized);
-  }
-
-  return (
-    // <div className="skill-img-label">
-    <Draggable
-      handle=".continue-handle"
-      defaultPosition={{ x: 0, y: 0 }}
-      scale={1}>
-      <div className={minimized ? skillCardNoShadow : skillCardShadow}>
-        <div className={minimized ? minimizedStylesHandle : maximizedStylesHandle}>
-          <button className='minimize-btn' style={{ backgroundColor: minimized ? "green" : "red" }} onClick={handleMinimize}></button>
-          <div className='program-title'>
-            <div className='program-line'></div>
-            <h1 className='skills-text-title'>Continue</h1>
-            <div className='program-line'></div>
-          </div>
-        </div>
-        <div className='continue-btn' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
-          <a className="continue-button" href="#portfolio">
-            <FontAwesomeIcon icon={faCircleChevronDown} />
-          </a>
-        </div>
-      </div>
-    </Draggable>
-    // </div>
-  );
-}
-
-function SkillTextCard(props) {
-  let minimizedStylesHandle = 'text-handle box-shadow';
-  let maximizedStylesHandle = 'text-handle';
-  let skillCardNoShadow = 'skills-text-bubble';
-  let skillCardShadow = 'skills-text-bubble box-shadow';
-  const [minimized, setMinimized] = useState(false);
-
-  function handleMinimize(e) {
-    setMinimized(!minimized);
-  }
-
-  return (
-    <Draggable
-      handle=".text-handle"
-      defaultPosition={{ x: 0, y: 0 }}
-      scale={1}>
-      <div className={minimized ? skillCardNoShadow : skillCardShadow}>
-        <div className={minimized ? minimizedStylesHandle : maximizedStylesHandle}>
-          <button className='minimize-btn' onClick={handleMinimize} style={{ backgroundColor: minimized ? "gold" : "red" }}></button>
-          <div className='program-title'>
-            <div className='program-line'></div>
-            <h1 className='skills-text-title'>{props.programText}</h1>
-            <div className='program-line'></div>
-          </div>
-        </div>
-        <div className='skills-text-wrapper' style={{ visibility: minimized ? 'hidden' : 'visible' }}>
-          <h1 className='skills-text-bubble-text'>{props.titleText}</h1>
-          <p>{props.skillsText}</p>
-        </div>
-      </div>
-    </Draggable>
-  );
-}
-
 function About(props) {
   const sec = useRef();
 
@@ -160,11 +87,16 @@ function About(props) {
               {/* <Fade> */}
               <SkillCard programText="Debrief: Introduction" artComp={
                 <div className='intro-wrap'>
-                  <h1 className='intro-title'>{"Welcome"}</h1>
+                  <h1 className='intro-title'>Welcome</h1>
                   <p className="intro">
-                    Front-end focused web developer dedicated to building uniquely crafted user-interactive experiences.
-                    Computer Science graduate from The University of Texas at Dallas (UTD).
-                    I have a <span className="italics">genuine zeal</span> for exploring new programming techniques, skills, and implementations. I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter(X) bots.
+                    <span className="emphasis-text1">Front-end</span> focused web developer dedicated to building uniquely crafted user-interactive experiences.
+                    Computer Science graduate from
+                    <span className="utdorange"> The University</span><span className="utdorange"> of Texas</span><span className="utdgreen"> at Dallas</span>
+                    <span className="utdgreen"> (</span>
+                    <span className="utdorange italics">UTD</span>
+                    <span className="utdgreen">)</span>
+                    .
+                    I have a <span className="italics">*zeal*</span> for exploring new programming techniques, skills, and implementations. I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter(X) bots.
                     I'm comfortable with a range of languages and frameworks, including{" "}
                     <span className="emphasis-text1">C#</span>,{" "}
                     <span className="emphasis-text2">C++</span>,{" "}
@@ -211,7 +143,7 @@ function About(props) {
                 } />
 
                 <div className="center-window">
-                  <MacCard programText="Big Sound" underbartext="I like visualizing music" artComp={<MusicBumper audioSource={tailrunner} />
+                  <MacCard programText="X:/MusicBumper.js" underbartext="I like to visualize sound" artComp={<MusicBumper audioSource={tailrunner} />
                   } />
                 </div>
               </div>
