@@ -203,7 +203,7 @@
           "Java",
           "Java Swing Library"
         ],
-        "desc":"University Project: A complete recreation of the Windows Programmer Caculator implementing an Infix/Postfix expression reducing and solving algorithm.",
+        "desc":"University Project: A complete recreation of the Windows Programmer Calculator implementing an Infix/Postfix expression reducing and solving algorithm.",
         "image":"calculator.png",
         "demo":"https://github.com/neerb/ProgrammerCalculator",
         "source":"https://github.com/neerb"

@@ -68,8 +68,9 @@ function SoftwareProjectCard(props) {
           />
         </h1>
         <div className="inner-card-wrapper-bolts">
-          <div className="bolt-wrapper" style={{ justifyContent: "center" }}>
-            <div className="bolt" />
+          <div className="bolt-wrapper">
+            <div className="bolt" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+            <div className="bolt" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
           </div>
 
           <div className="card-wrapper">
@@ -119,8 +120,9 @@ function SoftwareProjectCard(props) {
             </div>
           </div>
 
-          <div className="bolt-wrapper" style={{ justifyContent: "center" }}>
-            <div className="bolt" />
+          <div className="bolt-wrapper">
+            <div className="bolt" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+            <div className="bolt" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
           </div>
         </div>
       </div>
@@ -146,7 +148,7 @@ class Portfolio extends Component {
             <h1 className='port-header'>
               <span className="header-spanelement">{"<"}</span>
               <span className="header-spancompo">{"My"}</span>
-              <span className="header-spanprops">{" works"}</span>
+              <span className="header-spanprops">{" projects"}</span>
               <span className="header-spanslash">{"/"}</span>
               <span className="header-spanelement">{">"}</span>
             </h1>

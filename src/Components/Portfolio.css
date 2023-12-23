@@ -11,10 +11,15 @@
     width: 100%;
     justify-content: center;
     background-color: #386641;
-    background: url("../../public/images/pixelrain.jpg");
+    /* background: url("../../public/images/pixelrain.jpg"); */
+    background: rgb(101,131,112);
+    background: 
+    url(../../public/images/bricktexture.png),
+    linear-gradient(90deg, rgba(101,131,112,1) 0%, rgba(109,139,122,1) 50%, rgba(154,190,172,1) 100%);
+    
     background-repeat: repeat;
     background-attachment: fixed;
-    background-size:cover;
+    background-size:contain;
     /* height: 100vh; */
     min-height: 100vh;
     max-height: fit-content;
@@ -43,7 +48,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 600;
     font-size: 3em;
-    background-color: rgba(47, 79, 79, 0.701);
+    background-color: rgba(0, 0, 0, 0.701);
     padding: 15px 5px 15px 5px;
     border-radius: 10px;
     margin: 0 auto;
@@ -114,11 +119,9 @@
     z-index: 1;
     padding: 15px 5px 15px 5px;
     width: fit-content;
-    height: auto;
-    background: linear-gradient(45deg, #888888c4 0%, #888888c4 50%, #7243bdcb 50%, #7243bdcb 100%);
-    
+    height: auto;    
     background: 
-    linear-gradient(45deg, #888888c4 0%, #888888c4 50%, #7243bdcb 50%, #7243bdcb 100%),
+    linear-gradient(45deg, #888888c4 0%, #888888c4 50%, #c175ffcb, #ffe54fcb 50%, #ff4f84cb 60%, #4fd6ffcb 100%),
     url(../../public/images/cementoverlay.png) center;    
     background-repeat: repeat-x;
     border-radius: 5px;
