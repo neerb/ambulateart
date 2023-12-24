@@ -11,6 +11,8 @@ import MusicBumper from "./MusicBumper/MusicBumper";
 import cleanteeth from "../../src/audio/cleanteeth.mp3"
 import tailrunner from "../../src/audio/tailrunner.mp3"
 
+import WaveGuy from "../Components/p5art/WaveGuy"
+
 const skillPics = [
   '/images/skillpics/javascriptskill.png',
   '/images/skillpics/cssskill.png',
@@ -114,6 +116,7 @@ function About(props) {
                 </div>
               } />
 
+
               <WindowsCard programText="C:/mySkillset-0" artComp={
                 <div className='skills-text-wrapper'>
                   <h1 className='text-vt323 skills-title'>{"Technologies/Frameworks"}</h1>
@@ -146,8 +149,8 @@ function About(props) {
                   <MacCard programText="X:/MusicBumper.js" underbartext="I like to visualize sound" artComp={<MusicBumper audioSource={tailrunner} />
                   } />
                 </div>
-              </div>
 
+              </div>
 
               <MacCard programText="C:/mySkillset-1" artComp={
                 <div className='skills-text-wrapper-mac mac-bgc'>
@@ -185,12 +188,17 @@ function About(props) {
               }
               />
 
+              {/* <MacCard programText="X:/WaveGuy.p5" underbartext="WebGL is incredible" artComp={
+                <WaveGuy />
+              } /> */}
+
               <SkillCard programText="Version Control Tools" artComp={
                 vcPics.map((skill) => {
                   return (
                     <img className='multi-image-skill-img' key={skill.name} alt='skill' src={"/images/skillpics/" + skill.src}></img>
                   )
                 })} />
+
 
               <SkillCard programText="Continue" artComp={
                 <div className='continue-btn'>
