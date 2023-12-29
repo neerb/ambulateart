@@ -35,7 +35,6 @@ class Header extends Component {
 
 
         <nav id="nav-wrap">
-
           <Fade>
           </Fade>
         </nav>

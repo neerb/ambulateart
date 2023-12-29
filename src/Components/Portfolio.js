@@ -3,31 +3,11 @@ import Fade from "react-reveal";
 import "./Portfolio.css";
 import "./Contact.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faCircleChevronDown, faLaptop } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLaptop } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { TypeAnimation } from "react-type-animation";
-import TimesTables from "./p5art/TimesTables";
-import PerlinNoise2D from "./p5art/PerlinNoise2D";
-import Unknownp5 from "./p5art/Unknownp5";
-import Colorful3DAnimation from "./p5art/Colorful3DAnimation";
-import Triangular3DAnimation from "./p5art/Triangular3DAnimation";
-import ColorfulBouncingBalls from "./p5art/ColorfulBouncingBalls";
-import ColorfulBouncingBalls3D from "./p5art/ColorfulBouncingBalls3D";
-import ColorfulWaves3DAnimation from "./p5art/ColorfulWaves3DAnimation";
-import ColorfulWave2DAnimation from "./p5art/ColorfulWaves2DAnimation";
-import GravitySimulation2D from "./p5art/GravitySimulation2D";
-import SolarSystem3DAnimation from "./p5art/SolarSystem3DAnimation";
-import SolarSystem3D from "./p5art/SolarSystem3D";
-import LaughingFaces from "./p5art/LaughingFaces";
-import WildFaces from "./p5art/WildFaces";
-import AnimatedDetailedHumanFace from "./p5art/AnimatedDetailedHumanface";
-import MenacingFace from "./p5art/MenacingFace";
-import Kaleidoscope2D from "./p5art/Kaleidoscope2D";
-import DetailedKaleidoscope2D from "./p5art/DetailedKaleidoscope2D";
-import Psychedelic3D from "./p5art/Psychedelic3D";
-import AnimatedFlowerBouquet from "./p5art/AnimatedFlowerBouqet";
-import Draggable from "react-draggable";
-import { useState } from "react";
+
 
 
 let colorGradients = [
@@ -145,13 +125,43 @@ class Portfolio extends Component {
       <div id="portfolio">
         <div className="portfolio-block">
           <Fade>
-            <h1 className='port-header'>
+            <div className='port-header'>
               <span className="header-spanelement">{"<"}</span>
               <span className="header-spancompo">{"My"}</span>
               <span className="header-spanprops">{" projects"}</span>
               <span className="header-spanslash">{"/"}</span>
               <span className="header-spanelement">{">"}</span>
-            </h1>
+
+              <div className="legend-wrapper">
+                <div className="icon-legend">
+                  <FontAwesomeIcon icon={faCaretDown} />
+                  {" LEGEND "}
+                  <FontAwesomeIcon icon={faCaretDown} />
+                </div>
+
+                <div className="legend-items">
+                  <div className="icon-legend-item">
+                    <h1 className="legend-btn-title">
+                      {"DEMO: "}
+                    </h1>
+                    <span className="legend-icon-span">
+                      <div className="icon-legend-btn">
+                        <FontAwesomeIcon icon={faLaptop} />
+                      </div>
+                    </span>
+                  </div>
+                  <div className="icon-legend-item">
+                    <h1 className="legend-btn-title">
+                      {"SOURCE: "}
+                    </h1>                    <span className="legend-icon-span">
+                      <div className="icon-legend-btn">
+                        <FontAwesomeIcon icon={faGithub} />
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Fade>
 
           <div className="projects-wrapper">

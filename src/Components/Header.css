@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Lines&family=Silkscreen&display=swap');
 
 .app-header {
     text-align: center;
@@ -39,21 +41,18 @@
 }
 
 .shineeffect {
-    color: hsl(0, 0%, 28%);
-    font-weight: bold!important;
-    font-family: monospace;
-    letter-spacing: 7px!important;
-    text-transform: uppercase;
-    z-index: 1;
-  }
-  
-.shineeffect {
+    /* font-family: 'Silkscreen'; */
     padding: 0px;
     background: linear-gradient(to right, #ffffff85 0, #ffea4e8e 10%, #ffe46db2 20%, #ffe46db2 30%, #ffea4e8a 40%, #ffffff85 50%, #ffffff85 60%);
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 8s infinite linear;
+    color: hsl(0, 0%, 28%);
+    /* font-weight: bold!important; */
+    letter-spacing: 7px!important;
+    text-transform: uppercase;
+    z-index: 1;
   }
   
   @keyframes shine {
@@ -70,6 +69,7 @@
     font-size: 2rem;
     font-family: 'VT323', monospace;
     letter-spacing: 2px;
+    text-shadow: 0 0 4px #4AF626, 0px 0px 12px hsla(0,0%,100%,.5);
     /* background-color: rgb(0, 71, 0); */
 }
 
@@ -191,5 +191,11 @@
 
     .header-type {
         font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .header-name {
+        font-size: 3.25rem;
     }
 }
