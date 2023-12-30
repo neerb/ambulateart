@@ -34,10 +34,10 @@ class Header extends Component {
         </div> */}
 
 
-        <nav id="nav-wrap">
+        {/* <nav id="nav-wrap">
           <Fade>
           </Fade>
-        </nav>
+        </nav> */}
 
         <div className="header-wrapper">
           {/* <h2 style={{ fontSize: 30 }} class='header-label'>Portfolio:</h2> */}
