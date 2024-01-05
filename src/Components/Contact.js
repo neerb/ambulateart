@@ -60,10 +60,17 @@ class Contact extends Component {
             <div className="contact-bar barc5"></div>
           </div>
           <div className="contact-outer">
+
             <div className="contact-outer-wrap">
               <div className="top-plane"></div>
               <div className="bottom-plane"></div>
             </div>
+
+            {/* <div className="brickframe">
+            </div> */}
+
+            {/* <div className="overlay">
+            </div> */}
 
             <div className="pos-abs-wrap">
               <div className="contact-info-wrap">
