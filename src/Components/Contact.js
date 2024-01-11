@@ -77,7 +77,7 @@ class Contact extends Component {
 
                 <div className="contact-info">
                   <div className="bolt-wrapper">
-                    <div className="screw" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+                    <div className="screw" style={{ transform: "rotateZ(" + (Math.random() * 90) + "deg)", margin: "auto" }} />
                   </div>
 
                   <h2>
@@ -85,14 +85,14 @@ class Contact extends Component {
                   </h2>
 
                   <div className="bolt-wrapper">
-                    <div className="screw" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+                    <div className="screw" style={{ transform: "rotateZ(" + (Math.random() * 90) + "deg)", margin: "auto" }} />
                   </div>
                 </div>
 
                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", flexWrap: "wrap", gap: "20px" }}>
                   <div className="contact-info" style={{ margin: "0 20px" }}>
                     <div className="bolt-wrapper">
-                      <div className="screw" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+                      <div className="screw" style={{ transform: "rotateZ(" + (Math.random() * 90) + "deg)", margin: "auto" }} />
 
                     </div>
 
@@ -102,7 +102,7 @@ class Contact extends Component {
                       </h3>
                     </div>
                     <div className="bolt-wrapper">
-                      <div className="screw" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+                      <div className="screw" style={{ transform: "rotateZ(" + (Math.random() * 90) + "deg)", margin: "auto" }} />
 
                     </div>
                   </div>

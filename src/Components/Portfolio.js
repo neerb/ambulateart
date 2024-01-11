@@ -26,10 +26,10 @@ let colors = [
   "#4b749fc4" // slateblue
 ];
 
-let id = 0;
-
 function SoftwareProjectCard(props) {
   let reversePos = "reverse-order magnet-right";
+  let fixtureType = Math.floor((Math.random() * 2)) === 1 ? "screw" : "bolt";
+  console.log(Math.random() * 3);
 
   return (
     <div className="border-aim">
@@ -42,18 +42,25 @@ function SoftwareProjectCard(props) {
 
         <div className="gradient-metal-bg"></div> */}
 
-        <h1 className="project-title">
+        {/* <h1 className="project-title">
           <TypeAnimation
             sequence={["> " + props.projectData.title]}
           />
-        </h1>
+        </h1> */}
         <div className="inner-card-wrapper-bolts">
           <div className="bolt-wrapper">
-            <div className="bolt" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
-            <div className="bolt" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
           </div>
 
           <div className="card-wrapper">
+            <h1 className="project-title">
+              <TypeAnimation
+                sequence={["> " + props.projectData.title]}
+              />
+            </h1>
+
+
             <div className={"project-info " + (props.right ? reversePos : null)}>
               <img className="" src={"/images/softwarepics/" + props.projectData.image}>
               </img>
@@ -101,8 +108,8 @@ function SoftwareProjectCard(props) {
           </div>
 
           <div className="bolt-wrapper">
-            <div className="bolt" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
-            <div className="bolt" style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
           </div>
         </div>
       </div>

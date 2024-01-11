@@ -106,7 +106,7 @@
     background-position: -10% -10%; */
 
     background-color: #31000a;
-    background-image: url(../../public/images/light-aluminum-comp.webp);
+    background-image: url(../../public/images/metal-texture.webp);
     border: 3px inset #a8a8a8;
     border-radius: 5px;
     box-sizing: border-box;
@@ -166,7 +166,7 @@
     mix-blend-mode: overlay;
     pointer-events: none;
     
-    background-image: url(../../public/images/light-aluminum-comp.webp);
+    background-image: url(../../public/images/metal-texture.webp);
 }
 
 .legend-icon-span:after {
@@ -179,7 +179,7 @@
     mix-blend-mode: overlay;
     pointer-events: none;
     z-index: -1;
-    background-image: url(../../public/images/metal-small-comp.webp);
+    background-image: url(../../public/images/metalbg-texture.webp);
 }
 
 .header-spanelement {
@@ -246,8 +246,7 @@
     width: fit-content;
     height: auto;    
     background: 
-    linear-gradient(45deg, #888888c4 0%, #888888c4 50%, #c175ffcb, #ffe54fcb 50%, #ff4f84cb 60%, #4fd6ffcb 100%),
-    url(../../public/images/cementoverlay.png) center;    
+    linear-gradient(45deg, #888888c4 0%, #888888c4 50%, #c175ffcb, #ffe54fcb 50%, #ff4f84cb 60%, #4fd6ffcb 100%);    
     background-repeat: repeat-x;
     border-radius: 5px;
 
@@ -256,6 +255,7 @@
     transition: background-position .2s cubic-bezier(.47, .1, 1, .63),
     color .2s linear;
     transition: 0.5s ease-in-out;
+    overflow: hidden;
 
     /* background: linear-gradient(90deg,#88868b,#a7a2a6 10%,#a09b9f 50%,#8f8d93 75%,#625f60 90%,#4a4645); */
     border-radius: 4px;
@@ -273,8 +273,7 @@
     height: 100%;
 }
 
-/* .project-card::before { */
-.metal-foreground {
+.project-card::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -284,12 +283,11 @@
     mix-blend-mode: overlay;
     pointer-events: none;
     border-radius: 5px;
-    
-    /* background-image: url(../../public/images/light-aluminum-comp.webp); */
-    /* background: linear-gradient(90deg,#88868b,#a7a2a6 10%,#a09b9f 50%,#8f8d93 75%,#625f60 90%,#4a4645); */
-    background-image: url(../../public/images/metal-small-comp.webp),
-    url(../../public/images/light-aluminum-comp.webp),
-    linear-gradient(90deg,#88868b,#a7a2a6 10%,#a09b9f 50%,#8f8d93 75%,#625f60 90%,#4a4645);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.4;
+    background: url(../../public/images/cementoverlay.png) center;
 }
 
 
@@ -303,7 +301,7 @@
     left: 0;
     mix-blend-mode: overlay;
     pointer-events: none;
-    /* background-image: url(../../public/images/metal-small-comp.webp); */
+    /* background-image: url(../../public/images/metalbg-texture.webp); */
     background: linear-gradient(90deg,#88868b,#a7a2a6 10%,#a09b9f 50%,#8f8d93 75%,#625f60 90%,#4a4645);
     border-radius: 5px;
     z-index: -1;
@@ -394,8 +392,9 @@
     border-radius: 7px;
     padding: 5px 5px 5px 5px;
     text-align: center;
-    margin: 0 auto;
-    width: 90%;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    box-sizing: border-box;
     /* margin-bottom: 10px; */
 }
 
@@ -512,7 +511,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     background-color: #700016;
-    background-image: url(../../public/images/light-aluminum-comp.webp);
+    background-image: url(../../public/images/metal-texture.webp);
 }
 
 .proj-button {
@@ -584,7 +583,7 @@
     mix-blend-mode: overlay;
     pointer-events: none;
     
-    background-image: url(../../public/images/light-aluminum-comp.webp);
+    background-image: url(../../public/images/metal-texture.webp);
 }
 
 .proj-btn:after {
@@ -597,7 +596,7 @@
     mix-blend-mode: overlay;
     pointer-events: none;
     z-index: -1;
-    background-image: url(../../public/images/metal-small-comp.webp);
+    background-image: url(../../public/images/metalbg-texture.webp);
 }
 
 
@@ -697,6 +696,10 @@
 
     .project-title {
         font-size: 1.5rem;
+    }
+
+    .project-card:hover {
+        background-position: inherit;
     }
 }
 
