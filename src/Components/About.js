@@ -69,22 +69,20 @@ function About(props) {
 
     // if (frontEndPics && backEndPics && versionControlPics) {
     return (
-      <div id="about" className='about' onTouchEnd={() => { props.scrollTo(props.goToSectionRef) }} onMouseOver={() => { props.scrollTo(props.goToSectionRef) }}>
+      // <div id="about" className='about' onTouchEnd={() => { props.scrollTo(props.goToSectionRef) }} onMouseOver={() => { props.scrollTo(props.goToSectionRef) }}>
+      <div id="about" className='about'>
         <div className="page-filter"></div>
+        <div className="about-bg-grid"></div>
         <div className="about-gradient-bg"></div>
         <Fade>
           <div className='about-wrapper'>
             {/* <div className='about-outer-skills'> */}
-            <div className='skill-windows'>
-              <div className="can-work">
-                <Fade left>
-                  <h1 className="can-work-text">Some things <span>about me...</span></h1>
-                </Fade>
-              </div>
-              <div className="about-bg-grid"></div>
-              <Fade left>
-                {/* <div className="skills-list-windows">{skills}</div> */}
+            <div className="about-header">
+              <Fade>
+                <h1 className="can-work-text"><span className="green-span">* </span>Some things <span className="bloo-span">about me...<span className="green-span"> *</span></span></h1>
               </Fade>
+            </div>
+            <div className='skill-windows'>
 
               {/* <Fade> */}
               <SkillCard programText="Debrief: Introduction" artComp={
@@ -98,7 +96,7 @@ function About(props) {
                     <span className="utdorange italics">UTD</span>
                     <span className="utdgreen">)</span>
                     .
-                    I have a <span className="italics">*zeal*</span> for exploring new programming techniques, skills, and implementations. I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter(X) bots.
+                    I have a <span className="italics">*zeal*</span> for exploring new programming techniques, skills, and implementations. During my academic journey and spare time over the past 7 years, I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter(X) and Discord bots.
                     I'm comfortable with a range of languages and frameworks, including{" "}
                     <span className="emphasis-text1">C#</span>,{" "}
                     <span className="emphasis-text2">C++</span>,{" "}
@@ -110,9 +108,10 @@ function About(props) {
                     <span className="emphasis-text1">CSS and HTML</span>,
                     I also find time to appreciate the intricacies of full-stack development, incorporating technologies like{" "}
                     <span className="emphasis-textw" w>MongoDB and Express.js for RESTful API services</span>.
-                    I find joy in attending hackathons, working on desktop and mobile applications, and solving coding problems.
+                    Likewise, I enjoy attending hackathons, working on desktop and mobile applications, and solving coding problems.
                     Let's collaborate and create something together.
                   </p>
+                  <h1 className='exit-title'>Thanks for stopping by...</h1>
                 </div>
               } />
 

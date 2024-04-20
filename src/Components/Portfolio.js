@@ -7,6 +7,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLaptop } from "@fortawesome/free-solid-svg-icons";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { TypeAnimation } from "react-type-animation";
+import { red } from "@mui/material/colors";
 
 
 
@@ -29,8 +30,6 @@ let colors = [
 function SoftwareProjectCard(props) {
   let reversePos = "reverse-order magnet-right";
   let fixtureType = Math.floor((Math.random() * 2)) === 1 ? "screw" : "bolt";
-  console.log(Math.random() * 3);
-
   return (
     <div className="border-aim">
       <div className="project-card" style={{
@@ -66,9 +65,7 @@ function SoftwareProjectCard(props) {
               </img>
 
               <div className="proj-desc-links ">
-                <p style={{
-                  background: "linear-gradient(-45deg, #333333c4" + /*colors[Math.floor(Math.random() * 5)] + */" 50%, #000000c4 50%)",
-                }}>
+                <p>
 
                   {props.projectData.desc}
                 </p>
@@ -81,26 +78,34 @@ function SoftwareProjectCard(props) {
 
                     <div className="stack-info">
                       {props.projectData.technologies.map((t) =>
-                        <p key={t}>
+                        <div className="stack-item" key={t}>
                           {t}
-                        </p>
+                        </div>
                       )}
                     </div>
                   </div>
 
                   <div className="proj-links">
                     {/* Live Demo and Source Links: */}
-                    <div className="proj-btn">
-                      <a target='_blank' href={props.projectData.demo} className="proj-button border-aim-btn">
-                        <FontAwesomeIcon icon={faLaptop} />
-                      </a>
-                    </div>
+                    {
+                      props.projectData.demo ?
+                        // <div className="proj-btn-link">
+                        <a target='_blank' href={props.projectData.demo} className="proj-button">
+                          <FontAwesomeIcon icon={faLaptop} />
+                        </a>
+                        // </div>
+                        :
+                        null
+                    }
 
-                    <div className="proj-btn">
-                      <a target='_blank' href={props.projectData.source} className="proj-button border-aim-btn">
-                        <FontAwesomeIcon icon={faGithub} />
-                      </a>
-                    </div>
+                    {
+                      props.projectData.source ?
+                        <a target='_blank' href={props.projectData.source} className="proj-button">
+                          <FontAwesomeIcon icon={faGithub} />
+                        </a>
+                        :
+                        null
+                    }
                   </div>
                 </div>
               </div>
@@ -130,45 +135,72 @@ class Portfolio extends Component {
 
     return (
       <div id="portfolio">
+        <div className="dotted-bg">
+        </div>
         <div className="portfolio-block">
           <Fade>
+
             <div className='port-header'>
-              <span className="header-spanelement">{"<"}</span>
-              <span className="header-spancompo">{"My"}</span>
-              <span className="header-spanprops">{" projects"}</span>
-              <span className="header-spanslash">{"/"}</span>
-              <span className="header-spanelement">{">"}</span>
+              <div style={{ display: 'flex', flexDirection: "column", gap: "10px" }}>
+                <h1 className="icon-legend" style={{ fontWeight: "400", margin: "auto" }}>
+                  {"---> ---> ---> ---> --->"}
+                </h1>
 
-              <div className="legend-wrapper">
-                <div className="icon-legend">
-                  <FontAwesomeIcon icon={faCaretDown} />
-                  {" LEGEND "}
-                  <FontAwesomeIcon icon={faCaretDown} />
+                <div className="myprojs-wrap">
+                  <span className="header-spanelement">{"<"}</span>
+                  <span className="header-spancompo">{"My"}</span>
+                  <span className="header-spanprops">&nbsp;{"projects"}</span>
+                  <span className="header-spanslash">{"/"}</span>
+                  <span className="header-spanelement">{">"}</span>
                 </div>
 
-                <div className="legend-items">
-                  <div className="icon-legend-item">
-                    <h1 className="legend-btn-title">
-                      {"DEMO: "}
-                    </h1>
-                    <span className="legend-icon-span">
-                      <div className="icon-legend-btn">
-                        <FontAwesomeIcon icon={faLaptop} />
-                      </div>
-                    </span>
+                <h1 className="icon-legend" style={{ fontWeight: "400", margin: "auto" }}>
+                  {"---> ---> ---> ---> --->"}
+                </h1>
+              </div>
+
+              <div>
+                <div className='port-header' style={{ padding: "10px", margin: "auto", background: "#000", display: "flex", justifyContent: "", boxShadow: "0px 0px 12px #EE0000" }}>
+                  <span style={{ color: "red", fontSize: "30px", textShadow: "red 0px 0px 6px" }}>{"<!!!>"} </span>
+                  <h1 className="icon-legend" style={{ fontWeight: "400", margin: "auto" }}>
+                    All web-related projects are fully responsive, please try them out.
+                  </h1>
+                  <span style={{ color: "red", fontSize: "30px", textShadow: "red 0px 0px 6px" }}> {"<!!!>"}</span>
+                </div>
+
+                <div className="legend-wrapper" style={{ paddingTop: "12px" }}>
+                  <div className="icon-legend">
+                    <FontAwesomeIcon style={{ color: "red" }} icon={faCaretDown} />
+                    {" LEGEND "}
+                    <FontAwesomeIcon style={{ color: "red" }} icon={faCaretDown} />
                   </div>
-                  <div className="icon-legend-item">
-                    <h1 className="legend-btn-title">
-                      {"SOURCE: "}
-                    </h1>                    <span className="legend-icon-span">
-                      <div className="icon-legend-btn">
-                        <FontAwesomeIcon icon={faGithub} />
-                      </div>
-                    </span>
+
+                  <div className="legend-items">
+                    <div className="icon-legend-item">
+                      <h1 className="legend-btn-title">
+                        {"DEMO: "}
+                      </h1>
+                      <span className="legend-icon-span">
+                        <div className="icon-legend-btn">
+                          <FontAwesomeIcon icon={faLaptop} />
+                        </div>
+                      </span>
+                    </div>
+                    <div className="icon-legend-item">
+                      <h1 className="legend-btn-title">
+                        {"SOURCE: "}
+                      </h1>                    <span className="legend-icon-span">
+                        <div className="icon-legend-btn">
+                          <FontAwesomeIcon icon={faGithub} />
+                        </div>
+                      </span>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
+
           </Fade>
 
           <div className="projects-wrapper">
@@ -177,6 +209,7 @@ class Portfolio extends Component {
               <SoftwareProjectCard projectData={this.props.data.software[2]} right={true} />
               <SoftwareProjectCard projectData={this.props.data.software[4]} />
               <SoftwareProjectCard projectData={this.props.data.software[6]} right={true} />
+              <SoftwareProjectCard projectData={this.props.data.software[8]} />
             </div>
 
             <div className="project-list">
@@ -186,7 +219,7 @@ class Portfolio extends Component {
               <SoftwareProjectCard projectData={this.props.data.software[7]} right={true} />
             </div>
           </div>
-        </div>
+        </div >
 
         {/* <div className="programming-art">
           <SkillCard programText="p5.js" artComp={<PerlinNoise2D />} />

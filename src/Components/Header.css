@@ -92,7 +92,7 @@
 .header-bar {
     min-width: 35%;
     margin: 18px auto 24px auto;
-    border-color: rgba(255, 236, 0, 0.5);
+    border-color: #ffec0080;
     z-index: 1;
 }
 

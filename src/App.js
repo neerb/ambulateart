@@ -6,6 +6,7 @@ import Navigation from "./Components/Navigation";
 import Header from "./Components/Header";
 import About from "./Components/About";
 import Portfolio from "./Components/Portfolio";
+import PortfolioConcept from "./Components/portfolioConcept/PortfolioConcept";
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import { useEffect } from "react";
@@ -58,7 +59,8 @@ function App() {
           <About goToSectionRef={abtRef} scrollTo={scrollTo} data={resumeData.main} skills={resumeData.resume} id="about" />
         </div>
         <Portfolio data={resumeData.portfolio} id='portfolio' />
-        <Contact data={resumeData.main} />
+        {/* <PortfolioConcept /> */}
+        <Contact data={resumeData.main} id="contact" />
         <Footer data={resumeData.main} />
       </div >
     );

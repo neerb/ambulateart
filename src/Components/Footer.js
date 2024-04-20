@@ -8,7 +8,7 @@ class Footer extends Component {
     return (
       <footer className="footer-wrap">
         <div className="copyright">
-          @Copyright 2023 - Nathan Breen
+          @Copyright 2024 - Nathan Breen
         </div>
       </footer>
     );

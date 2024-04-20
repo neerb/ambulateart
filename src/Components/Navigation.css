@@ -74,6 +74,21 @@ nav ul {
     transition: 0.25s ease-in-out;
     color: #ffec00; 
   }
+/* 
+  nav li a:hover nav li a::before {
+    content: ".";
+    display: inline-block;
+    color: aqua;
+    position: absolute;
+    margin-left: -0.5rem;
+  }
+  nav li a:hover nav li a::after {
+    content: "()";
+    display: inline-block;
+    color: rgb(218, 112, 202);
+    position: absolute;
+  } */
+
 
 
   nav li.active a::after { 

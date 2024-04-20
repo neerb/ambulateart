@@ -43,11 +43,11 @@
    position: absolute;
    top: 0;
    left: 0;
-   height: 100vh;
+   height: 100%;
    width: 100%;
-   z-index: 0;
+   z-index: 1;
    pointer-events: none;
-   /* background: linear-gradient(180deg, var(--bgc), var(--bgc2), var(--bgc3), var(--bgc4), var(--bgc)); */
+   background: linear-gradient(180deg, var(--bgc), var(--bgc2), var(--bgc3), var(--bgc4), var(--bgc));
    background-attachment: scroll;
 }
 
@@ -62,7 +62,7 @@
    /* overflow: auto; */
    -ms-overflow-style: none;
    scrollbar-width: none;
-   z-index: -1;
+   z-index: 2;
    pointer-events: none;
    scroll-behavior: auto;
 
@@ -86,7 +86,7 @@
    left: 0;
    bottom: 0;
    right: 0;
-   z-index: 3;
+   z-index: 4;
    pointer-events: none;
    background: linear-gradient(rgba(18,16,16,0) 50%,rgba(0, 0, 0, 0.137) 0),linear-gradient(90deg,rgba(255,0,0,.06),rgba(0,255,0,.02),rgba(0,0,255,.06));
    background-size: 100% 2px,3px 100%;
@@ -99,8 +99,9 @@
    overflow: auto;
    -ms-overflow-style: none;
    scrollbar-width: none;
+   z-index: 3;
    
-   background: url(../../public/images/brick.png), #ffd79b;
+   /* background: url(../../public/images/brick.png), #ffd79b; */
    background-repeat: repeat;
    background-size: cover;
  }
@@ -248,7 +249,7 @@
 
    z-index: 0;
 
-   background: linear-gradient(180deg, var(--bgc), var(--bgc2), var(--bgc3), var(--bgc4), var(--bgc));
+   /* background: linear-gradient(180deg, var(--bgc), var(--bgc2), var(--bgc3), var(--bgc4), var(--bgc)); */
 }
 
 .skills-left {
@@ -258,7 +259,7 @@
 .skills-right {
 
 }
-
+/* 
 .can-work {
    display: flex;
    flex-direction: column;
@@ -266,22 +267,61 @@
    text-align: center;
    width: 100%;
    z-index: 0;
+} */
+
+.about-header {
+   font-family: 'VT323', monospace;
+   /* font-family: 'Courier New', monospace; */
+   font-weight: 400;
+   font-size: 4em;
+   background-color: #000000;
+   border: 6px inset #ffffff;
+   box-shadow: 0px 0px 12px #ffffff;
+   padding: 20px;
+   border-radius: 10px;
+   margin: 75px auto 10px auto;
+   max-width: fit-content;
+   height: 100px;
+
+   /* text-shadow: 0 0 4px #860000, 0px 1px 12px hsla(0,0%,100%,.5); */
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   width: 100%;
+   z-index: 0;
+   gap: 20px;
+
+   /* background: #000; */
+   background-image: linear-gradient(#4b2121 2px, transparent 2px), 
+   linear-gradient(90deg, #4b2121 2px, transparent 2px);
+   background-size: 0.4em 0.4em;
+   background-position: -10% -10%;
+   /* max-width: 100%; */
 }
 
 .can-work-text {
    font-size: 35px;
-   font-family: 'Roboto Mono', monospace;
-   color: black;
-   margin: 85px auto 15px auto;
+   font-family: 'VT323', monospace;
+   font-weight: 400;
+   color: white;
+   text-shadow: 0 0 2px #FFF, 2px 2px 16px hsla(0,0%,100%,.5);
    padding: 5px 10px;
-   background-color: rgb(255, 231, 201);
-   box-shadow:  -8px -6px #00A4BD, 6px 6px #FF7A59;
+   background: black;
+   box-shadow: 0px 0px 12px #4b2121;
 }
 
-.can-work-text span {
-   color: #c72020;
-   text-shadow: 0 0 5px rgb(255, 162, 201), 2px 2px 16px hsla(0,0%,100%,.5);
+.bloo-span {
+   color: #2df8ff;
+   font-weight: 400;
+   text-shadow: 0 0 6px #2df8ff, 2px 2px 16px hsla(0,0%,100%,.5);
    font-style: italic;
+}
+
+.green-span {
+   color: #e5ff00;
+   text-shadow: 0 0 2px #e5ff00, 2px 2px 16px hsla(0,0%,100%,.5);
 }
 
 .about-work h1 {
@@ -304,6 +344,29 @@
 
 .intro-title{
    text-align: center;
+}
+
+.exit-title {
+   font-family: "VT323", monospace;
+   text-align: center;
+   font-size: 1.4rem;
+   color: #7fff00;
+   text-shadow: #7fff00 0px 0px 6px;
+   background-color: black;
+   width: auto;
+   padding: 6px;
+   margin: 10px auto 0 auto;
+
+   animation: hue-rotate 10s infinite alternate;
+}
+
+@keyframes hue-rotate {
+   from {
+      filter: hue-rotate(0deg)
+   }
+   to {
+      filter: hue-rotate(360deg)
+   }
 }
 
 .intro {
@@ -713,9 +776,8 @@
 }
 
 @media screen and (max-width: 550px) {
-   .can-work {
-      max-width: 90vw;
-      margin: auto;
+   .about-header {
+      max-width: 80vw;
    }
    .can-work-text {
       font-size: 28px;

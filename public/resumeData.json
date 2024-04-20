@@ -126,10 +126,10 @@
           "Ant Design Components",
           "Django REST Framework"
         ],
-        "desc":"Developed the front-end user interface with coordination of back-end team, enabling users to upload .csv and .xlsx product catalog files to be parsed, uploaded, and processed to a back-end database containing online e-commerce product data via a Django implemented RESTful API.",
+        "desc":"Developed the front-end user interface with coordination of back-end team of an E-Commerce product uploading platform - enabling users to upload .csv and .xlsx product catalog files to be parsed, uploaded, and processed to a back-end database containing online e-commerce product data via a Django implemented RESTful API.",
         "image":"unthinkai.png",
-        "demo":"https://github.com/neerb",
-        "source":"https://github.com/neerb"
+        "demo": "",
+        "source":"https://github.com/neerb/unthink-frontend-playground"
       },
       {
         "title":"Ambulation Zone",
@@ -140,7 +140,7 @@
           "JQuery",
           "Gatsby"
         ],
-        "desc":"A zone for my thoughts, programming related, or just for fun ideas (usually visual/interactive).  Sort of a mix of everything.  This is best experienced on a PC/Desktop.",
+        "desc":"A zone for my thoughts, programming related, or just for fun ideas (usually visual/interactive).  A mix of everything.  This is best experienced on a PC/Desktop.",
         "image":"ambulationzonesc.png",
         "demo":"https://ambulate.net",
         "source":"https://github.com/neerb"
@@ -151,12 +151,13 @@
           "JavaScript, CSS, React",
           "Express.js",
           "MongoDB",
+          "AWS",
           "JQuery",
           "Gatsby"
         ],
-        "desc":"A full-stack web project with fully implemented multi-pathway RESTful API and Database linkage, populated with the information for all of the Greed Island cards from the popular show Hunter X Hunter.  Accompanied by a front-end user display to view and search through this array of cards.",
+        "desc":"A full-stack web project with fully implemented multi-pathway RESTful API (AWS Lambda) and Database linkage (MongoDB), populated with the information for all of the Greed Island cards from the popular show Hunter X Hunter.  Accompanied by a front-end user display to view and search through this array of cards.",
         "image":"greedislanddatabasesc.png",
-        "demo":"https://github.com/neerb",
+        "demo":"https://www.ambulation.zone",
         "source":"https://github.com/neerb"
       },
       {
@@ -170,8 +171,8 @@
         ],
         "desc":"A few of my favorite album covers brought to life utilizing CSS styling and animations.",
         "image":"albumcoverssc.png",
-        "demo":"https://www.ambulation.zone",
-        "source":"https://www.github.com/neerb"
+        "demo":"https://neerb.github.io/animated-album-covers/",
+        "source":"https://www.github.com/neerb/animated-album-covers"
       },
       {
         "title":"A Simple ToDo List Applet",
@@ -205,8 +206,19 @@
         ],
         "desc":"University Project: A complete recreation of the Windows Programmer Calculator implementing an Infix/Postfix expression reducing and solving algorithm.",
         "image":"calculator.png",
-        "demo":"https://github.com/neerb/ProgrammerCalculator",
-        "source":"https://github.com/neerb"
+        "demo":"",
+        "source":"https://github.com/neerb/ProgrammerCalculator"
+      },
+      {
+        "title":"Paint.NET One-Dimensional Cellular Automata Rendering Plugin",
+        "technologies":[
+          "C#",
+          "Paint.NET Framework"
+        ],
+        "desc":"A Paint.NET plugin that renders any ruleset of one-dimensional cellular automata (0 - 255) with a user's choice of color and up to 3 initial starting indexes. Pictured: Ruleset 99 with 3 initial starting indexes.",
+        "image":"99tristart.png",
+        "demo":"",
+        "source":"https://github.com/neerb/pdn-one-dimensional-cellular-automata-plugin/"
       }
     ],
     "projects": [
