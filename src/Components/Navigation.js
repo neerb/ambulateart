@@ -3,6 +3,7 @@ import "./Navigation.css";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { blue } from '@mui/material/colors';
+import { motion } from 'framer-motion';
 
 function Navigation() {
     const [activeSection, setActiveSection] = useState('home');

@@ -27,6 +27,79 @@ let colors = [
   "#4b749fc4" // slateblue
 ];
 
+function SoftwareProjectCardClean(props) {
+  let reversePos = "reverse-order magnet-right";
+  let fixtureType = Math.floor((Math.random() * 2)) === 1 ? "screw" : "bolt";
+  return (
+    <div className="border-aim-clean">
+      <div className="project-card-clean" style={{
+        // background: colorGradients[Math.floor(Math.random() * 5)]
+      }}>
+
+        <div className="card-wrapper-clean">
+          <h1 className="project-title-clean">
+            <TypeAnimation
+              sequence={[props.projectData.title]}
+              cursor={false}
+            />
+          </h1>
+
+
+          <div className={"project-info-clean " + (props.right ? reversePos : null)}>
+            <img className="" src={"/images/softwarepics/" + props.projectData.image}>
+            </img>
+
+            <div className="proj-desc-links-clean ">
+              <p>
+                {props.projectData.desc}
+              </p>
+              <hr></hr>
+              <div className="tech-wrapper-clean">
+                <div className="tech-stack-clean">
+                  <div className="stack-title-clean">
+                    {"< Stack Used />"}
+                  </div>
+
+                  <div className="stack-info-clean">
+                    {props.projectData.technologies.map((t) =>
+                      <div className="stack-item-clean" key={t}>
+                        {t}
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <div className="proj-links-clean">
+                  {/* Live Demo and Source Links: */}
+                  {
+                    props.projectData.demo ?
+                      // <div className="proj-btn-link">
+                      <a target='_blank' href={props.projectData.demo} className="proj-button-clean">
+                        <FontAwesomeIcon icon={faLaptop} />
+                      </a>
+                      // </div>
+                      :
+                      null
+                  }
+
+                  {
+                    props.projectData.source ?
+                      <a target='_blank' href={props.projectData.source} className="proj-button-clean">
+                        <FontAwesomeIcon icon={faGithub} />
+                      </a>
+                      :
+                      null
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div >
+  );
+}
+
 function SoftwareProjectCard(props) {
   let reversePos = "reverse-order magnet-right";
   let fixtureType = Math.floor((Math.random() * 2)) === 1 ? "screw" : "bolt";
@@ -48,14 +121,15 @@ function SoftwareProjectCard(props) {
         </h1> */}
         <div className="inner-card-wrapper-bolts">
           <div className="bolt-wrapper">
-            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
-            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 70) + "deg)" }} />
+            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 70) + "deg)" }} />
           </div>
 
           <div className="card-wrapper">
             <h1 className="project-title">
               <TypeAnimation
                 sequence={["> " + props.projectData.title]}
+                cursor={false}
               />
             </h1>
 
@@ -113,8 +187,8 @@ function SoftwareProjectCard(props) {
           </div>
 
           <div className="bolt-wrapper">
-            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
-            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 25) + "deg)" }} />
+            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 70) + "deg)" }} />
+            <div className={fixtureType} style={{ transform: "rotateZ(" + (Math.random() * 70) + "deg)" }} />
           </div>
         </div>
       </div>
@@ -135,8 +209,6 @@ class Portfolio extends Component {
 
     return (
       <div id="portfolio">
-        <div className="dotted-bg">
-        </div>
         <div className="portfolio-block">
           <Fade>
 

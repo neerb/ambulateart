@@ -6,13 +6,14 @@ import Navigation from "./Components/Navigation";
 import Header from "./Components/Header";
 import About from "./Components/About";
 import Portfolio from "./Components/Portfolio";
-import PortfolioConcept from "./Components/portfolioConcept/PortfolioConcept";
+// import PortfolioConcept from "./Components/portfolioConcept/PortfolioConcept";
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import { useCallback } from "react";
+
 
 function App() {
   const [resumeData, setResumeData] = useState(null);

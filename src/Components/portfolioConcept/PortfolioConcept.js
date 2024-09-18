@@ -3,8 +3,6 @@ import Spline from '@splinetool/react-spline';
 import './PortfolioConcept.css';
 import $ from "jquery";
 import { motion } from 'framer-motion';
-import SeraphimBumper from './Seraphim/SeraphimBumper'
-
 import esse from './shapes/esse.png'
 import evalink from './shapes/evalink.png'
 import greencube from './shapes/greencube.png'

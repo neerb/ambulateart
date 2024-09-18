@@ -89,14 +89,21 @@ function About(props) {
                 <div className='intro-wrap'>
                   <h1 className='intro-title'>Welcome</h1>
                   <p className="intro">
-                    <span className="emphasis-text1">Front-end</span> focused web developer dedicated to building uniquely crafted user-interactive experiences.
+                    <span className="emphasis-text1">Full-stack</span> focused Software Developer enamored by building uniquely crafted user-interactive experiences.
+
+                    <br></br>
+                    <hr></hr>
                     Computer Science graduate from
                     <span className="utdorange"> The University</span><span className="utdorange"> of Texas</span><span className="utdgreen"> at Dallas</span>
                     <span className="utdgreen"> (</span>
                     <span className="utdorange italics">UTD</span>
                     <span className="utdgreen">)</span>
                     .
+                    <br></br>
+                    <hr></hr>
                     I have a <span className="italics">*zeal*</span> for exploring new programming techniques, skills, and implementations. During my academic journey and spare time over the past 7 years, I've crafted a variety of applications, from fully-responsive full-stack web pages to implementing data structures and integrating APIs for Twitter(X) and Discord bots.
+                    <br></br>
+                    <hr></hr>
                     I'm comfortable with a range of languages and frameworks, including{" "}
                     <span className="emphasis-text1">C#</span>,{" "}
                     <span className="emphasis-text2">C++</span>,{" "}
@@ -104,11 +111,15 @@ function About(props) {
                     <span className="emphasis-text4">JavaScript</span>,{" "} and {" "}
                     <span className="emphasis-text5">React</span>.
                     Likewise, I'm inclined towards <span className="emphasis-text5">WebGL</span> rendering and traversing in a 3D environment.
+                    <br></br>
+                    <hr></hr>
                     While I particularly enjoy front-end development, where I focus on styling/structuring with{" "}
                     <span className="emphasis-text1">CSS and HTML</span>,
                     I also find time to appreciate the intricacies of full-stack development, incorporating technologies like{" "}
                     <span className="emphasis-textw" w>MongoDB and Express.js for RESTful API services</span>.
-                    Likewise, I enjoy attending hackathons, working on desktop and mobile applications, and solving coding problems.
+                    I view anything software related as an opportunity to express & nurture creative innovation.
+                    <br></br>
+                    <hr></hr>
                     Let's collaborate and create something together.
                   </p>
                   <h1 className='exit-title'>Thanks for stopping by...</h1>
