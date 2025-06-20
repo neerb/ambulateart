@@ -219,7 +219,22 @@
         "image":"99tristart.png",
         "demo":"",
         "source":"https://github.com/neerb/pdn-one-dimensional-cellular-automata-plugin/"
+      },
+      {
+        "title":"Oral Observer: 3D Anatomical Model",
+        "technologies":[
+          "React",
+          "THREE.js",
+          "TypeScript",
+          "CSS",
+          "Vite"
+        ],
+        "desc":"A rudimentary 3D rendering application created for exploring the anatomy of the human mouth.  Includes an interactive highlighting tool interface & orbit controls.  The Mouth: a marvel of evolutionary organic engineering.",
+        "image":"oralobserver.png",
+        "demo":"https://oralobserver.netlify.app",
+        "source":""
       }
+      
     ],
     "projects": [
       {

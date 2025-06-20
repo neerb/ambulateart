@@ -277,11 +277,11 @@ class Portfolio extends Component {
 
           <div className="projects-wrapper">
             <div className="project-list">
-              <SoftwareProjectCard projectData={this.props.data.software[0]} />
-              <SoftwareProjectCard projectData={this.props.data.software[2]} right={true} />
-              <SoftwareProjectCard projectData={this.props.data.software[4]} />
-              <SoftwareProjectCard projectData={this.props.data.software[6]} right={true} />
-              <SoftwareProjectCard projectData={this.props.data.software[8]} />
+              <SoftwareProjectCard projectData={this.props.data.software[9]} />
+              <SoftwareProjectCard projectData={this.props.data.software[0]} right={true} />
+              <SoftwareProjectCard projectData={this.props.data.software[2]} />
+              <SoftwareProjectCard projectData={this.props.data.software[4]} right={true} />
+              <SoftwareProjectCard projectData={this.props.data.software[6]} />
             </div>
 
             <div className="project-list">
@@ -289,6 +289,7 @@ class Portfolio extends Component {
               <SoftwareProjectCard projectData={this.props.data.software[3]} right={true} />
               <SoftwareProjectCard projectData={this.props.data.software[5]} />
               <SoftwareProjectCard projectData={this.props.data.software[7]} right={true} />
+              <SoftwareProjectCard projectData={this.props.data.software[8]} />
             </div>
           </div>
         </div >
